@@ -1,0 +1,118 @@
+{% load static %}
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        
+          
+        <a class="navbar-brand">
+          <img src="{% static 'img/logo-white.png' %}"  class="d-inline-block align-text-top">
+        </a>
+          
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"> صفحه اول </a>
+              <div class="menu-tabs">
+                <!-- required for floating -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left sideways">
+                    <li class="active"><a href="#home-v" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile-v" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages-v" data-toggle="tab">Messages</a></li>
+                    <li><a href="#settings-v" data-toggle="tab">Settings</a></li>
+                </ul>
+              
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home-v">Home Tab.</div>
+                    <div class="tab-pane" id="profile-v">Profile Tab.</div>
+                    <div class="tab-pane" id="messages-v">Messages Tab.</div>
+                    <div class="tab-pane" id="settings-v">Settings Tab.</div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="mega-indicator"></span>محصولات خانگی</a>
+              <div class="menu-tabs">
+                <!-- required for floating -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left sideways">
+                    <li class="active"><a href="#home-z" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile-z" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages-z" data-toggle="tab">Messages</a></li>
+                    <li><a href="#settings-z" data-toggle="tab">Settings</a></li>
+                </ul>
+              
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home-z">Home Tab.</div>
+                    <div class="tab-pane" id="profile-z">Profile Tab.</div>
+                    <div class="tab-pane" id="messages-z">Messages Tab.</div>
+                    <div class="tab-pane" id="settings-z">Settings Tab.</div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+
+
+
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+   
+    
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'bootstrap/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        $( document ).ready(function() {
+            $('.nav-tabs > li > a').hover(function() {
+                $(this).tab('show');
+            });
+
+        });
+
+        $(document).ready(function(){
+          $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+
+            if (scroll > 100) {
+              $(".navbar").addClass("bg-white");
+            }else{
+              $(".navbar").removeClass("bg-white");
+            }
+          })
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+

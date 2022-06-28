@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    background-color: #FFF;
+}
+
+  
+/*/////////////////////////////////////////////////////////////////////////*/
+  
+
+.navbar{
+    transition: 0.3s;
+    position:absolute;
+    z-index:10;
+    width:100%;
+}
+.navbar:hover{
+    background-color: rgba(51, 51, 51, 0.719);
+    color: #fff;
+}
+.navbar-expand-lg{
+    padding: 0;
+    position: fixed;
+}
+.navbar a{
+    line-height: 4rem;
+    color: #111;
+    padding: 4vh 8vh;
+}
+.nav-item:hover .nav-link ,.menu-tabs ul li a:hover{
+    background-color: #444;
+    color: #fff;
+}
+
+.nav-tabs{
+    border: none;
+}
+
+.nav-item .menu-tabs{
+    position: absolute;
+    display: none;
+}
+.nav-item:hover .menu-tabs{
+    display: flex;
+}
+
+.bg-white{
+    background-color: #444444;
+}
+
+.navbar img {
+    width: 10rem;
+}
+
+
+
+/*/////////////////////////////////////////////////////////////////////////*/
+
+/* .nav-tabs>li>a:hover {
+    line-height: 1.42857143;
+}
+
+.tabs-left>li.active>a::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    display: block;
+    width: 0;
+    line-height: normal;
+} */
+
+
+
+.menu-tabs{
+    display: flex;
+    background-color: #222;
+    color: azure;
+    padding: 0;
+    width: 500px;
+}
+
+.menu-tabs ul{
+    display: block;
+
+}
+
+.menu-tabs ul li{
+    width: 200px;
+}
+.menu-tabs ul li:hover{
+    /* background-color: #222; */
+    padding: 0;
+    line-height: normal;
+}
+
+.menu-tabs ul li a{
+    color: #FFF;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    line-height: normal;
+}
+
+
+
+
+/* .menu-tabs ul li a.active{
+    background-color: #444;
+    position: relative;
+    line-height: inherit;
+} */
+
+
+
+
+.tab-content{
+    width: 100%;
+    min-width: 500px;
+    padding: 10px;
+    background-color: #444;
+}
+
+.tab-content .tab-pane{
+    color: #FFF
+}
+
+#navbarNav {
+    z-index: 9999;
+
+}
+
+.carousel-inner img{
+    position: absolute;
+    object-fit:cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 572px;
+    background:rgba(0,0,0,0.7);
+}
+
+.bannerContainer {
+    position:relative;     
+}
+.carousel {
+    top:0;
+}
+
+.text-start {
+    text-align: right!important;
+    right: 5rem;
+    left: 30rem;
+    top: 10rem;
+}
+
+.font-6{
+    color: #77ACDC;
+}
+
+.btn-secondary {
+    width: 180px;
+    border-radius: 0;
+    padding: 10px;
+    background-color: #309eb7;
+}
+.btn-secondary:hover{
+    background-color: #3049b7;
+}
+
+
+
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+  /* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+  /* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+  /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+  /* Style the back side */
+.flip-card-back {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    transform: rotateY(180deg);
+}
+.back-face{
+    padding-top: 7rem;
+}
+
+.btn-flip{
+    
+    background-color: rgb(6, 158, 13);
+    width: 100%;
+    max-width: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.btn-flip:hover{
+    background-color: rgb(2, 90, 6);
+    color: #fff;
+}
+
+
+.row{
+    padding: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+    FOR DEMO PURPOSE
+  ========================================== */
+.back-color {
+    background-color: #2a2e32;
+  }
+  
+.text-small {
+    font-size: 0.9rem;
+}
+  
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+  
+a:hover, a:focus {
+    text-decoration: none;
+}
+  
+.form-control {
+    background: #212529;
+    border-color: #545454;
+}
+  
+.form-control:focus {
+    background: #212529;
+}
+  
+footer {
+    background: #212529;
+}
