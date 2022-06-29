@@ -1,47 +1,34 @@
+{% load static %}
 <div class="d-flex flex-column back-color">
-
-    {% comment %} <!-- FOR DEMO PURPOSE -->
-    <section class="hero text-white py-5 flex-grow-1">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="display-4">Bootstrap footer bottom</h1>
-                    <p class="fst-italic text-muted">Using Bootstrap 5 flexbox utilities, create a footer that always sticks to the bottom of your viewport. Snippet by <a class="text-primary" href="https://bootstrapious.com/" target="_blank">Bootstrapious</a></p>
-                </div>
-            </div>
-        </div>
-    </section> {% endcomment %}
-
-
     <!-- FOOTER -->
     <footer class="w-100 py-4 flex-shrink-0">
         <div class="container py-4">
             <div class="row gy-4 gx-5">
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="h1 text-white">FB.</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
+                    <img src="{% static 'img/logo-black.png' %}" style="width: -webkit-fill-available;"/>
+                    <h6 class="footer-text">کارشناسان ما در ساعات اداری همه روزه (غیر از روزهای تعطیل) آماده پشتیبانی محصولات و پاسخگویی به سوالات شما هستند.</h6>
+                    <p class="small mb-0" style="color:white">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">محصولات</h4>
                     <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">محصولات خانگی</a></li>
+                        <li><a href="#">محصولات سازمانی</a></li>
+                        <li><a href="#">امنیت شبکه</a></li>
+                        <li><a href="#">امنیت سیستم</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">برندها</h4>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#">ESET</a></li>
+                        <li><a href="#">Kaspersky</a></li>
+                        <li><a href="#">Symantec</a></li>
+                        <li><a href="#">Microsoft</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <h4 class="text-white mb-3">نماد الکترونیک</h4>
                     <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                    
                 </div>
