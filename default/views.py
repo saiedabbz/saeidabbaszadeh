@@ -5,9 +5,9 @@ from default.models import Category
 # Create your views here.
 
 def HomePage(request):
-    obj = Category.objects.get(id=1)
+    categories = Category.objects.all()
     context ={
-        'title': obj.title,
+        'categories': categories,
     }
     return render(request, 'index.html' , context)
 

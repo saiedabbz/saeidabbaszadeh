@@ -4,4 +4,4 @@ from .models import Category
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')
 
-admin.site.register(Category)
+admin.site.register(Category,CategoryAdmin)

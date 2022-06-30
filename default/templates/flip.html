@@ -2,6 +2,8 @@
 
 <div class="container">
     <div class="row">
+      {% if categories %}
+      {% for cat in categories %}
         <div class="col-lg-4">
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -10,47 +12,16 @@
                   </div>
                   <div class="flip-card-back">
                     <div class="back-face">
-                        <button class="btn btn-flip">Home</button><br><br>
+                        <button class="btn btn-flip"><a href="{% url 'esset' %}">{{cat.title}}</a></button><br><br>
                         <button class="btn btn-flip">company</button>
                     </div>
                   </div>
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back">
-                    <div class="back-face">
-                        <button class="btn btn-flip">home</button><br><br>
-                        <button class="btn btn-flip">company</button>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="{% static 'img/eset-logo.png'%}" alt="Avatar" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back">
-                    <div class="back-face">
-                        <button class="btn btn-flip"><a href="{% url 'esset' %}">{{ title }}<a></button><br><br>
-                        <button class="btn btn-flip">company</button>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-
+        {% endfor %}
+        
+        {% endif %} 
     </div>
 
 </div>
