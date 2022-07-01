@@ -1,113 +1,35 @@
 {% load static %}
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <svg
-        class="bd-placeholder-img"
-        width="100%"
-        height="100%"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        preserveAspectRatio="xMidYMid slice"
-        focusable="false"
-      >
-        <rect width="100%" height="100%" fill="#777" />
-      </svg>
+<div class="container" style="padding:0px;max-width: 1401px;">
+  <div class="row" style="padding:0;">
+    <div class="carousel-inner">
 
       <div class="container">
-        <img
-          class="img"
-          {% comment %} src="{% static 'img/slide2.jpg' %}" {% endcomment %}
-          style="background-color: #00838f"
-        />
+        <img class="img" style="background-color: #00838f"/>
 
-        <div class="carousel-caption text-start">
-          <div class="row row-c">
-            <div class="col-md-9">
-              <h1>Protecting digital progress with award-winning security</h1>
-              <h1 class="font-6">
-                <p>بزرگترین ارائه دهنده راهکارهای امنیتی در ایران</p>
-              </h1>
-              <p>
-                پایداری و گسترش امنیت اطلاعات با استفاده از نرم افزار های
-                اورجینال
-              </p>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton2"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      محصولات سازمانی
-                    </button>
-                    <ul
-                      class="dropdown-menu dropdown-menu-dark"
-                      aria-labelledby="dropdownMenuButton2"
-                    >
-                      <li>
-                        <a class="dropdown-item active" href="#">Action</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Another action</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton2"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      محصولات خانگی
-                    </button>
-                    <ul
-                      class="dropdown-menu dropdown-menu-dark"
-                      aria-labelledby="dropdownMenuButton2"
-                    >
-                      <li>
-                        <a class="dropdown-item active" href="#">Action</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Another action</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <img
-                src="https://www.eset.com/fileadmin/_processed_/2/5/csm_EIS_02f9642c5b.png"
-              />
-            </div>
+        <div class="row eset">
+          <div class="col-md-9">
+            <h1>لیست محصولات امنیت سایبری ESET</h1>
+          </div>
+          <div class="col-md-3 hide">
+            <img style="width: 261px;border-radius: 55px;" src="{% static 'img/esetlogo2.png' %}"/>
           </div>
         </div>
+        <div class="row eset-product">
+          {% if products %}
+          {% for pro in products %}
+          <div class="col-md-4">
+              <div class="card cus-card" style="width: 13rem;">
+                  <div class="card-body">
+                      <img src="{{ pro.image.url }}" />
+                      <h5 class="card-title">{{ pro.name }}</h5>
+                      
+                      <a href="#" class="card-link">{{ pro.id }}</a>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+          {% endif %}            
+      </div>
       </div>
     </div>
   </div>

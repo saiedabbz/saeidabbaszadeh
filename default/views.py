@@ -2,7 +2,9 @@ from multiprocessing import context
 from unicodedata import category
 from django.shortcuts import render
 from default.models import Category
-# Create your views here.
+from product.models import Product
+
+
 
 def HomePage(request):
     categories = Category.objects.all()
@@ -13,4 +15,14 @@ def HomePage(request):
 
 
 def EssetView(request):
-    return render(request, 'esset.html')
+    products = Product.objects.all()
+    context ={
+        'products': products
+    }
+    return render(request, 'esset.html', context)
+
+
+
+
+def Node32View(request):
+    return render(request,'node32.html')
