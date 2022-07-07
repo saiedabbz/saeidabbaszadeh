@@ -8,21 +8,14 @@ from product.models import Product
 
 def HomePage(request):
     categories = Category.objects.all()
-    context ={
-        'categories': categories,
-    }
-    return render(request, 'index.html' , context)
-
-
-def EssetView(request):
-    products = Product.objects.all()
-    context ={
-        'products': products
-    }
-    return render(request, 'esset.html', context)
+    return render(request, 'index.html' , {'categories': categories})
 
 
 
+def ProductsView(request, cat_id):
+    products = Product.objects.filter(category_id=cat_id)
 
-def Node32View(request):
-    return render(request,'node32.html')
+    category = Category.objects.get(pk=cat_id)
+
+    return render(request, category.theme , {'products': products})
+
