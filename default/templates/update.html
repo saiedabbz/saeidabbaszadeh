@@ -1,0 +1,46 @@
+{% load static %}
+
+
+
+<html>
+    <head>
+        {% include 'header.html' %}
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        <div class="container">
+            <div class="row">
+
+                <form action="updateorder/{{ order.id }}" method="POST" style="display: inline-grid;
+                padding-top: 10rem;
+                text-align: center;"/>
+
+                    {% csrf_token %}
+
+                    {% comment %} <select name="customer" id="">
+                        {% for c in customers %}
+                            <option value="{{ c.id }}" name="customer">{{ c }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <select name="product" id="">
+                        {% for p in products %}
+                            <option value="{{ p.id }}" name="product">{{ p }}</option>
+                        {% endfor %}
+                    </select> {% endcomment %}
+                    
+
+                    {% comment %} <input type="text" name="customer" placeholder="customer" value="{{ order.customer.id }}" /> {% endcomment %}
+                    {% comment %} <input type="text" name="product" placeholder="product" value="{{ order.product }}" /> {% endcomment %}
+
+                    <input type="number" name="quantity" placeholder="Quantity" value="{{ order.quantity }}" />
+
+                    <div class="button-box">
+                        <button type="submit"><span>Update Order</span></button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

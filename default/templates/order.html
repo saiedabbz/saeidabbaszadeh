@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+    <head>{% include 'header.html' %}</head>
+    <body>
+        {% include 'nav.html' %}
+
+        <div class="container" style="padding-top:8rem;">
+            <button onclick="location.href='{% url 'add_order' %}'">Add Order</button>
+        </div>
+        <div class="container" style="padding-top:5rem;">
+            
+            {% if order %}
+            {% for ord in order %}
+            <table border="1">
+                  <ul>
+                    <li>{{ord.customer}}</li>
+                    <li>{{ord.quantity}}</li>
+                    <li>{{ord.product}}</li>
+                    <li><a href="delete/{{ ord.id }}" style="color:red;">delete</a>
+                        <a href="update/{{ ord.id }}" style="color:green;">Edit</a>
+                    </li><br/>
+
+                  </ul>
+            </table>
+            {% comment %} <ul>
+                <li>Customer Name  :<span style="background-color:red;"></span></li>
+                <li>Quantity  :<span style="background-color:red;"></span></li>
+                <li>Product  :<span style="background-color:red;"></span></li>
+
+            </ul> {% endcomment %}
+            {% endfor %}
+            {% endif %}
+        </div>
+    </body>
+</html>
