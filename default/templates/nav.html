@@ -83,10 +83,13 @@
               <a class="nav-link" href="#">تماس با ما </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">پشتیبانی</a>
+              <a class="nav-link" href="{% url 'customerlist' %}">مشتری</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'order' %}">سفارش ها</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'productlist' %}">محصولات</a>
             </li>
             {% comment %} {% if user.is_authenticated %}
             <li class="nav-item">

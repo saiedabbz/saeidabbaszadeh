@@ -4,30 +4,30 @@
     <body>
         {% include 'nav.html' %}
 
-        <div class="container" style="padding-top:8rem;">
-            <button onclick="location.href='{% url 'add_order' %}'">Add Order</button>
-        </div>
-        <div class="container" style="padding-top:5rem;">
-            
+        
+        <div class="container" style="padding-top:8rem;direction:ltr;">
+            <div class="form-group">
+
+                <button class="btn btn-primary" onclick="location.href='{% url 'add_order' %}'">Add Order</button>
+            </div><br/>
             {% if order %}
             {% for ord in order %}
-            <table border="1">
-                  <ul>
-                    <li>{{ord.customer}}</li>
-                    <li>{{ord.quantity}}</li>
-                    <li>{{ord.product}}</li>
-                    <li><a href="delete/{{ ord.id }}" style="color:red;">delete</a>
-                        <a href="update/{{ ord.id }}" style="color:green;">Edit</a>
-                    </li><br/>
+            
+                <ul class="list-group">
+                    <li class="list-group-item active"> Customer Field:
+                        <div style="float:right;">
+                            <a href="update/{{ ord.id }}"><button class="btn btn-success">Edit</button></a>
+                            <a href="delete/{{ ord.id }}"><button class="btn btn-danger">delete</button></a>
+                        </div>
+                    </li>
+                    <li class="list-group-item"> Name:{{ord.customer}}</li>
 
-                  </ul>
-            </table>
-            {% comment %} <ul>
-                <li>Customer Name  :<span style="background-color:red;"></span></li>
-                <li>Quantity  :<span style="background-color:red;"></span></li>
-                <li>Product  :<span style="background-color:red;"></span></li>
+                    <li class="list-group-item">Quantity:{{ord.quantity}}</li>
+                    <li class="list-group-item">Product:{{ord.product}}</li>
+                    <br/>
 
-            </ul> {% endcomment %}
+                </ul>
+
             {% endfor %}
             {% endif %}
         </div>

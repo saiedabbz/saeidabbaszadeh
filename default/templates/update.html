@@ -1,7 +1,4 @@
 {% load static %}
-
-
-
 <html>
     <head>
         {% include 'header.html' %}
@@ -10,33 +7,32 @@
         {% include 'nav.html' %}
         <div class="container">
             <div class="row">
-
-                <form action="updateorder/{{ order.id }}" method="POST" style="display: inline-grid;
-                padding-top: 10rem;
-                text-align: center;"/>
-
+                
+                <form action="updateorder/{{ order.id }}" method="POST" style="padding-top: 10rem;"/>
                     {% csrf_token %}
+                        <div class="form-group">
+                            <label for="customer">customer </label>
+                            <select name="customer" id="customer" class="form-control">
+                                {% for c in customers %}
+                                    <option {% if c.id == order.customer.id %} selected="selected" title="saeed " {% endif %} value="{{ c.id }}" >{{ c.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">product</label>
+                            <select name="product" id="product" class="form-control">
+                                {% for p in products %}
+                                <option value="{{ p.id }}" {% if p.id == order.product.id %} selected="selected" {% endif %}>{{ p }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">quantity</label>
+                            <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantity" value="{{ order.quantity }}" />
+                        </div>
 
-                    {% comment %} <select name="customer" id="">
-                        {% for c in customers %}
-                            <option value="{{ c.id }}" name="customer">{{ c }}</option>
-                        {% endfor %}
-                    </select>
-
-                    <select name="product" id="">
-                        {% for p in products %}
-                            <option value="{{ p.id }}" name="product">{{ p }}</option>
-                        {% endfor %}
-                    </select> {% endcomment %}
-                    
-
-                    {% comment %} <input type="text" name="customer" placeholder="customer" value="{{ order.customer.id }}" /> {% endcomment %}
-                    {% comment %} <input type="text" name="product" placeholder="product" value="{{ order.product }}" /> {% endcomment %}
-
-                    <input type="number" name="quantity" placeholder="Quantity" value="{{ order.quantity }}" />
-
-                    <div class="button-box">
-                        <button type="submit"><span>Update Order</span></button>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success"><span>Update Order</span></button>
                     </div>
                     
                 </form>

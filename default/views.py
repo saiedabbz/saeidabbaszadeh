@@ -84,9 +84,7 @@ def AddOrder(request):
         c = Customer.objects.get(pk=customer)
         p = Product.objects.get(pk=product)
         order = Order(customer=c, product=p, quantity=quantity)
-        # order.customer = customer
-        # order.product = product
-        # order.quantity = quantity
+      
         order.save()
         return redirect('order')
 
@@ -106,26 +104,90 @@ def UpdateOrder(request, id):
     products = Product.objects.all()
     order = Order.objects.get(id=id)
     context ={
-        
-        'order': order
-
+        'customers': customers,
+        'products': products,
+        'order': order,
     }
     return render(request, 'update.html', context)
 
 
 def UpdateRecords(request, id):
 
-    # customer = request.POST['customer']
-    # product = request.POST['product']
+    customer = request.POST['customer']
+    product = request.POST['product']
     quantity = request.POST['quantity']
 
-    # c = Customer.objects.get(pk=customer)
-    # p = Product.objects.get(pk=product)
+    c = Customer.objects.get(pk=customer)
+    p = Product.objects.get(pk=product)
 
     order = Order.objects.get(id=id)
-    # order.customer = c 
-    # order.product = p
+    order.customer = c 
+    order.product = p
     order.quantity = quantity 
 
     order.save()
     return redirect('order')
+
+
+
+def CustomerList(request):
+    customers = Customer.objects.all()
+    return render(request,'customers.html',{'customers': customers})
+
+def AddCustomer(request):
+    if request.method == "POST":
+        customer_name = request.POST.get('customer')
+        ctm = Customer(name=customer_name)
+        ctm.save()
+        return redirect('customerlist')
+
+    return render(request,'add_customer.html')
+
+def DeleteCustomer(request, id):
+    ctm = Customer.objects.get(pk=id)
+    ctm.delete()
+    return redirect('customerlist')
+
+
+def UpdateCustomer(request ,id):
+    ctm = Customer.objects.get(pk=id)
+    return render(request, 'updatecustomer.html',{'ctm': ctm})
+
+
+def UpdateCustomerRecord(request, id):
+    customer_name = request.POST['name']
+    ctm = Customer.objects.get(pk=id)
+    ctm.name = customer_name
+    ctm.save()
+    return redirect('customerlist')
+
+
+
+def ProductList(request):
+    products = Product.objects.all()
+
+    return render(request, 'product_list.html',{'products': products })
+
+
+def DeleteProduct(request, id):
+    products = Product.objects.get(pk=id)
+    products.delete()
+    return redirect('productlist')
+
+
+def AddProduct(request):
+    categories = Category.objects.all()
+
+    if request.method == "POST":
+        category = request.POST.get('category')
+        name = request.POST.get('name')
+        image = request.FILES.get('image')
+
+        
+        print("**********",category)
+        c = Category.objects.get(pk=category)
+        products = Product(category=c, name=name, image=image)
+        products.save()
+        return redirect('productlist')
+
+    return render(request, 'add_product.html',{'categories': categories, })
