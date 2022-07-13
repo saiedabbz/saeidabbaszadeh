@@ -33,9 +33,12 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="eset-v">
                       <div class="row">
-                        <div class="col-md-4"><img src="{% static 'img/eset1.png'%}"/></div>
-                        <div class="col-md-4"><img src="{% static 'img/eset2.png'%}"/></div>
-                        <div class="col-md-4"><img src="{% static 'img/eset3.png'%}"/></div>
+                        {% for prod in products %}
+                        <div class="col-md-4"><img src="{{ prod.image.url }}"/></div>
+                        {% endfor %}
+
+                        {% comment %} <div class="col-md-4"><img src="{% static 'img/eset2.png'%}"/></div> {% endcomment %}
+                        {% comment %} <div class="col-md-4"><img src="{% static 'img/eset3.png'%}"/></div> {% endcomment %}
                       </div>
                     </div>
                     <div class="tab-pane" id="kaspersky-v">

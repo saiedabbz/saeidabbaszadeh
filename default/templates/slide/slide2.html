@@ -17,13 +17,13 @@
           <div class="row eset-product">
             {% if products %}
             {% for pro in products %}
-            <div class="col-md-4">
-                <div class="card cus-card" style="width: 13rem;">
+            <div class="col-md-3">
+                <div class="card cus-card" >
                     <div class="card-body">
                         <img src="{{ pro.image.url }}" />
                         <h5 class="card-title">{{ pro.name }}</h5>
                         
-                        <a href="/detail/{{ pro.id }}/" class="card-link">اطلاعات بیشتر</a>
+                        {% comment %} <a href="/detail/ {{ pro.id }}/" class="card-link">اطلاعات بیشتر</a> {% endcomment %}
                     </div>
                 </div>
             </div>

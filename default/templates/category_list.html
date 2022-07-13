@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+    <head>{% include 'header.html' %}</head>
+    <body>
+        {% include 'nav.html' %}
+
+        
+        <div class="container" style="padding-top:8rem;direction:ltr;">
+            <div class="form-group">
+                <button class="btn btn-primary" onclick="location.href='{% url 'add_category' %}'">Add Category</button>
+            </div><br/>
+            {% if category %}
+            {% for cat in category %}
+            
+                <ul class="list-group">
+                    <li class="list-group-item active"> Categories ID ({{ cat.id }})
+                        <div style="float:right;">
+                            <a href="update/{{ cat.id }}"><button class="btn btn-success">Edit</button></a>
+                            <a href="delete/{{ cat.id }}"><button class="btn btn-danger">delete</button></a>
+                        </div>
+                    </li>
+                    <li class="list-group-item">{{ cat.title }}</li><br/>
+                    
+
+                </ul>
+
+            {% endfor %}
+            {% endif %}
+        </div>
+    </body>
+</html>

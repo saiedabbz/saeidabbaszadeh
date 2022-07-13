@@ -7,10 +7,12 @@
     <body>
         {% include 'nav.html' %}
 
-        <div class="container" style="direction:ltr;">
-            <h1 style="padding-top:8rem;">Add New Customer</h1>
+        <div class="container" style="direction:ltr;padding-top: 8rem;">
+            <div >
+                <a href="{% url 'customerlist' %}"><button class="btn btn-primary" >Back Page</button></a>
+            </div><br/>
 
-            <form action="{% url 'add_customer' %}" method="POST" style="padding-top: 6rem;">
+            <form action="{% url 'add_customer' %}" method="POST" >
                 {% csrf_token %}
 
                 <div class="form-group">

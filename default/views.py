@@ -15,7 +15,8 @@ from django.template import loader
 
 def HomePage(request):
     categories = Category.objects.all()
-    return render(request, 'index.html' , {'categories': categories})
+    products = Product.objects.all()
+    return render(request, 'index.html' , {'categories': categories, 'products': products })
 
 
 
@@ -59,135 +60,44 @@ def Login(request):
     return render(request,'login.html')
 
 
-def Logout(reqeust):
-    logout(reqeust)
-    return render(request,'index.html')
 
 
 
 
 
-def OrderView(request):
-    order = Order.objects.all()
-    return render(request,'order.html',{'order': order})
+def Categories(request):
+    category = Category.objects.all()
+
+    return render(request, 'category_list.html',{'category': category })
 
 
-def AddOrder(request):
-    customers = Customer.objects.all()
-    products = Product.objects.all()
+def Delete(request, id):
+    category = Category.objects.get(pk=id)
+    category.delete()
+    return redirect('category_list')
+
+
+def AddCategory(request):
     if request.method == "POST":
-        customer = request.POST.get('customer')
-        product = request.POST.get('product')
-        quantity = request.POST.get('quantity')
-
-        print("*****", customer)
-        c = Customer.objects.get(pk=customer)
-        p = Product.objects.get(pk=product)
-        order = Order(customer=c, product=p, quantity=quantity)
-      
-        order.save()
-        return redirect('order')
+        cat_title = request.POST.get('title')
+        cat_theme = request.POST.get('theme')
+        category = Category(title=cat_title, theme=cat_theme)
+        category.save()
+        return redirect('category_list')
+    return render(request, 'add_category.html', )
 
 
-    return render(request,'addorder.html',{'customers': customers,
-        'products': products})
+def EditCategory(request, id):
+    category = Category.objects.get(pk=id)
+    return render(request, 'edit_category.html',{'category': category })
 
 
-def DeleteOrder(request, id):
-    order = Order.objects.get(id=id)
-    order.delete()
-    return redirect('order')
+def UpdateCategory(request, id):
 
+    category_title = request.POST['title']
+    
+    category = Category.objects.get(pk=id)
+    category.title = category_title
+    category.save()
 
-def UpdateOrder(request, id):
-    customers = Customer.objects.all()
-    products = Product.objects.all()
-    order = Order.objects.get(id=id)
-    context ={
-        'customers': customers,
-        'products': products,
-        'order': order,
-    }
-    return render(request, 'update.html', context)
-
-
-def UpdateRecords(request, id):
-
-    customer = request.POST['customer']
-    product = request.POST['product']
-    quantity = request.POST['quantity']
-
-    c = Customer.objects.get(pk=customer)
-    p = Product.objects.get(pk=product)
-
-    order = Order.objects.get(id=id)
-    order.customer = c 
-    order.product = p
-    order.quantity = quantity 
-
-    order.save()
-    return redirect('order')
-
-
-
-def CustomerList(request):
-    customers = Customer.objects.all()
-    return render(request,'customers.html',{'customers': customers})
-
-def AddCustomer(request):
-    if request.method == "POST":
-        customer_name = request.POST.get('customer')
-        ctm = Customer(name=customer_name)
-        ctm.save()
-        return redirect('customerlist')
-
-    return render(request,'add_customer.html')
-
-def DeleteCustomer(request, id):
-    ctm = Customer.objects.get(pk=id)
-    ctm.delete()
-    return redirect('customerlist')
-
-
-def UpdateCustomer(request ,id):
-    ctm = Customer.objects.get(pk=id)
-    return render(request, 'updatecustomer.html',{'ctm': ctm})
-
-
-def UpdateCustomerRecord(request, id):
-    customer_name = request.POST['name']
-    ctm = Customer.objects.get(pk=id)
-    ctm.name = customer_name
-    ctm.save()
-    return redirect('customerlist')
-
-
-
-def ProductList(request):
-    products = Product.objects.all()
-
-    return render(request, 'product_list.html',{'products': products })
-
-
-def DeleteProduct(request, id):
-    products = Product.objects.get(pk=id)
-    products.delete()
-    return redirect('productlist')
-
-
-def AddProduct(request):
-    categories = Category.objects.all()
-
-    if request.method == "POST":
-        category = request.POST.get('category')
-        name = request.POST.get('name')
-        image = request.FILES.get('image')
-
-        
-        print("**********",category)
-        c = Category.objects.get(pk=category)
-        products = Product(category=c, name=name, image=image)
-        products.save()
-        return redirect('productlist')
-
-    return render(request, 'add_product.html',{'categories': categories, })
+    return redirect('category_list')

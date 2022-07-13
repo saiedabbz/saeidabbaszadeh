@@ -1,0 +1,28 @@
+{% load static %}
+<div class="container" style="padding:0px;max-width: 1401px;">
+  <div class="row" style="padding:0;">
+    <div class="container" style="height:550px;">
+      <div class="row">
+        <div class="col-md-8">
+          <img class="kas-image" src="https://content.kaspersky-labs.com/se/com/content/en-global/images/baseline/masthead-home/home/home-v2.png"/>
+        </div>
+        <div class="col-md-4" style="display:flex;">
+
+          {% if products %}
+          {% for pro in products %}
+                  <div class="card kas-card">
+                      <div class="card-body">
+                          <img src="{{ pro.image.url }}" style="width:81px"/>
+                          <h6 class="card-title">{{ pro.name }}</h6>
+                          
+                          {% comment %} <a href="/detail/{{ pro.id }}/" class="card-link">اطلاعات بیشتر</a> {% endcomment %}
+                      </div>
+                  </div>
+          {% endfor %}
+          {% endif %}            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

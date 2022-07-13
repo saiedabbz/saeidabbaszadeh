@@ -8,9 +8,11 @@
         <div class="container" style="padding-top:8rem;direction:ltr;">
             <div class="form-group">
                 <button class="btn btn-primary" onclick="location.href='{% url 'add_product' %}'">Add Product</button>
+                <button class="btn btn-primary" onclick="location.href='{% url 'category_list' %}'">Categories</button>
+
             </div><br/>
             {% if products %}
-            {% for prod in products %}
+            {% for prod in products|dictsort:"name" %}
             
                 <ul class="list-group">
                     <li class="list-group-item active">
@@ -18,7 +20,7 @@
                         <img src="{{ prod.image.url }}" style="width:65px;"/>
                         {% endif %}
                         <div style="float:right;">
-                            {% comment %} <a href="update/{{ prod.id }}"><button class="btn btn-success">Edit</button></a> {% endcomment %}
+                            <a href="update/{{ prod.id }}"><button class="btn btn-success">Edit</button></a>
                             <a href="delete/{{ prod.id }}"><button class="btn btn-danger">delete</button></a>
                         </div>
                     </li>

@@ -344,11 +344,40 @@ footer {
     display: flex;
 }
 
+.kas-card{
+    padding-top: 15rem;
+    border: none;
+    height: fit-content;
+    text-align: center;
+    background: none;
+}
+
+.row{
+    --bs-gutter-x: 0;
+}
+
 @media screen and (max-width:600px){
     .hide {
         display: none;
     }
     .carousel-inner{
-        height: 75rem;
+        height: 60rem;
+    }
+    .eset-product{
+        justify-content: center;
+    }
+    .col-md-9 h1{
+        text-align: center;
+    }
+    .kas-image{
+        width: -webkit-fill-available;
+    }
+    .kas-card{
+        padding-top: 0;
     }
 }
+
+.col-md-3{
+    width: auto;
+}
+

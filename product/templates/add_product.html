@@ -10,13 +10,11 @@
         <div class="container" style="direction:ltr;">
             
             <div class="row" style="padding-top:8rem;" >
-                
                 <a href="{% url 'productlist' %}"><button class="btn btn-primary" >Back Page</button></a>
-                <h1 style="text-align: center;">Add New Product</h1>
-            </div>
+            </div><br/>
 
 
-            <form method="POST" action="{% url 'add_product' %} " enctype="multipart/form-data" style="padding-top: 4rem;">
+            <form method="POST" action="{% url 'add_product' %} " enctype="multipart/form-data">
                 {% csrf_token %}
 
                 <div class="form-group">

@@ -1,0 +1,52 @@
+{% load static %}
+<html>
+    <head>
+        {% include 'header.html' %}
+    </head>
+    <body>
+        {% include 'nav.html' %}
+
+        <div class="container" style="direction:ltr;padding-top: 8rem;">
+            <div >
+                <a href="{% url 'order' %}"><button class="btn btn-primary" >Back Page</button></a>
+            </div><br/>
+
+            <form action="{% url 'add_order' %}" method="POST">
+
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="customer">Customer : </label>
+                    <select name="customer" class="form-control" id="customer" >
+                        <option></option>
+                        {% for c in customers %}
+                        <option value="{{ c.id }}" >{{ c }}</option>
+                        {% endfor %}
+                    </select>
+                </div><br/>
+                
+                <div class="form-group">
+                    <label for="product">Product : </label>
+                    <select name="product" class="form-control" id="product">
+                        <option></option>
+
+                        {% for p in products %}
+                        <option value="{{ p.id }}">{{ p }}</option>
+                        {% endfor %}
+                    </select>
+                </div><br/>
+                
+                <div class="form-group">
+                    <label for="Quantity">Quantity</label>
+                    <input class="form-control" id="Quantity" type="number" name="quantity" placeholder="Quantity" />
+                </div><br/>
+                
+
+                <div class="button-box">
+                    <button class="btn btn-success" type="submit"><span>Add Order</span></button>
+                </div>
+                
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+    <head>
+        {% include 'header.html' %}
+    </head>
+
+    <body>
+        {% include 'nav.html' %}
+
+        <div class="container" style="direction:ltr;padding-top: 8rem;">
+            <div >
+                <a href="{% url 'category_list' %}"><button class="btn btn-primary" >Back Page</button></a>
+            </div><br/>
+
+            <form action="{% url 'add_category' %}" method="POST" >
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="addname">Add Name:</label>
+                    <br/>
+                    <input class="form-control" id="addname" type="text" name="title" placeholder="enter category name" />
+                </div><br/>
+
+                {% comment %} <div class="form-group">
+                    <label for="theme">Add Name:</label>
+                    <br/>
+                    <input class="form-control" id="theme" type="text" name="theme" placeholder="enter name" />
+                </div><br/> {% endcomment %}
+
+                <div class="button-box">
+                    <button class="btn btn-success" type="submit"><span>Add Category</span></button>
+                </div>
+                
+            </form>
+        </div>
+    </body>
+</html>
