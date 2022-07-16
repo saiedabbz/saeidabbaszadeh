@@ -5,12 +5,22 @@ from default.models import Category
 from product.models import Product
 from order.models import Order
 from customer.models import Customer
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.shortcuts import redirect
-from django.contrib.auth import authenticate, login,logout
+# from django.contrib.auth import authenticate, login,logout
 
 from django.views.generic import UpdateView
 from django.template import loader
+
+
+def Navbar(request, id):
+
+    products = Product.objects.filter(category_id=id)
+    category = Category.objects.all()
+
+    return render(request, 'nav.html', {'products': products, 'category': category })
+
+
 
 
 def HomePage(request):
@@ -26,39 +36,6 @@ def ProductsView(request, cat_id):
     category = Category.objects.get(pk=cat_id)
 
     return render(request, category.theme , {'products': products})
-
-
-def Register(request):
-    if request.method == "POST":
-        username = request.POST.get('username')
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
-        email = request.POST.get('email')
-        pass1 = request.POST.get('pass1')
-        pass2 = request.POST.get('pass2')
-
-        customer = User.objects.create_user(username,email,pass1)
-        customer.first_name = first_name
-        customer.last_name = last_name
-        customer.save()
-        return redirect('login')
-
-    return render(request,'register.html')
-
-
-def Login(request):
-    if request.method == "POST":
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-
-        user = authenticate(username = username, password = password)
-        if user is not None:
-            login(request,user)
-            return redirect('homepage')
-        else:
-            return redirect('login')
-    return render(request,'login.html')
-
 
 
 
@@ -101,3 +78,37 @@ def UpdateCategory(request, id):
     category.save()
 
     return redirect('category_list')
+
+
+
+
+# def Register(request):
+#     if request.method == "POST":
+#         username = request.POST.get('username')
+#         first_name = request.POST.get('first_name')
+#         last_name = request.POST.get('last_name')
+#         email = request.POST.get('email')
+#         pass1 = request.POST.get('pass1')
+#         pass2 = request.POST.get('pass2')
+
+#         customer = User.objects.create_user(username,email,pass1)
+#         customer.first_name = first_name
+#         customer.last_name = last_name
+#         customer.save()
+#         return redirect('login')
+
+#     return render(request,'register.html')
+
+
+# def Login(request):
+#     if request.method == "POST":
+#         username = request.POST.get('username')
+#         password = request.POST.get('password')
+
+#         user = authenticate(username = username, password = password)
+#         if user is not None:
+#             login(request,user)
+#             return redirect('homepage')
+#         else:
+#             return redirect('login')
+#     return render(request,'login.html')

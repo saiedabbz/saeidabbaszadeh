@@ -1,0 +1,140 @@
+body {
+    font-family: "Mulish", sans-serif;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+.bg-home {
+    background-color: #0096A1;
+    position: relative;
+}
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    /* background: #ffffff; */
+}
+
+.half-home {
+    padding: 20px 0 0;
+}
+.border {
+    border: solid 1px;
+    border-color: darkgrey;
+}
+
+.home-center {
+    display: table;
+    width: 100%;
+    height: 420px;
+}
+
+.home-desc-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.justify-content-center {
+    justify-content: center!important;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.home-title {
+    font-size: 38px;
+    line-height: 1.4;
+}
+
+.mb-0 {
+    margin-bottom: 0!important;
+}
+
+
+.title {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+.text-color{
+    color:#7ba3ee;
+}
+.mt-5 {
+    margin-top: 3rem!important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem!important;
+}
+
+.mt-3 {
+    margin-top: 1rem!important;
+}
+
+.skin-mt-s {
+    margin-top: 25px;
+}
+
+.p-5 {
+    padding: 3rem!important;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+.col-lg-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul.list-checkmark li{
+    list-style: none;
+}
+
+ul.list-checkmark li::before{
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #00db2a;
+    margin-right: 10px;
+}
+
+
+
+/* .list-checkmark {
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    display: inline-block;
+}
+
+.list-checkmark > li {
+    display: block;
+    padding: 3px 0 6px 25px;
+    position: relative;
+}
+
+
+.list-checkmark > li.y-mark:before {
+    color: #8dc63f;
+    top: 8px;
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 14px;
+} */
+
+

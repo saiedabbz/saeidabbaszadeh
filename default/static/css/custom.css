@@ -242,16 +242,24 @@ body {
   
   /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-    background-color: #bbb;
+    /* background-color: #bbb; */
     color: black;
 }
   
   /* Style the back side */
 .flip-card-back {
-    background-color: rgb(255, 255, 255);
+    background-color: inherit;
     color: white;
     transform: rotateY(180deg);
+    width: inherit;
+    height: inherit;
 }
+
+.flip-card-front, .flip-card-back{
+    display: grid;
+}
+
+
 .back-face{
     padding-top: 7rem;
 }
@@ -259,7 +267,7 @@ body {
 .btn-flip{
     
     background-color: rgb(6, 158, 13);
-    width: 100%;
+    width: 60%;
     max-width: 100% !important;
     padding-left: 10px;
     padding-right: 10px;
@@ -272,6 +280,10 @@ body {
 
 .padding {
     padding: 25px;
+}
+
+.flip{
+    max-width: inherit;
 }
 
 

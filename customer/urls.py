@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from customer.apis import CustomerListApiView
 
 urlpatterns = [
     
@@ -9,5 +10,10 @@ urlpatterns = [
     path('customer_list/update/<int:id>',views.UpdateCustomer, name="update"),
     path('customer_list/update/updatecustomer/<int:id>', views.UpdateCustomerRecord, name="update_customer_record"),
 
+
+
+
+
+    path('api',CustomerListApiView.as_view()),
 
 ]
