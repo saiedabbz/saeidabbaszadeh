@@ -58,7 +58,9 @@ def AddCategory(request):
     if request.method == "POST":
         cat_title = request.POST.get('title')
         cat_theme = request.POST.get('theme')
-        category = Category(title=cat_title, theme=cat_theme)
+        image = request.FILES.get('cat_image')
+
+        category = Category(title=cat_title, theme=cat_theme, cat_image=image)
         category.save()
         return redirect('category_list')
     return render(request, 'add_category.html', )
@@ -71,10 +73,16 @@ def EditCategory(request, id):
 
 def UpdateCategory(request, id):
 
-    category_title = request.POST['title']
+    title = request.POST.get('title')
+    cat_image = request.FILES.get('cat_image')
     
     category = Category.objects.get(pk=id)
-    category.title = category_title
+
+    category.title = title
+
+    if cat_image:
+        category.cat_image = cat_image
+
     category.save()
 
     return redirect('category_list')
@@ -82,33 +90,12 @@ def UpdateCategory(request, id):
 
 
 
-# def Register(request):
-#     if request.method == "POST":
-#         username = request.POST.get('username')
-#         first_name = request.POST.get('first_name')
-#         last_name = request.POST.get('last_name')
-#         email = request.POST.get('email')
-#         pass1 = request.POST.get('pass1')
-#         pass2 = request.POST.get('pass2')
 
-#         customer = User.objects.create_user(username,email,pass1)
-#         customer.first_name = first_name
-#         customer.last_name = last_name
-#         customer.save()
-#         return redirect('login')
+def EsetNod(request):
+    return render(request, 'eset_detail/eset_detail_nod.html')
 
-#     return render(request,'register.html')
+def EsetInternet(request):
+    return render(request, 'eset_detail/eset_detail_internet.html')
 
-
-# def Login(request):
-#     if request.method == "POST":
-#         username = request.POST.get('username')
-#         password = request.POST.get('password')
-
-#         user = authenticate(username = username, password = password)
-#         if user is not None:
-#             login(request,user)
-#             return redirect('homepage')
-#         else:
-#             return redirect('login')
-#     return render(request,'login.html')
+def EsetSmart(request):
+    return render(request, 'eset_detail/eset_detail_smart.html')

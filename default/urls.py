@@ -27,4 +27,11 @@ urlpatterns = [
 
 
 
+
+
+    path('products/eset_nod32/',views.EsetNod, name="eset_nod"),
+    path('products/eset_internet/', views.EsetInternet, name="eset_internet"),
+    path('products/eset_smart/', views.EsetSmart, name="eset_smart"),
+
+
 ]

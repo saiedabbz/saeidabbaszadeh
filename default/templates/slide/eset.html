@@ -3,7 +3,7 @@
 <!DOCTYPE>
 <html>
   <head>{% include 'header.html' %}</head>
-  <body cz-shortcut-listen="true">
+  <body>
     <section class="section bg-home half-home">
       <div class="home-center">
         <div class="home-desc-center">
@@ -31,61 +31,29 @@
             <div class="col-lg-4">
               <div class="text-center bg-white mt-3 p-5 border">
                 <div>
-                  <img class="d-block mx-auto img-fluid" src={% static 'img/eset3.png'%}>
+                  <a href="{% url 'eset_nod' %}"><img class="d-block mx-auto img-fluid" src={% static 'img/eset3.png'%}></a>
                 </div>
                 <div>
                   <p class="text-muted mt-4">ضد فیشینگ, محافظ وب کم, اسکن قدرتمند با تکنولوژی ابری, محافظت از فعالیت های بانکی, محافظت دربرابر حملات شبکه</p>
                 </div>
-                <div class="text-center">
-                  <a href="#" class="btn btn-success">خرید محصول</a>
+                <div class="text-center ">
+                  <a href="#" class="btn btn-success w-x">خرید محصول</a>
                 </div>
-                <div class="text-center">
+                <div class="text-center top-pad">
                   <p>
-                    <a class="text-color" href="#">اطلاعات بیشتر</a>
+                    <a class="text-color" href="{% url 'eset_nod' %}">اطلاعات بیشتر</a>
                   </p>
                 </div>
                 <div class="skin-mt-s">
-                  <div class="csc-textpic-text">
+                  <div class="csc-textpic-text text-aling">
                     <ul class="list-checkmark">
-                      <li>Management Console</li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 ">
-              <div class="text-center bg-white mt-3 p-5 border">
-                <div>
-                  <img class="d-block mx-auto img-fluid" src={% static 'img/eset2.png'%}>
-                </div>
-                <div>
-                  <p class="text-muted mt-4">ضد فیشینگ, محافظ وب کم, اسکن قدرتمند با تکنولوژی ابری, محافظت از فعالیت های بانکی, محافظت دربرابر حملات شبکه</p>
-                </div>
-                <div class="text-center">
-                  <a href="#" class="btn btn-success">خرید محصول</a>
-                </div>
-                <div class="text-center">
-                  <p>
-                    <a class="text-color" href="#">اطلاعات بیشتر</a>
-                  </p>
-                </div>
-                <div class="skin-mt-s">
-                  <div class="csc-textpic-text">
-                    <ul class="list-checkmark">
-                      <li class="y-mark">Management Console</li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      <li class="y">Management Console</li>
+                      <li class="y">Endpoint Protection</li>
+                      <li class="y">File Server Security</li>
+                      <li class="x">Full Disk Encryption</li>
+                      <li class="x">Advanced Threat Defense</li>
+                      <li class="x">Mail Security</li>
+                      <li class="x">Cloud App Protection</li>
 
                     </ul>
                   </div>
@@ -96,29 +64,62 @@
             <div class="col-lg-4 ">
               <div class="text-center bg-white mt-3 p-5 border">
                 <div>
-                  <img class="d-block mx-auto img-fluid" src="{% static 'img/eset1.png'%}">
+                  <a href="{% url 'eset_internet' %}"><img class="d-block mx-auto img-fluid" src={% static 'img/eset2.png'%}></a>
                 </div>
                 <div>
                   <p class="text-muted mt-4">ضد فیشینگ, محافظ وب کم, اسکن قدرتمند با تکنولوژی ابری, محافظت از فعالیت های بانکی, محافظت دربرابر حملات شبکه</p>
                 </div>
                 <div class="text-center">
-                  <a href="#" class="btn btn-success">خرید محصول</a>
+                  <a href="#" class="btn btn-success w-x">خرید محصول</a>
                 </div>
-                <div class="text-center">
+                <div class="text-center top-pad">
                   <p>
-                    <a class="text-color" href="#">اطلاعات بیشتر</a>
+                    <a class="text-color" href="{% url 'eset_internet' %}">اطلاعات بیشتر</a>
                   </p>
                 </div>
                 <div class="skin-mt-s">
-                  <div class="csc-textpic-text">
+                  <div class="csc-textpic-text text-aling">
                     <ul class="list-checkmark">
-                      <li class="y-mark">Management Console</li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      <li class="y">Management Console</li>
+                      <li class="y">Endpoint Protection</li>
+                      <li class="y">File Server Security</li>
+                      <li class="y">Full Disk Encryption</li>
+                      <li class="y">Advanced Threat Defense</li>
+                      <li class="x">Mail Security</li>
+                      <li class="x">Cloud App Protection</li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 ">
+              <div class="text-center bg-white mt-3 p-5 border">
+                <div>
+                  <a href="{% url 'eset_smart' %}"><img class="d-block mx-auto img-fluid" src="{% static 'img/eset1.png'%}"></a>
+                </div>
+                <div>
+                  <p class="text-muted mt-4">ضد فیشینگ, محافظ وب کم, اسکن قدرتمند با تکنولوژی ابری, محافظت از فعالیت های بانکی, محافظت دربرابر حملات شبکه</p>
+                </div>
+                <div class="text-center">
+                  <a href="#" class="btn btn-success w-x">خرید محصول</a>
+                </div>
+                <div class="text-center top-pad">
+                  <p>
+                    <a class="text-color" href="{% url 'eset_smart' %}">اطلاعات بیشتر</a>
+                  </p>
+                </div>
+                <div class="skin-mt-s">
+                  <div class="csc-textpic-text text-aling">
+                    <ul class="list-checkmark">
+                      <li class="y">Management Console</li>
+                      <li class="y">Endpoint Protection</li>
+                      <li class="y">File Server Security</li>
+                      <li class="y">Full Disk Encryption</li>
+                      <li class="y">Advanced Threat Defense</li>
+                      <li class="y">Mail Security</li>
+                      <li class="y">Cloud App Protection</li>
 
                     </ul>
                   </div>
@@ -130,53 +131,7 @@
       </div>
     </section>
     
+  <div>{% include 'footer.html' %}</div>
   </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %} <div class="container" style="padding:0px;max-width: 1401px;">
-  <div class="row" style="padding:0;">
-    <div class="carousel-inner">
-
-      <div class="container">
-        <img class="img" style="background-color: #00838f"/>
-
-        <div class="row eset">
-          <div class="col-md-9">
-            <h1>لیست محصولات امنیت سایبری ESET</h1>
-          </div>
-          <div class="col-md-3 hide">
-            <img style="width: 261px;border-radius: 55px;" src="{% static 'img/esetlogo2.png' %}"/>
-          </div>
-        </div>
-          <div class="row eset-product">
-            {% if products %}
-            {% for pro in products %}
-            <div class="col-md-3">
-                <div class="card cus-card" >
-                    <div class="card-body">
-                        <img src="{{ pro.image.url }}" />
-                        <h5 class="card-title">{{ pro.name }}</h5>
-                        
-                        <a href="/detail/ {{ pro.id }}/" class="card-link">اطلاعات بیشتر</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-            {% endif %}            
-        </div>
-      </div>
-    </div>
-  </div>
-</div> {% endcomment %}

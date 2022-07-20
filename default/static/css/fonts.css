@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url("../fonts/icomoon/icomoon.eot?1z9v6x");
+    src: url("../fonts/icomoon/icomoon.eot?1z9v6x#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?1z9v6x") format("truetype"), url("../fonts/icomoon/icomoon.woff?1z9v6x") format("woff"), url("../fonts/icomoon/icomoon.svg?1z9v6x#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @charset "utf-8";
+  
+  @font-face {
+      font-family: IRANSans;
+      font-style: normal;
+      font-weight: bold;
+      src: url('../fonts/iransans/IRANSansWeb_Bold.eot');
+      src: url('../fonts/iransans/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../fonts/iransans/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/iransans/IRANSansWeb_Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  }
+  
+  @font-face {
+      font-family: IRANSans;
+      font-style: normal;
+      font-weight: normal;
+      src: url('../fonts/iransans/IRANSansWeb.eot');
+      src: url('../fonts/iransans/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../fonts/iransans/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/iransans/IRANSansWeb.woff') format('woff') ; /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  }
+  
+  @font-face {
+      font-family: IRANSans;
+      font-style: normal;
+      font-weight: 300;
+      src: url('../fonts/iransans/IRANSansWeb_UltraLight.eot');
+      src: url('../fonts/iransans/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../fonts/iransans/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/iransans/IRANSansWeb_UltraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  }
+
+
+
+@font-face {
+    font-family: Titr;
+    src: url('../fonts/titr/Titr.eot');
+    src: local('☺'),
+    local('Titr'),
+    url('../fonts/titr/Titr.woff') format('woff'),
+    url('../fonts/titr/Titr.ttf') format('truetype'),
+    url('../fonts/titr/Titr.svg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+
+@font-face {
+    font-family: BRoya;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/BRoya/BRoya.eot');
+    src: url('../fonts/BRoya/BRoya.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../fonts/BRoya/BRoya.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/BRoya/BRoya.woff') format('woff') ; /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}

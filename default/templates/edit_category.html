@@ -9,13 +9,18 @@
             <div >
                 <a href="{% url 'category_list' %}"><button class="btn btn-primary" >Back Page</button></a>
             </div><br/>
-            <form action="updatecategory/{{ category.id }}" method="POST">
+            <form action="updatecategory/{{ category.id }}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
 
                 <ul class="list-group">
                     <li class="list-group-item active">Category Name :</li>
                     <li class="list-group-item">
                         <input type="text" name="title" class="form-group" id="" value="{{ category.title }}" />
+                        <br/>
+                        <img src="{{ category.cat_image.url }}"/><br/>
+                        <input type="file" name="cat_image" class="form-group" id="" value="{{ category.cat_image }}" />
+
+                        
                         <button type="submit" class="btn btn-success" style="float:right;"><span>Update Category</span></button>
                     </li>
                     
