@@ -105,18 +105,6 @@ body {
     line-height: normal;
 }
 
-/* .a{
-    min-width: 189px;
-}
-.b{
-    min-width: 173px;
-}
-#d {
-    padding-inline-start: 81px;
-} */
-
-
-
 
 .tab-content{
     width: 100%;
@@ -130,16 +118,13 @@ body {
     color: #FFF
 }
 
-
-
 .carousel-inner .img{
     position: absolute;
     object-fit:cover;
     width: 100%;
-    height: 100%;
+    height: 650px;
     top: 0;
     left: 0;
-    min-height: 50rem;
     background:rgba(0,0,0,0.7);
 }
 .carousel-inner {
@@ -147,7 +132,13 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    height: 50rem;
+    height: 650px;
+}
+
+#grad {
+    background: rgb(11,176,209);
+    background: linear-gradient(90deg, rgba(11,176,209,1) 0%, rgba(2,144,182,1) 41%, rgba(23,17,139,1) 100%);
+
 }
 
 .bannerContainer {
@@ -188,6 +179,17 @@ body {
     width: 85%;
 }
 
+.eset-list-btn {
+    width: 205px;
+    height: 76px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+}
+
+
 
 /**************   flip card   ****************/
 
@@ -225,6 +227,7 @@ body {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 0px 8px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -242,12 +245,14 @@ body {
   .flip-card-front {
     background-color: #ffffff;
     color: black;
+    border-radius: 10px;
   }
   
   .flip-card-back {
     background-color: #ffffff;
     color: white;
     transform: rotateY(180deg);
+    border-radius: 10px;
   }
 
 
@@ -332,13 +337,7 @@ footer {
     display: flex;
 }
 
-.kas-card{
-    padding-top: 15rem;
-    border: none;
-    height: fit-content;
-    text-align: center;
-    background: none;
-}
+
 
 .row{
     --bs-gutter-x: 0;
@@ -357,15 +356,116 @@ footer {
     .col-md-9 h1{
         text-align: center;
     }
-    .kas-image{
-        width: -webkit-fill-available;
-    }
-    .kas-card{
-        padding-top: 0;
-    }
 }
 
 .col-md-3{
     width: auto;
 }
 
+
+div.icon svg {
+    background: #FFF;
+    margin-bottom: 20px;
+}
+
+
+
+.khadamat {
+    display: flex;
+    height: 350px;
+    padding-bottom: 400px;
+    justify-content: space-evenly;
+    /* width: 85%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    align-content: space-between;
+}
+
+
+.font-khadamat {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pad-bot {
+    padding-bottom: 25px;
+    padding-top: 40px;
+}
+
+.kh-p {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.kh-p img {
+    width: 350px;
+}
+
+.kh-p p {
+    text-align: center;
+    font-size: 24px;
+}
+
+.khadamat-banner {
+    /* background: url(https://ravinacademy.com/wp-content/uploads/2020/04/Corporate_Training.png) center center / cover scroll no-repeat; */
+    position: absolute;
+    z-index: 0;
+    height: 550px;
+    background-color: #111;
+}
+
+.khadamat-banner img {
+    width: 550px;
+    padding-top: 50px;
+}
+
+.home-center-kh {
+    top: 106px;
+    display: table;
+    width: 100%;
+    height: 420px;
+}
+
+
+.section-kh {
+    padding-top: 605px;
+}
+
+.text-kh {
+    text-align: justify;
+    padding-top: 60px;
+}
+
+.bg-color-1 {
+    background-color: #EDFCF6;
+}
+
+.bg-color-2 {
+    background: url(https://kamleshyadav.com/wp/multifarious/locksmith/wp-content/uploads/sites/3/2021/07/testimonial-bg.jpg);
+    height: 500px;
+    z-index: 0;
+    position: relative;
+    color: #ffffff;
+}
+
+@media only screen and (max-width:600px){
+    .bg-color-1 {
+        height: 77rem;
+    }
+    .bg-color-2 {
+        height: 72rem;
+    }
+}
+@media only screen and (max-width:900px){
+    .bg-color-1 {
+        height: 55rem;
+    }
+    .bg-color-2 {
+        height: 43rem;
+    }
+}

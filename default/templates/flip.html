@@ -1,32 +1,58 @@
 {% load static %}
+<div class="container-fluid bg-color-1">
+  <div class="padding">
+    <p class="font-khadamat">خدمات سازمانی</p>
+  </div>
+  <div class="container"><hr/></div>
+  <div class="row padding khadamat">
+    <div class="col-lg-3 col-md-6 kh-p">
+      <a href="{% url 'khadamat' %}"><img src="https://ravinacademy.com/wp-content/uploads/2020/04/Corporate_Training.png"/></a>
+      <p>آموزش سازمانی</p>
+    </div>
+    <div class="col-lg-3 col-md-6 kh-p">
+      <a href="#"><img src="https://ravinacademy.com/wp-content/uploads/2020/04/Consultant.png"/></a>
+      <p>مشاوره‌ی امنیت سایبری</p>
+    </div>
+    <div class="col-lg-3 col-md-6 kh-p">
+      <a href="#"><img src="https://ravinacademy.com/wp-content/uploads/2020/04/Research.png"/></a>
+      <p>تحقیقات امنیت سایبری</p>
+    </div>
+  </div>
+</div>
 
-<div class="container flip">
-    <div class="row padding">
-      {% if categories %}
-      {% for cat in categories %}
-        <div class="col-lg-3 col-md-6">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <div class="flip-logo">
-                      <img src="{{ cat.cat_image.url }}" alt="Avatar">
-                    </div>
-                    <div>
-                      <p>{{ cat.title }}</p>
-                    </div>
+{% comment %} <div class="container-fluid ">
+
+
+</div> {% endcomment %}
+
+<div class="container flip bg-color-2">
+  <div class="padding"><p class="font-khadamat pad-bot">آنتی ویروس ها</p></div>
+
+  <div class="row padding">
+    {% if categories %}
+    {% for cat in categories %}
+      <div class="col-lg-3 col-md-6">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="flip-logo">
+                    <img src="{{ cat.cat_image.url }}" alt="Avatar">
                   </div>
-                  <div class="flip-card-back">
-                    <div class="back-face">
-                        <button class="btn btn-flip"><a href="/products/{{cat.id}}/">{{cat.title}}</a></button><br><br>
-                        {% comment %} <button class="btn btn-flip">company</button> {% endcomment %}
-                    </div>
+                  <div>
+                    <p>{{ cat.title }}</p>
                   </div>
                 </div>
-            </div><br/>
-        </div>
-        {% endfor %}
-        
-        {% endif %} 
-    </div>
-
+                <div class="flip-card-back">
+                  <div class="back-face">
+                      <button class="btn btn-flip"><a href="/products/{{cat.id}}/">{{cat.title}}</a></button><br><br>
+                      {% comment %} <button class="btn btn-flip">company</button> {% endcomment %}
+                  </div>
+                </div>
+              </div>
+          </div><br/>
+      </div>
+      {% endfor %}
+      
+      {% endif %} 
+  </div>
 </div>

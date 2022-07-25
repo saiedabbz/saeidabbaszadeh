@@ -1,0 +1,91 @@
+{% load static %}
+
+<section class="section bg-home half-home">
+  <div class="top-banner"></div>
+  <div class="home-center kas-image ">
+    <div class="home-desc-center">
+      <div class="container content-page-kasper">
+        <div class="row">
+          <div class="top-title-kasper-1 col-md-12">حفاظت پیشرفته در برابر انواع تهدیدات</div>
+        </div>
+        <div class="row">
+          <div class="top-title-kasper-2 col-md-12">امنیت سایبری که همیشه یک قدم جلوتر است</div>
+        </div>
+        <div class="row">
+          <div class="top-title-kasper-3 col-md-5 ">با محافظت مبتنی بر هوش مصنوعی در برابر هکرها و جدیدترین ویروس‌ها، باج‌افزارها و جاسوس‌افزارها، واقعاً احساس امنیت کنید.</div>
+        </div>
+        <div class="row p">
+          <a class="btn btn-success k-button">لیست محصولات</a>
+          <a class="btn btn-light k-button-2" >تمدید مجوز</a>
+
+        </div>
+          <div class="row">
+              <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
+                  {% comment %} <button href="{% url 'homepage' %}" type="button" class="btnbtn-success">خرید محصول</button> {% endcomment %}
+                  {% comment %} <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a> {% endcomment %}
+              </div>
+          </div>
+          <div class="row logo">
+            <div class="col-md-2 lg"><img src="{% static 'img/av-2020-kasper.png' %}"/></div>
+            <div class="col-md-2 lg"><img src="{% static 'img/mrg--effitas-kasper.png' %}"/></div>
+            <div class="col-md-2 lg"><img src="{% static 'img/home-award-kasper.png' %}"/></div>
+            <div class="col-md-2 lg"><img src="{% static 'img/home-award-4-kasper.png' %}"/></div>
+            <div class="col-md-2 lg"><img src="{% static 'img/home-award-5-kasper.png' %}"/></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section top">
+  <div class="container">
+    <div class="row" style="height:500px;">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          {% for prod in products  %}
+          
+            
+
+            <div class="swiper-slide disp">
+                <div class="CardLight_card Card_card">
+                <div class="row row-logo-card"><img src="{{ prod.image.url }}"/></div>
+                <div class="row slide-item-top"><p>{{ prod.name }}</p></div>
+                <div class="row slide-item-top"><h6>{{ prod.info }}</h6></div>
+                <div class="row slide-item-top"><a href="#" class="btn btn-success">خرید محصول</a></div>
+                <div class="row slide-item-top"><a href="{{ prod.id }}" class="btn btn-link">اطلاعات بیشتر</a></div>
+            </div>
+            </div>
+          
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div style="padding-top: 599px;">{% include 'footer.html' %}</div>
+
+
+
+
+
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    slidesPerGroup: 4,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

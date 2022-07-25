@@ -34,4 +34,10 @@ urlpatterns = [
     path('products/eset_smart/', views.EsetSmart, name="eset_smart"),
 
 
+    path('products/<int:cat_id>/<int:prod_id>', views.Kasper, name="kasper"),
+
+
+    path('khadamat/', views.Khadamat, name="khadamat"),
+
+
 ]

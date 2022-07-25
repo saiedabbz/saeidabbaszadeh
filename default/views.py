@@ -24,6 +24,7 @@ def Navbar(request, id):
 
 
 def HomePage(request):
+    print("-------------------------")
     categories = Category.objects.all()
     products = Product.objects.all()
     return render(request, 'index.html' , {'categories': categories, 'products': products })
@@ -45,13 +46,13 @@ def ProductsView(request, cat_id):
 def Categories(request):
     category = Category.objects.all()
 
-    return render(request, 'category_list.html',{'category': category })
+    return render(request, 'category/category_list.html',{'category': category })
 
 
 def Delete(request, id):
     category = Category.objects.get(pk=id)
     category.delete()
-    return redirect('category_list')
+    return redirect('category/category_list')
 
 
 def AddCategory(request):
@@ -63,12 +64,12 @@ def AddCategory(request):
         category = Category(title=cat_title, theme=cat_theme, cat_image=image)
         category.save()
         return redirect('category_list')
-    return render(request, 'add_category.html', )
+    return render(request, 'category/add_category.html', )
 
 
 def EditCategory(request, id):
     category = Category.objects.get(pk=id)
-    return render(request, 'edit_category.html',{'category': category })
+    return render(request, 'category/edit_category.html',{'category': category })
 
 
 def UpdateCategory(request, id):
@@ -85,7 +86,7 @@ def UpdateCategory(request, id):
 
     category.save()
 
-    return redirect('category_list')
+    return redirect('category/category_list')
 
 
 
@@ -99,3 +100,14 @@ def EsetInternet(request):
 
 def EsetSmart(request):
     return render(request, 'eset_detail/eset_detail_smart.html')
+
+
+def Kasper(request,cat_id, prod_id):
+    category = Category.objects.get(pk=cat_id)
+    products = Product.objects.get(pk=prod_id)    
+    return render(request, 'kasper_detail/antivirus.html',{'category': category, 'products': products})
+
+
+
+def Khadamat(request):
+    return render(request, 'khadamat.html')

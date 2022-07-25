@@ -42,10 +42,16 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'default',
-    'product',
     'customer',
-    'order',
+    'hq',
     'user',
+    'product',
+    'cart',
+    'order',
+    'payment_gateway',
+    'promotion',
+
+    'publisher',
 
 ]
 
@@ -76,7 +82,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+AUTH_USER_MODEL='user.User'
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [

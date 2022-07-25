@@ -135,7 +135,21 @@ ul.list-checkmark li.x::before{
     padding-top: 38px;
 }
 
-.baner {
+.nod-banner {
+    background: url(/static/img/nod-banner.jpg) center center / cover scroll no-repeat;
+    position: absolute;
+    z-index: 0;
+    height: 550px;
+}
+
+.smart-banner {
+    background: url(/static/img/smart-banner.jpg) center center / cover scroll no-repeat;
+    position: absolute;
+    z-index: 0;
+    height: 550px;
+}
+
+.internet-banner {
     background: url(/static/img/eset-banner-01.jpg) center center / cover scroll no-repeat;
     position: absolute;
     z-index: 0;
@@ -226,18 +240,6 @@ ul.list-checkmark li.x::before{
     padding: 20px 0 100px;
 }
 
-/* .benefit-wrapper::before{
-    position: absolute;
-    top: -10px;
-    bottom: 0;
-    width: 1px;
-    margin-left: -1px;
-    border-radius: 2px;
-    background-color: #424d56;
-    content: "";
-    z-index: 0;
-} */
-
 
 .icon svg path{
     fill:#008ba0;
@@ -279,7 +281,7 @@ ul.list-checkmark li.x::before{
 }
 .home-title-2::before{
     position: absolute;
-    top: 40rem;
+    top: 44rem;
     bottom: 0;
     width: 1px;
     margin-left: -1px;
@@ -289,11 +291,11 @@ ul.list-checkmark li.x::before{
     z-index: -1;
     left: 0;
     right: 50%;
-    height: 22rem;
+    height: 25rem;
 }
 .home-title-3::before{
     position: absolute;
-    top: 70rem;
+    top: 77rem;
     bottom: 0;
     width: 1px;
     margin-left: -1px;
@@ -303,7 +305,7 @@ ul.list-checkmark li.x::before{
     z-index: -1;
     left: 0;
     right: 50%;
-    height: 22rem;
+    height: 26rem;
 }
 
 .bottom {
