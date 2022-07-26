@@ -34,7 +34,9 @@ urlpatterns = [
     path('products/eset_smart/', views.EsetSmart, name="eset_smart"),
 
 
-    path('products/<int:cat_id>/<int:prod_id>', views.Kasper, name="kasper"),
+    path('products/2/<int:prod_id>', views.Kasper, name="kasper"),
+    path('products/1/<int:prod_id>', views.Eset, name="eset"),
+
 
 
     path('khadamat/', views.Khadamat, name="khadamat"),

@@ -1,16 +1,20 @@
+from gc import get_objects
+from itertools import product
 from multiprocessing import context
 from unicodedata import category
 from django.shortcuts import render
 from default.models import Category
-from product.models import Product
-from order.models import Order
-from customer.models import Customer
+from product.models import Product, Collection, ProductImage
+from django.shortcuts import redirect, get_object_or_404
+# from order.models import Order
+# from customer.models import Customer
 # from django.contrib.auth.models import User
-from django.shortcuts import redirect
 # from django.contrib.auth import authenticate, login,logout
 
 from django.views.generic import UpdateView
 from django.template import loader
+
+from product.services import collections, product_detail, products
 
 
 def Navbar(request, id):
@@ -24,22 +28,14 @@ def Navbar(request, id):
 
 
 def HomePage(request):
-    print("-------------------------")
-    categories = Category.objects.all()
-    products = Product.objects.all()
-    return render(request, 'index.html' , {'categories': categories, 'products': products })
+    categories = Collection.objects.filter(parent_id=None, collection_type_id=1)
+    return render(request, 'index.html' , {'categories': categories})
 
 
 
 def ProductsView(request, cat_id):
-    products = Product.objects.filter(category_id=cat_id)
-
-    category = Category.objects.get(pk=cat_id)
-
-    return render(request, category.theme , {'products': products})
-
-
-
+    products = Product.objects.filter(collections__id=cat_id)
+    return render(request, products[0].collections.first().theme , {'products': products})
 
 
 
@@ -102,10 +98,24 @@ def EsetSmart(request):
     return render(request, 'eset_detail/eset_detail_smart.html')
 
 
-def Kasper(request,cat_id, prod_id):
-    category = Category.objects.get(pk=cat_id)
-    products = Product.objects.get(pk=prod_id)    
-    return render(request, 'kasper_detail/antivirus.html',{'category': category, 'products': products})
+def Kasper(request, prod_id):
+    # category = Collection.objects.get(pk=cat_id)
+    products = Product.objects.get(pk=prod_id)
+
+    context = {
+            # 'category': category, 
+            'products': products,
+            }
+    return render(request, 'kasper_detail/antivirus.html', context)
+
+def Eset(request, prod_id):
+    # category = Collection.objects.get(pk=cat_id)
+    product = Product.objects.get(pk=prod_id)
+    context = {
+            # 'category': category, 
+            'product': product,
+            }
+    return render(request, 'eset_detail/eset_product.html', context)
 
 
 

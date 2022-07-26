@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import (
     Product, ProductImage, ProductOption, ProductOptionGroup, ProductVariant, Showcase,
-    Collection, CollectionType
+    Collection, CollectionType, ProductExtra
 )
 
 from django.utils.html import format_html
@@ -20,6 +20,12 @@ class ProductImageInline(admin.TabularInline):
     extra = 0
     verbose_name = _("Image")
     verbose_name_plural = _("Images")
+
+class ProductExtraInline(admin.TabularInline):
+    model = ProductExtra
+    extra = 0
+    verbose_name = _("Extra")
+    verbose_name_plural = _("Extras")
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
@@ -41,6 +47,7 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [
         VariantInline,
         ProductImageInline,
+        ProductExtraInline,
     ]
 
 
@@ -135,7 +142,9 @@ class CollectionAdmin(admin.ModelAdmin):
     ]
 
     def image_tag(self, obj):
-        return format_html('<img src="{}" style="width: 100px; height: 100px;" />'.format(obj.image.url))
+        if obj.image != '':
+            return format_html('<img src="{}" style="width: 100px; height: 100px;" />'.format(obj.image.url))
+        return ''
 
     def type_title(self, obj):
         return obj.collection_type.title

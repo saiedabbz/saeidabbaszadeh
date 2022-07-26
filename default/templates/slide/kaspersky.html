@@ -43,14 +43,13 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           {% for prod in products  %}
-          
-            
-
             <div class="swiper-slide disp">
                 <div class="CardLight_card Card_card">
-                <div class="row row-logo-card"><img src="{{ prod.image.url }}"/></div>
-                <div class="row slide-item-top"><p>{{ prod.name }}</p></div>
-                <div class="row slide-item-top"><h6>{{ prod.info }}</h6></div>
+                <div class="row row-logo-card">
+                  <img src="{{ prod.images.first.image.url }}"/>
+                </div>
+                <div class="row slide-item-top"><p>{{ prod.title }}</p></div>
+                <div class="row slide-item-top"><h6>{{ prod.description }}</h6></div>
                 <div class="row slide-item-top"><a href="#" class="btn btn-success">خرید محصول</a></div>
                 <div class="row slide-item-top"><a href="{{ prod.id }}" class="btn btn-link">اطلاعات بیشتر</a></div>
             </div>

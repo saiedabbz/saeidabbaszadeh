@@ -1,7 +1,9 @@
+from pyexpat import model
 from django.db import models
 # from django.utils.translation import gettext_lazy as _
 
 from django.utils.translation import gettext as _
+from ckeditor.fields import RichTextField
 
 
 class Product(models.Model):
@@ -12,6 +14,7 @@ class Product(models.Model):
     active = models.BooleanField(_("active"), default=True)
     created_at = models.DateTimeField(_("created at"), auto_now_add=True)
     updated_at = models.DateTimeField(_("updated at"), auto_now=True)
+    theme = models.CharField(_("Theme"), max_length=64, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -19,7 +22,6 @@ class Product(models.Model):
     class Meta:
         verbose_name = _('Product')
         verbose_name_plural = _('Products')
-
 
 class Showcase(models.Model):
     title = models.CharField(_("title"), max_length=64, null=True, blank=True)
@@ -37,8 +39,6 @@ class Showcase(models.Model):
         verbose_name = _('Showcase')
         verbose_name_plural = _('Showcases')
     
-
-
 class ProductVariant(models.Model):
     product = models.ForeignKey("product.Product", verbose_name=_("product"), on_delete=models.CASCADE, related_name="variants")
     is_main = models.BooleanField(_("is main"), default=False)
@@ -56,7 +56,6 @@ class ProductVariant(models.Model):
         verbose_name = _('Product Variant')
         verbose_name_plural = _('Product Variants')
 
-
 class ProductOptionGroup(models.Model):
     field = models.CharField(_("field"), max_length=64)
     active = models.BooleanField(_("active"), default=True)
@@ -69,7 +68,6 @@ class ProductOptionGroup(models.Model):
     class Meta:
         verbose_name = _('Product Option Group')
         verbose_name_plural = _('Product Option Groups')
-
 
 class ProductOption(models.Model):
     group = models.ForeignKey("product.ProductOptionGroup", verbose_name=_("field"), on_delete=models.CASCADE)
@@ -84,8 +82,6 @@ class ProductOption(models.Model):
     class Meta:
         verbose_name = _('Product Option')
         verbose_name_plural = _('Product Options')
-
-
 
 class ProductImage(models.Model):
     product = models.ForeignKey("product.Product", verbose_name=_("product"), on_delete=models.CASCADE, related_name="images")
@@ -102,6 +98,20 @@ class ProductImage(models.Model):
         verbose_name = _('Product Image')
         verbose_name_plural = _('Product Images')
 
+class ProductExtra(models.Model):
+    product = models.ForeignKey("product.Product", verbose_name=_("product"), on_delete=models.CASCADE, related_name="extras")
+    title = models.CharField(_("title"), max_length=200, blank=True, null=True)
+    desc = models.TextField(_("desc"), default='')
+    active = models.BooleanField(_("active"), default=True)
+    created_at = models.DateTimeField(_("created at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("updated at"), auto_now=True)
+
+    def __str__(self):
+        return self.product.title
+
+    class Meta:
+        verbose_name = _('Product Extra')
+        verbose_name_plural = _('Product Extras')
 
 class Collection(models.Model):
     title = models.CharField(_("title"), max_length=64)
@@ -113,6 +123,7 @@ class Collection(models.Model):
     active = models.BooleanField(_("active"), default=True)
     created_at = models.DateTimeField(_("created at"), auto_now_add=True)
     updated_at = models.DateTimeField(_("updated at"), auto_now=True)
+    theme = models.CharField(_("Theme"), max_length=64, null=True, blank=True)
 
     def __str__(self):
         return self.title
