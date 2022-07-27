@@ -6,10 +6,6 @@ from django.shortcuts import render
 from default.models import Category
 from product.models import Product, Collection, ProductImage
 from django.shortcuts import redirect, get_object_or_404
-# from order.models import Order
-# from customer.models import Customer
-# from django.contrib.auth.models import User
-# from django.contrib.auth import authenticate, login,logout
 
 from django.views.generic import UpdateView
 from django.template import loader
@@ -19,10 +15,9 @@ from product.services import collections, product_detail, products
 
 def Navbar(request, id):
 
-    products = Product.objects.filter(category_id=id)
-    category = Category.objects.all()
+    product = Product.objects.all()
 
-    return render(request, 'nav.html', {'products': products, 'category': category })
+    return render(request, 'nav.html', {'products': product })
 
 
 
@@ -99,20 +94,16 @@ def EsetSmart(request):
 
 
 def Kasper(request, prod_id):
-    # category = Collection.objects.get(pk=cat_id)
     products = Product.objects.get(pk=prod_id)
 
     context = {
-            # 'category': category, 
             'products': products,
             }
     return render(request, 'kasper_detail/antivirus.html', context)
 
 def Eset(request, prod_id):
-    # category = Collection.objects.get(pk=cat_id)
     product = Product.objects.get(pk=prod_id)
     context = {
-            # 'category': category, 
             'product': product,
             }
     return render(request, 'eset_detail/eset_product.html', context)

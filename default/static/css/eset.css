@@ -132,28 +132,28 @@ ul.list-checkmark li.x::before{
 
 .content-page {
     padding-inline: 60px;
-    padding-top: 38px;
+    padding-top: 96px;
 }
 
 .nod-banner {
     background: url(/static/img/nod-banner.jpg) center center / cover scroll no-repeat;
-    position: absolute;
+    /* position: absolute; */
     z-index: 0;
-    height: 550px;
+    height: 500px;
 }
 
 .smart-banner {
     background: url(/static/img/smart-banner.jpg) center center / cover scroll no-repeat;
-    position: absolute;
+    /* position: absolute; */
     z-index: 0;
-    height: 550px;
+    height: 500px;
 }
 
 .internet-banner {
     background: url(/static/img/eset-banner-01.jpg) center center / cover scroll no-repeat;
-    position: absolute;
+    /* position: absolute; */
     z-index: 0;
-    height: 550px;
+    height: 500px;
 }
 
 .top-title-1 {
@@ -325,5 +325,5 @@ ul.list-checkmark li.x::before{
 }
 
 .foot {
-    padding-top: 30rem;
+    padding-top: 0;
 }

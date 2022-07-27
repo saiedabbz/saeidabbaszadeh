@@ -8,9 +8,7 @@ urlpatterns = [
 
     path('products/<int:id>', views.Navbar, name="navbar_view"),
 
-    # path('register/',views.Register ,name='register'),
-    # path('login/',views.Login ,name='login'),
-    # path('logout/',views.Logout ,name='logout'),
+    
 
     path('category/', views.Categories, name="category_list"),
     path('category/delete/<int:id>', views.Delete, name="delete_category"),
