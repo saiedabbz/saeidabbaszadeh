@@ -126,7 +126,10 @@ class Collection(models.Model):
     theme = models.CharField(_("Theme"), max_length=64, null=True, blank=True)
 
     def __str__(self):
-        return self.title
+        if self.parent_id is not None:
+            return f"{self.parent} -> {self.title}"
+        else:
+            return self.title
 
     class Meta:
         verbose_name = _('Collection')
