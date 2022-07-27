@@ -1,0 +1,4 @@
+*.pyc
+env
+.env
+core/settings.py
