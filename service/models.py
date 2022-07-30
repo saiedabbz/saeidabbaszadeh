@@ -6,6 +6,7 @@ class Service(models.Model):
     title = models.CharField(_("title"), max_length=64)
     slug = models.SlugField(_("slug"))
     image = models.ImageField(_("image"), upload_to='collections/', null=True, blank=True)
+    image_top = models.ImageField(_("image_top"), upload_to='collections/', null=True, blank=True)
     body = RichTextField()
     active = models.BooleanField(_("active"), default=True)
     created_at = models.DateTimeField(_("created at"), auto_now_add=True)

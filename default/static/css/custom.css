@@ -460,12 +460,13 @@ div.icon svg {
 }
 
 .kh-p img {
-    width: 350px;
+    width: 200px;
 }
 
 .kh-p p {
     text-align: center;
     font-size: 24px;
+    color: black;
 }
 
 .khadamat-banner {

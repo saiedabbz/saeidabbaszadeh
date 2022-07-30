@@ -1,29 +1,22 @@
 {% load static %}
+
+
 <div class="container-fluid bg-color-1">
   <div class="padding">
-    <p class="font-khadamat">خدمات سازمانی</p>
+    <p class="font-khadamat">خدمات امنیتی</p>
   </div>
   <div class="container"><hr/></div>
   <div class="row padding khadamat">
+    {% for serv in services  %}
     <div class="col-lg-3 col-md-6 kh-p">
-      <a href="{% url 'khadamat' %}"><img src="https://ravinacademy.com/wp-content/uploads/2020/04/Corporate_Training.png"/></a>
-      <p>آموزش سازمانی</p>
+      <img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} />
+      <a href="{% url 'khadamat' serv.id %}"><p>{{ serv.title }}</p></a>
     </div>
-    <div class="col-lg-3 col-md-6 kh-p">
-      <a href="#"><img src="https://ravinacademy.com/wp-content/uploads/2020/04/Consultant.png"/></a>
-      <p>مشاوره‌ی امنیت سایبری</p>
-    </div>
-    <div class="col-lg-3 col-md-6 kh-p">
-      <a href="#"><img src="https://ravinacademy.com/wp-content/uploads/2020/04/Research.png"/></a>
-      <p>تحقیقات امنیت سایبری</p>
-    </div>
+    {% endfor %}
   </div>
 </div>
 
-{% comment %} <div class="container-fluid ">
 
-
-</div> {% endcomment %}
 
 <div class="container flip bg-color-2">
   <div class="padding"><p class="font-khadamat pad-bot">آنتی ویروس ها</p></div>
@@ -47,7 +40,6 @@
                     {% for sub_cat in cat.collection_set.all%}
                       <button class="btn btn-flip"><a href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a></button><br><br>
                     {% endfor %}
-                      {% comment %} <button class="btn btn-flip">company</button> {% endcomment %}
                   </div>
                 </div>
               </div>

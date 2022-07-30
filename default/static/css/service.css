@@ -1,0 +1,25 @@
+
+.home-center-service {
+    top: 102px;
+    /* display: table; */
+    width: 100%;
+    height: fit-content;
+    background-color: #F7F7F7;
+}
+
+.bg-home-ser {
+    background-color: #F7F7F7;
+}
+
+.bg-back {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.pad-ser {
+    padding-top: 85px;
+    padding-bottom: 33px;
+
+}
