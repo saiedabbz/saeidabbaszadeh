@@ -1,0 +1,27 @@
+
+
+
+.symantec-banner {
+    background: url(/static/img/cyber-security-hero_v2.jpg) center center / cover scroll no-repeat;
+    /* position: absolute; */
+    z-index: 0;
+    /* height: 500px; */
+    top: 82px;
+}
+
+.section-symantec {
+    padding-top: 165px;
+    padding-bottom: 80px;
+    position: relative;
+    /* background: #ffffff; */
+}
+
+
+.contain-banner {
+    margin-right: 0;
+}
+
+.sym-text {
+    text-align: justify;
+    padding-top: 148px;
+}

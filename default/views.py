@@ -24,6 +24,7 @@ def Navbar(request, id):
 
 def HomePage(request):
     categories = Collection.objects.filter(parent_id=None, collection_type_id=1)
+    
     return render(request, 'index.html' , {'categories': categories})
 
 
@@ -101,14 +102,19 @@ def Kasper(request, prod_id):
             }
     return render(request, 'kasper_detail/antivirus.html', context)
 
-def Eset(request, prod_id):
+def EsetHome(request, prod_id):
     product = Product.objects.get(pk=prod_id)
     context = {
             'product': product,
             }
     return render(request, 'eset_detail/eset_product.html', context)
 
-
+def Microsoft(request, prod_id):
+    product = Product.objects.get(pk=prod_id)
+    context = {
+            'product': product,
+            }
+    return render(request, 'slide/microsoft.html', context)
 
 def Khadamat(request):
     return render(request, 'khadamat.html')

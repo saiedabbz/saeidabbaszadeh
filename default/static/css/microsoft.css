@@ -1,0 +1,14 @@
+.mic-banner {
+    background: url(/static/img/Microsoft-Banner.png) no-repeat scroll;
+    /* position: absolute; */
+    z-index: 0;
+    /* height: 550px; */
+    /* left: 205px; */
+}
+
+
+
+.section-mic {
+    padding-bottom: 80px;
+    position: relative;
+}

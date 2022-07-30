@@ -33,7 +33,7 @@ urlpatterns = [
 
 
     path('products/2/<int:prod_id>', views.Kasper, name="kasper"),
-    path('products/1/<int:prod_id>', views.Eset, name="eset"),
+    path('products/6/<int:prod_id>', views.EsetHome, name="eset"),
 
 
 

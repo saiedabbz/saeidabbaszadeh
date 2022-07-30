@@ -44,9 +44,9 @@
                 </div>
                 <div class="flip-card-back">
                   <div class="back-face">
-                      <button class="btn btn-flip"><a href="/products/{{cat.id}}/">Home</a></button><br><br>
-                      <button class="btn btn-flip"><a href="/products/{{cat.id}}/">Business</a></button>
-
+                    {% for sub_cat in cat.collection_set.all%}
+                      <button class="btn btn-flip"><a href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a></button><br><br>
+                    {% endfor %}
                       {% comment %} <button class="btn btn-flip">company</button> {% endcomment %}
                   </div>
                 </div>

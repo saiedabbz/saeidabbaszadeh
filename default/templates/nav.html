@@ -18,69 +18,119 @@
               <a class="nav-link" href="{% url 'homepage' %}"> صفحه اول </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link bef" aria-current="page" href="#"> محصولات سازمانی   </a>
+              <a class="nav-link bef" aria-current="page" href="#">محصولات سازمانی</a>
               <div class="menu-tabs">
                 <!-- required for floating -->
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-left sideways a">
                     <li class="active"><a href="#eset-v" data-toggle="tab">ESET</a></li>
                     <li><a href="#kaspersky-v" data-toggle="tab">KASPERSKY</a></li>
+                    <li><a href="#symantec-v" data-toggle="tab">SYMANTEC</a></li>
                     <li><a href="#microsoft-v" data-toggle="tab">MICROSOFT</a></li>
                 </ul>
               
                 <!-- Tab panes -->
                 <div class="tab-content">
+
                     <div class="tab-pane active" id="eset-v">
-                      <div class="row">
-                        <div class="col-md-4"><img src="{% static 'img/eset2.png'%}"/></div>
-                        <div class="col-md-4"><img src="{% static 'img/eset2.png'%}"/></div>
-                        <div class="col-md-4"><img src="{% static 'img/eset3.png'%}"/></div>
+                      <div class="row justi">
+                        <div class="col-md-4"><img src="{% static 'img/eset-advanced1.png'%}"/></div>
+                        <div class="col-md-4"><img src="{% static 'img/EEPS-N1-F-800x800-1.jpg'%}"/></div>
                       </div>
                       <div class="row" style="justify-content: center;">
-                        <a href="products/1/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
+                        <a href="/products/5/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
                       </div>
                     </div>
+
                     <div class="tab-pane" id="kaspersky-v">
-                      <div class="row" style="padding-bottom: 15px;">
-                        <div class="col-md-4"><img src="{% static 'img/kasper1.png'%}"/></div>
-                        <div class="col-md-4"><img src="{% static 'img/kasper2.png'%}"/></div>
-                        <div class="col-md-4"><img src="{% static 'img/kasper3.png'%}"/></div>
+                      <div class="row justi" style="padding-bottom: 15px;">
+                        <div class="col-md-4"><img src="{% static 'img/small-office.png'%}"/></div>
                       </div>
                       <div class="row" style="justify-content: center;">
-                        <a href="/products/2/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
+                        <a href="/products/8/" class="btn btn-secondary kaspersky-list-btn">لیست محصولات</a>
                       </div>
                     </div>
+
+                    <div class="tab-pane" id="symantec-v">
+                      <div class="row justi" id="d">
+                        <div class="col-md-6"><img src="{% static 'img/symantec_logo.png'%}"/></div>
+                      </div>
+                      <div class="row" style="justify-content: center;">
+                        <a href="/products/10/" class="btn btn-secondary symantec-list-btn">لیست محصولات</a>
+                      </div>
+                    </div>
+
                     <div class="tab-pane" id="microsoft-v">
-                      <div class="row" id="d">
-                        <div class="col-md-6"><img src="{% static 'img/windows-8.1.png'%}"/></div>
-                        <div class="col-md-6"><img src="{% static 'img/windows-10.png'%}"/></div>
+                      <div class="row justi" id="d">
+                        <div class="col-md-6"><img src="{% static 'img/windows-server-2012.png'%}" style="width: 91px;"/></div>
+                        <div class="col-md-6"><img src="{% static 'img/windows-server-2016.png'%}"/></div>
+                        <div class="col-md-6"><img src="{% static 'img/windows-server-2019.png'%}"/></div>
+                      </div>
+                      <div class="row" style="justify-content: center;">
+                        <a href="/products/12/" class="btn btn-secondary mic-list-btn">لیست محصولات</a>
                       </div>
                     </div>
-                    <div class="tab-pane" id="settings-v">Settings Tab.</div>
+
                 </div>
               </div>
             </li>
+
             <li class="nav-item">
               <a class="nav-link bef" href="#">محصولات خانگی </a>
               <div class="menu-tabs">
                 <!-- required for floating -->
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-left sideways b">
-                    <li class="active"><a href="#home-z" data-toggle="tab">Home</a></li>
-                    <li><a href="#profile-z" data-toggle="tab">Profile</a></li>
-                    <li><a href="#messages-z" data-toggle="tab">Messages</a></li>
-                    <li><a href="#settings-z" data-toggle="tab">Settings</a></li>
+                    <li class="active"><a href="#eset-z" data-toggle="tab">ESET</a></li>
+                    <li><a href="#kaspersky-z" data-toggle="tab">KASPERSKY</a></li>
+                    <li><a href="#microsoft-z" data-toggle="tab">MICROSOFT</a></li>
                 </ul>
               
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div class="tab-pane active" id="home-z">Home Tab.</div>
-                    <div class="tab-pane" id="profile-z">Profile Tab.</div>
-                    <div class="tab-pane" id="messages-z">Messages Tab.</div>
-                    <div class="tab-pane" id="settings-z">Settings Tab.</div>
+
+
+                    <div class="tab-pane active" id="eset-z">
+                      <div class="row justi">
+                        <div class="col-md-4"><img src="{% static 'img/eset1.png'%}"/></div>
+                        <div class="col-md-4"><img src="{% static 'img/eset2.png'%}"/></div>
+                        <div class="col-md-4"><img src="{% static 'img/eset3.png'%}"/></div>
+                      </div>
+                      <div class="row" style="justify-content: center;">
+                        <a href="/products/6/" class="btn btn-secondary kaspersky-list-btn">لیست محصولات</a>
+                      </div>
+                    </div>
+
+
+                    <div class="tab-pane" id="kaspersky-z">
+                      <div class="row justi" style="padding-bottom: 15px;">
+                        <div class="col-md-4"><img src="{% static 'img/kasper1.png'%}"/></div>
+                        <div class="col-md-4"><img src="{% static 'img/kasper2.png'%}"/></div>
+                        <div class="col-md-4"><img src="{% static 'img/kasper3.png'%}"/></div>
+                        
+                      </div>
+                      <div class="row" style="justify-content: center;">
+                        <a href="/products/7/" class="btn btn-secondary kaspersky-list-btn">لیست محصولات</a>
+                      </div>
+                    </div>
+
+
+                    <div class="tab-pane" id="microsoft-z">
+                      <div class="row justi" id="d">
+                        <div class="col-md-6"><img src="{% static 'img/windows-10.png'%}"/></div>
+                      </div>
+                      <div class="row" style="justify-content: center;">
+                        <a href="/products/11/" class="btn btn-secondary mic-list-btn">لیست محصولات</a>
+                      </div>
+                    </div>
+
+
                 </div>
               </div>
             </li>
+
+
+
             <li class="nav-item">
               <a class="nav-link" href="#">درباره ما </a>
             </li>
@@ -96,15 +146,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'productlist' %}">محصولات</a>
             </li>
-            {% comment %} {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'order' %}">Order</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">login</a>
-            </li>
-            {% endif %} {% endcomment %}
+            
           </ul>
 
 

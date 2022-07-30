@@ -58,7 +58,7 @@ body {
 }
 
 .navbar img {
-    width: 10rem;
+    width: 7rem;
 }
 
 
@@ -73,6 +73,16 @@ body {
     font-weight: 900;
 }
 
+
+.justi {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: center;
+    padding-top: 25px;
+}
 
 
 /*/////////////////////////////////////////////////////////////////////////*/
@@ -193,11 +203,49 @@ body {
     flex-direction: column;
     align-content: space-between;
     justify-content: center;
-    margin-top: 26px;
+    margin-top: 61px;
     background: url();
     border-radius: 12px;
 }
 
+.kaspersky-list-btn {
+    width: 321px;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 34px;
+    background: url();
+    border-radius: 12px;
+}
+
+.symantec-list-btn {
+    width: 321px;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 103px;
+    background: url();
+    border-radius: 12px;
+}
+
+.mic-list-btn {
+    width: 321px;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 61px;
+    background: url();
+    border-radius: 12px;
+}
 
 
 /**************   flip card   ****************/
@@ -434,7 +482,7 @@ div.icon svg {
 }
 
 .home-center-kh {
-    top: 106px;
+    top: 102px;
     display: table;
     width: 100%;
     height: 420px;
@@ -477,4 +525,9 @@ div.icon svg {
     .bg-color-2 {
         height: 43rem;
     }
+}
+
+
+#microsoft-v .col-md-6 {
+    width: 26%;
 }
