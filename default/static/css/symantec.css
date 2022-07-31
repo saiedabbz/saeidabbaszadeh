@@ -1,21 +1,22 @@
-
-
+body {
+    background-color: rgb(247, 247, 247);
+}
 
 .symantec-banner {
     background: url(/static/img/cyber-security-hero_v2.jpg) center center / cover scroll no-repeat;
-    /* position: absolute; */
     z-index: 0;
-    /* height: 500px; */
-    top: 82px;
 }
 
 .section-symantec {
-    padding-top: 165px;
+    padding-top: 69px;
     padding-bottom: 80px;
     position: relative;
-    /* background: #ffffff; */
 }
 
+.mt-sym {
+    margin-top: 3rem!important;
+    justify-content: center;
+}
 
 .contain-banner {
     margin-right: 0;
@@ -24,4 +25,27 @@
 .sym-text {
     text-align: justify;
     padding-top: 148px;
+    font-size: 25px;
+    padding-left: 359px;
+}
+
+.top-title-symantec-3 {
+    padding-top: 12px;
+    color: rgb(0, 0, 0);
+    width: 60%;
+    text-align: justify;
+}
+
+
+.symantec-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.symantec-item img {
+    padding-top: 70px;
 }

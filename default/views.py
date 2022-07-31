@@ -33,8 +33,8 @@ def HomePage(request):
 
 
 
-def ProductsView(request, cat_id):
-    products = Product.objects.filter(collections__id=cat_id)
+def ProductsView(request, slug):
+    products = Product.objects.filter(collections__id=slug)
     return render(request, products[0].collections.first().theme , {'products': products})
 
 
@@ -80,20 +80,6 @@ def UpdateCategory(request, id):
     category.save()
     return redirect('category/category_list')
 
-
-
-
-
-
-
-# def EsetNod(request):
-#     return render(request, 'eset_detail/eset_detail_nod.html')
-
-# def EsetInternet(request):
-#     return render(request, 'eset_detail/eset_detail_internet.html')
-
-# def EsetSmart(request):
-#     return render(request, 'eset_detail/eset_detail_smart.html')
 
 
 

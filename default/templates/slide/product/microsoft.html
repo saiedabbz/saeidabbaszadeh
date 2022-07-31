@@ -7,13 +7,15 @@
         <section class="section half-home">
             <div class="top-banner"></div>
             <div class="home-center pro">
-                <div class="i"><img src="{{ product.images.first.image.url }}" /></div>
+                <div>
+                    <img class="mic-logo" src="{{ product.images.first.image.url }}" />
+                </div>
               <div class="home-desc-center" style="direction: rtl;">
                 <div class="container content-page-kasper">
 
-                    {% comment %} <div class="row">
+                    <div class="row">
                         <div class="top-title-kasper-1 col-md-12">حفاظت پیشرفته در برابر انواع تهدیدات</div>
-                    </div> {% endcomment %}
+                    </div>
                     <div class="row">
                     <div class="top-title-kasper-2 col-md-12">{{ product.title }}</div>
                     </div>
@@ -68,9 +70,3 @@
         
     </body>
 </html>
-
-
-
-
-
-

@@ -541,3 +541,7 @@ div.icon svg {
     align-content: center;
     justify-content: center;
 }
+
+.pici img {
+    margin-left: 20px;
+}

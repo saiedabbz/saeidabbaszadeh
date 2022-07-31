@@ -5,7 +5,7 @@
     <body>
         {% include 'nav.html' %}
 
-        <section class="section mic-banner half-home">
+        <section class="section mic-banner">
                 {{ product.extras.all.2.desc|safe }}
                 <div class="home-center ">
                     <div class="home-desc-center">
@@ -25,14 +25,16 @@
                     {{ products.0.collections.all.0.parent.title }}</h3>
                   <p class="text-muted">پشتیبانی از قابلیت چند لمسی و طراحی دوباره ویندوز شِل</p>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-mic">
                   {% for prod in products %}
                   <div class="col-lg-4">
                     <div class="text-center bg-white mt-3 p-5 border">
                       <div>
-                        <a href="{{ prod.id }}"><img class="d-block mx-auto img-fluid" src={{ prod.images.first.image.url }}></a>
+                        <a href="{{ prod.id }}">
+                          <img class="d-block mx-auto img-fluid" style="width:218px;" src={{ prod.images.first.image.url }}>
+                        </a>
                       </div>
-                      <div>{{ prod.title }}
+                      <div style="padding-top: 70px;">{{ prod.title }}
                         <p class="text-muted mt-4">{{ prod.description }}</p>
                       </div>
                       <div class="text-center ">
@@ -40,7 +42,7 @@
                       </div>
                       <div class="text-center top-pad">
                         <p>
-                          <a class="text-color" href="{{ prod.id }}">اطلاعات بیشتر</a>
+                          <a class="text-color" href="/product/{{ prod.slug }}/">اطلاعات بیشتر</a>
                         </p>
                       </div>
       

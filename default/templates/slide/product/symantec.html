@@ -1,24 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
+    <style>
+        p {
+            color:red;
+        }
+    </style>
     <head>{% include 'header.html' %}</head>
     <body>
         {% include "nav.html" %}
         <section class="section half-home">
-            <div class="top-banner"></div>
-            <div class="home-center pro">
-                <div class="i"><img src="{{ product.images.first.image.url }}" /></div>
+            <div>
+                <img src="https://www.broadcom.com/media/blt4ac44e0e6c6d8341/blta4af3bbb043a76ba/60371cc1cb8a051f10537b93/wwwHero_Endpoint-Security_1920x45.jpg">
+            </div>
+            <div class="home-center symantec-item">
+                <div><img src="{{ product.images.first.image.url }}" /></div>
               <div class="home-desc-center" style="direction: rtl;">
-                <div class="container content-page-kasper">
+                <div class="container">
 
                     {% comment %} <div class="row">
                         <div class="top-title-kasper-1 col-md-12">حفاظت پیشرفته در برابر انواع تهدیدات</div>
                     </div> {% endcomment %}
                     <div class="row">
-                    <div class="top-title-kasper-2 col-md-12">{{ product.title }}</div>
+                    <div class="top-title-kasper-2 col-md-12"><p>{{ product.title }}</p></div>
                     </div>
                     <div class="row">
-                        <div class="top-title-kasper-3 col-md-5 ">{{ product.description }}</div>
+                        <div class="top-title-symantec-3 col-md-5 ">{{ product.description }}</div>
                     </div>
                     <div class="row">
                         <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
@@ -33,7 +41,7 @@
         </section>
 
 
-        <section style="padding-top: 50px;">
+        {% comment %} <section style="padding-top: 50px;">
             <div class="container-fluid con-flu-col">
                 <div class="row">
                     <div></div>
@@ -63,14 +71,8 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <div>{% include 'footer.html' %}</div>
         
     </body>
 </html>
-
-
-
-
-
-

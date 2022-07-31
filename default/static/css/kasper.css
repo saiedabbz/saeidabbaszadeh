@@ -28,6 +28,7 @@
     padding-inline: 60px;
     padding-top: 38px;
     margin-inline: 26px;
+    padding-bottom: 70px;
 }
 .top-title-kasper-1 {
     color: rgb(0, 0, 0);
@@ -45,6 +46,8 @@
 .top-title-kasper-3 {
     padding-top: 12px;
     color: rgb(0, 0, 0);
+    width: 60%;
+    text-align: justify;
 }
 
 .logo {

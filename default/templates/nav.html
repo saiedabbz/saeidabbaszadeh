@@ -7,7 +7,6 @@
           <img src="{% static 'img/logo-white.png' %}"  class="d-inline-block align-text-top">
         </a>
           
-        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,8 +33,12 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                   {% for service in g_services %}
-                    <div class="tab-pane {% if forloop.first %}active{% endif %}" id="sec-{{service.id}}">
-                      <img src="{{service.image.url}}" alt="{{service.title}}" />
+                    <div class="tab-pane justi {% if forloop.first %}active{% endif %}" id="sec-{{service.id}}">
+                      
+                      <a href="/service/{{ service.id }}/">
+                        <img src="{{service.image.url}}" alt="{{service.title}}" />
+                      </a>
+
                     </div>
                   {% endfor %}
                 </div>
@@ -68,11 +71,8 @@
                           
                           {% for child in cat.collection_set.all %}
                             {% if child.collection_type_id == 4%}
-                              {% comment %} {{child.title}} - {{child.id}} {% endcomment %}
-                              {% comment %} <hr /> {% endcomment %}
                               {% for product in g_products %}
                                 {% if product.collections.first.id == child.id%}
-                                {{product.title}} - {{product.collections.first.id}}
                                 <a href="/product/{{product.slug}}/">
                                   <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
                                 </a>

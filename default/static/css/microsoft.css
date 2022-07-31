@@ -1,9 +1,11 @@
+body {
+    background-color: rgb(247, 247, 247);
+}
+
 .mic-banner {
     background: url(/static/img/Microsoft-Banner.png) no-repeat scroll;
-    /* position: absolute; */
     z-index: 0;
-    /* height: 550px; */
-    /* left: 205px; */
+    top: 85px;
 }
 
 
@@ -11,4 +13,14 @@
 .section-mic {
     padding-bottom: 80px;
     position: relative;
+}
+
+.mt-mic {
+    margin-top: 3rem!important;
+    justify-content: center;
+}
+
+.mic-logo {
+    width: 200px;
+    padding-top: 27px;
 }
