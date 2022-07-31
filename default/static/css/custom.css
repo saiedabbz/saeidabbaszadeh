@@ -29,7 +29,7 @@ body {
 
 .navbar a{
     line-height: 4rem;
-    color: #111;
+    color: #ffffff;
     /* padding: 3vh 5vh; */
 }
 
@@ -497,10 +497,11 @@ div.icon svg {
 .text-kh {
     text-align: justify;
     padding-top: 60px;
+    padding-bottom: 110px;
 }
 
 .bg-color-1 {
-    background-color: #EDFCF6;
+    background-color: #F6F6F6;
 }
 
 .bg-color-2 {
@@ -531,4 +532,13 @@ div.icon svg {
 
 #microsoft-v .col-md-6 {
     width: 26%;
+}
+
+
+.pici {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
 }

@@ -4,7 +4,7 @@ from multiprocessing import context
 from unicodedata import category
 from django.shortcuts import render
 from default.models import Category
-from product.models import Product, Collection
+from product.models import Product, Collection, ProductImage
 from django.shortcuts import redirect, get_object_or_404
 from service.models import Service
 
@@ -14,9 +14,6 @@ from django.template import loader
 from product.services import collections, product_detail, products
 
 
-# def Navbar(request, id):
-#     product = Product.objects.all()
-#     return render(request, 'nav.html', {'products': product })
 
 
 
@@ -24,10 +21,14 @@ from product.services import collections, product_detail, products
 def HomePage(request):
     categories = Collection.objects.filter(parent_id=None, collection_type_id=1)
     services = Service.objects.all()
+    products = Product.objects.all()
+    
     context = {
         'categories': categories ,
         'services': services ,
+        'products': products ,
     }
+    
     return render(request, 'index.html', context)
 
 
