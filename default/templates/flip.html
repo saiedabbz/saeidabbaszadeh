@@ -9,7 +9,7 @@
   <div class="row padding khadamat">
     {% for serv in services  %}
     <div class="col-lg-3 col-md-6 kh-p">
-      <img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} />
+      <a href="{% url 'khadamat' serv.id %}"><img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} /></a>
       <a href="{% url 'khadamat' serv.id %}"><p>{{ serv.title }}</p></a>
     </div>
     {% endfor %}
