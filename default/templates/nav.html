@@ -24,7 +24,7 @@
                 <!-- required for floating -->
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-left sideways a">
-                    {% for service in services %}
+                    {% for service in g_services %}
                       <li class="{% if forloop.first %}active{%endif%}">
                         <a href="#sec-{{service.id}}" data-toggle="tab">{{service.title}}</a>
                       </li>
@@ -33,7 +33,7 @@
               
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  {% for service in services %}
+                  {% for service in g_services %}
                     <div class="tab-pane {% if forloop.first %}active{% endif %}" id="sec-{{service.id}}">
                       <img src="{{service.image.url}}" alt="{{service.title}}" />
                     </div>
@@ -51,7 +51,7 @@
               <div class="menu-tabs">
               
                 <ul class="nav nav-tabs tabs-left sideways a">
-                  {% for cat in categories %}
+                  {% for cat in g_categories %}
                     <li class="{% if forloop.first %}active{% endif %}">
                       <a href="#bus-{{ cat.id }}" data-toggle="tab">{{ cat.title }}</a>
                     </li>
@@ -60,7 +60,7 @@
               
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  {% for cat in categories %}
+                  {% for cat in g_categories %}
                   
                     <div class="tab-pane {% if forloop.first %}active{% endif%}" id="bus-{{ cat.id }}">
                       <div class="row justi">
@@ -70,20 +70,29 @@
                             {% if child.collection_type_id == 4%}
                               {% comment %} {{child.title}} - {{child.id}} {% endcomment %}
                               {% comment %} <hr /> {% endcomment %}
-                              {% for product in products %}
+                              {% for product in g_products %}
                                 {% if product.collections.first.id == child.id%}
-                                {% comment %} {{product.title}} - {{product.collections.first.id}} {% endcomment %}
-                                <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
-                                {%endif%}
+                                {{product.title}} - {{product.collections.first.id}}
+                                <a href="/product/{{product.slug}}/">
+                                  <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
+                                </a>
+                                {% endif %}
                               {% endfor %}
-                            {%endif%}
+                            {% endif %}
                           {% endfor %}
 
                         </div>
                       </div>
-                      {% comment %} <div class="row" style="justify-content: center;">
-                        <a href="/products/5/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
-                      </div> {% endcomment %}
+                      
+                      {% for child in cat.collection_set.all %}
+                        {% if child.collection_type_id == 4%}
+                            <div class="row" style="justify-content: center;">
+                              <a href="/products/{{child.id}}/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
+                            </div>  
+                        {% endif %}
+                      {% endfor %}
+                      
+                      
                     </div>
                   {% endfor %}
 
@@ -99,7 +108,7 @@
                 <!-- required for floating -->
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-left sideways a">
-                  {% for cat in categories %}
+                  {% for cat in g_categories %}
                     <li class="{% if forloop.first %}active{% endif %}">
                       <a href="#home-{{ cat.id }}" data-toggle="tab">{{ cat.title }}</a>
                     </li>
@@ -108,7 +117,7 @@
                 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  {% for cat in categories %}
+                  {% for cat in g_categories %}
                   
                     <div class="tab-pane {% if forloop.first %}active{% endif%}" id="home-{{ cat.id }}">
                       <div class="row justi">
@@ -118,10 +127,12 @@
                             {% if child.collection_type_id == 3%}
                               {% comment %} {{child.title}} - {{child.id}} {% endcomment %}
                               {% comment %} <hr /> {% endcomment %}
-                              {% for product in products %}
+                              {% for product in g_products %}
                                 {% if product.collections.first.id == child.id%}
                                 {% comment %} {{product.title}} - {{product.collections.first.id}} {% endcomment %}
-                                <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
+                                <a href="/product/{{product.slug}}/">
+                                  <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
+                                </a>
                                 {%endif%}
                               {% endfor %}
                             {%endif%}
@@ -129,9 +140,13 @@
 
                         </div>
                       </div>
-                      {% comment %} <div class="row" style="justify-content: center;">
-                        <a href="/products/5/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
-                      </div> {% endcomment %}
+                      {% for child in cat.collection_set.all %}
+                        {% if child.collection_type_id == 3%}
+                            <div class="row" style="justify-content: center;">
+                              <a href="/products/{{child.id}}/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
+                            </div>  
+                        {% endif %}
+                      {% endfor %}
                     </div>
                   {% endfor %}
 

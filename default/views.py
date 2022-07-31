@@ -96,30 +96,18 @@ def UpdateCategory(request, id):
 #     return render(request, 'eset_detail/eset_detail_smart.html')
 
 
-def Kasper(request, prod_id):
-    products = Product.objects.get(pk=prod_id)
-    context = {
-            'products': products,
-            }
-    return render(request, 'kasper_detail/antivirus.html', context)
 
 
+def ProductDetail(request, pro_slug):
+    product = Product.objects.get(slug=pro_slug)
+    theme  = 'slide/product/' + product.collections.all()[0].theme
 
-def Eset(request, prod_id):
-    product = Product.objects.get(pk=prod_id)
+    print(theme)
+    
     context = {
             'product': product,
             }
-    return render(request, 'eset_detail/eset_product.html', context)
-
-
-
-def Microsoft(request, prod_id):
-    product = Product.objects.get(pk=prod_id)
-    context = {
-            'product': product,
-            }
-    return render(request, 'slide/microsoft.html', context)
+    return render(request, theme, context)
 
 
 

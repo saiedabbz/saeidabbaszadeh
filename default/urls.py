@@ -21,8 +21,10 @@ urlpatterns = [
     # path('products/eset_smart/', views.EsetSmart, name="eset_smart"),
 
 
-    path('products/2/<int:prod_id>', views.Kasper, name="kasper"),
-    path('products/6/<int:prod_id>', views.Eset, name="eset"),
+    # path('products/2/<int:prod_id>', views.Kasper, name="kasper"),
+    # path('products/6/<int:prod_id>', views.Eset, name="eset"),
+    # path('product/<int:prod_id>', views.ProductDetail, name="eset"),
+    path('product/<slug:pro_slug>/', views.ProductDetail, name="eset"),
 
     path('service/<int:id>', views.ServiceView, name="khadamat"),
 ]
