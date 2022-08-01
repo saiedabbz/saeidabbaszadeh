@@ -1,50 +1,16 @@
 {% load static %}
-<div id="myCarousel" class="carousel slide " data-bs-ride="carousel">
 
-    <div class="carousel-inner" id="grad">
-      <div class="carousel-item active">
-        <div class="container">
-  
-          <div class="carousel-caption text-start">
-            <h1> مهر سامان </h1>
-            <h1 class="font-6"><p>بزرگترین ارائه دهنده راهکارهای امنیتی در ایران</p></h1>
-            <p>
-              پایداری و گسترش امنیت اطلاعات با استفاده از نرم افزار های اورجینال
-            </p>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    محصولات سازمانی
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item active" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                    محصولات خانگی
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item active" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+<div class="home-content">
+  <div class="right">
+    <h1> مهر سامان </h1>
+    <h3> ارائه دهنده راهکارهای امنیتی </h3>
   </div>
+  <div class="left">
+    <img src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
+  </div>
+</div>
+
   <style>
     .navbar { 
         background-color: rgba(51, 51, 51, 0);
@@ -56,4 +22,7 @@
       color: #fff;
     }
 
+    .navbar a{
+      color: #000000;
+  }
 </style>

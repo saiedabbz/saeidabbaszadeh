@@ -1,52 +1,54 @@
 {% load static %}
 
-
-<div class="container-fluid bg-color-1">
-  <div class="padding">
-    <p class="font-khadamat">خدمات امنیتی</p>
-  </div>
-  <div class="container"><hr/></div>
-  <div class="row padding khadamat">
-    {% for serv in services  %}
-    <div class="col-lg-3 col-md-6 kh-p">
-      <a href="{% url 'khadamat' serv.id %}"><img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} /></a>
-      <a href="{% url 'khadamat' serv.id %}"><p>{{ serv.title }}</p></a>
+<section id="services">
+  <div class="container-fluid bg-color-1">
+    <div class="padding">
+      <p class="font-services pad-bot">خدمات امنیتی</p>
     </div>
-    {% endfor %}
-  </div>
-</div>
-
-
-
-<div class="container flip bg-color-2">
-  <div class="padding"><p class="font-khadamat pad-bot">آنتی ویروس ها</p></div>
-
-  <div class="row padding">
-    {% if categories %}
-    {% for cat in categories %}
-      <div class="col-lg-3 col-md-6">
-          <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <div class="flip-logo">
-                    <img src="{{ cat.image.url }}" alt="Avatar">
-                  </div>
-                  <div>
-                    <p>{{ cat.title }}</p>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <div class="back-face">
-                    {% for sub_cat in cat.collection_set.all%}
-                      <button class="btn btn-flip"><a href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a></button><br><br>
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-          </div><br/>
+    <div class="container"><hr/></div>
+    <div class="row padding services">
+      {% for serv in services  %}
+      <div class="col-lg-3 col-md-6 kh-p service-card">
+        <a href="{% url 'services' serv.id %}"><img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} /></a>
+        <a href="{% url 'services' serv.id %}"><p>{{ serv.title }}</p></a>
       </div>
       {% endfor %}
-      
-      {% endif %} 
+    </div>
   </div>
-</div>
+</section>
+
+
+<section class="software">
+  <div class="container flip bg-color-2">
+    <div class="padding"><p class="font-services pad-bot">نرم افزار های امنیتی</p></div>
+    <div class="container"><hr/>
+      <div class="row padding">
+        {% if categories %}
+          {% for cat in categories %}
+            <div class="col-lg-3 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <div class="flip-logo">
+                          <img src="{{ cat.image.url }}" alt="Avatar">
+                        </div>
+                        <div>
+                          <p>{{ cat.title }}</p>
+                        </div>
+                      </div>
+                      <div class="flip-card-back">
+                        <div class="back-face">
+                          {% for sub_cat in cat.collection_set.all%}
+                            <button class="btn btn-flip"><a href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a></button><br><br>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                </div><br/>
+            </div>
+            {% endfor %}
+          {% endif %} 
+      </div>
+    </div>
+  </div>
+</section>

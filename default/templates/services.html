@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>{% include 'header.html' %}</head>
+    <body>
+        {% include 'nav.html' %}
+        <section class="section bg-home-ser half-home">
+            <div class="home-center-service pad-ser">
+                <div class="bg-back"><img src="{{ service.image_top.url }}"/></div>
+                <div class="home-desc-center">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="padding"><h2>{{service.title}}</h2></div>
+                <div class="container text-kh">
+                    {{service.body|safe}}
+                </div>
+            </div>
+        </section>
+        <div>{% include 'footer.html' %}</div>
+        <style>
+            body{
+                background: #f6f6f6;
+            }
+        </style>
+    </body>
+</html>
