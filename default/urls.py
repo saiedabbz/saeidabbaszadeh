@@ -26,5 +26,5 @@ urlpatterns = [
     # path('product/<int:prod_id>', views.ProductDetail, name="eset"),
     path('product/<slug:pro_slug>/', views.ProductDetail, name="eset"),
 
-    path('service/<int:id>', views.ServiceView, name="khadamat"),
+    path('service/<int:id>', views.ServiceView, name="services"),
 ]

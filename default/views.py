@@ -112,8 +112,8 @@ def ProductDetail(request, pro_slug):
 
 
 def ServiceView(request, id):
-    services = Service.objects.get(pk=id)
+    service = Service.objects.get(pk=id)
     context = {
-        'services': services ,
+        'service': service ,
     }
-    return render(request, 'khadamat.html', context )
+    return render(request, 'services.html', context )
