@@ -2,6 +2,7 @@ body {
     font-family: IRANSans, sans-serif;
     overflow-x: hidden !important;
     position: relative;
+    
 }
 
 .bg-home {
@@ -73,6 +74,7 @@ body {
 }
 .mt-5 {
     margin-top: 3rem!important;
+    justify-content: center;
 }
 
 .mt-4 {
