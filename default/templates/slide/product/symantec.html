@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-
     <style>
         p {
             color:red;
@@ -10,18 +9,85 @@
     <head>{% include 'header.html' %}</head>
     <body>
         {% include "nav.html" %}
+        <section>
+            
+        </section>
         <section class="section half-home">
-            <div>
-                <img src="https://www.broadcom.com/media/blt4ac44e0e6c6d8341/blta4af3bbb043a76ba/60371cc1cb8a051f10537b93/wwwHero_Endpoint-Security_1920x45.jpg">
+            <div class="sym-pro-ban">
+                <img src="{% static 'img/symantec_code_banner.jpg' %}">
             </div>
-            <div class="home-center symantec-item">
-                <div><img src="{{ product.images.first.image.url }}" /></div>
+            <div class="container">
+                <h1 class="symantec-title">Endpoint Security</h1>
+            </div>
+            <div class="row mrg">
+                <div class="col-sm-3">
+                  <div class="text-center bg-white mt-3 p-5 border">
+                    <div>
+                      <a href="{{ prod.id }}">
+                        <img class="d-block mx-auto img-fluid" src="{% static 'img/icon_suite-circle.webp' %}">
+                      </a>
+                    </div>
+                    <div style="padding-top:10px;">
+                      Client Management Suite
+                      <p class="text-muted mt-4">
+                        Secures, monitors, and protects AWS, Azure, Google Cloud Platform, and Oracle Cloud Infrastructure workloads, plus Docker containers across public/private clouds and on-premises data centers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-sm-3">
+                  <div class="text-center bg-white mt-3 p-5 border">
+                    <div>
+                      <a href="{{ prod.id }}">
+                        <img class="d-block mx-auto img-fluid" src="{% static 'img/icon_asset-mgmt-circle.webp' %}">
+                      </a>
+                    </div>
+                    <div style="padding-top:10px;">
+                      Asset Management Suite
+                      <p class="text-muted mt-4">
+                        Secures, monitors, and protects AWS, Azure, Google Cloud Platform, and Oracle Cloud Infrastructure workloads, plus Docker containers across public/private clouds and on-premises data centers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <div class="text-center bg-white mt-3 p-5 border">
+                    <div>
+                      <a href="{{ prod.id }}">
+                        <img class="d-block mx-auto img-fluid" src="{% static 'img/icon_server-mgmt-circle.webp' %}">
+                      </a>
+                    </div>
+                    <div style="padding-top:10px;">
+                      Server Management Suite
+                      <p class="text-muted mt-4">
+                        Secures, monitors, and protects AWS, Azure, Google Cloud Platform, and Oracle Cloud Infrastructure workloads, plus Docker containers across public/private clouds and on-premises data centers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-3">
+                  <div class="text-center bg-white mt-3 p-5 border">
+                    <div>
+                      <a href="{{ prod.id }}">
+                        <img class="d-block mx-auto img-fluid" src="{% static 'img/icon_ghost-solution-suite-circle.webp' %}">
+                      </a>
+                    </div>
+                    <div style="padding-top:10px;">
+                      Ghost Solution Suite
+                      <p class="text-muted mt-4">
+                        Secures, monitors, and protects AWS, Azure, Google Cloud Platform, and Oracle Cloud Infrastructure workloads, plus Docker containers across public/private clouds and on-premises data centers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% comment %} <div class="home-center symantec-item">
+                <div><img src="" /></div>
               <div class="home-desc-center" style="direction: rtl;">
                 <div class="container">
-
-                    {% comment %} <div class="row">
-                        <div class="top-title-kasper-1 col-md-12">حفاظت پیشرفته در برابر انواع تهدیدات</div>
-                    </div> {% endcomment %}
                     <div class="row">
                     <div class="top-title-kasper-2 col-md-12"><p>{{ product.title }}</p></div>
                     </div>
@@ -30,48 +96,13 @@
                     </div>
                     <div class="row">
                         <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
-                            {% comment %} <button href="{% url 'homepage' %}" type="button" class="btnbtn-success">خرید محصول</button> {% endcomment %}
                             <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a>
                         </div>
                     </div>
-                    
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
         </section>
-
-
-        {% comment %} <section style="padding-top: 50px;">
-            <div class="container-fluid con-flu-col">
-                <div class="row">
-                    <div></div>
-                    <div class="col-lg-12">
-                        <div class="col-md-4">
-                            <div class="Feature_icon__3OtVF circle">
-                                <img src="https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/modernization/key features/anti-hacking/anti-hacking.svg"/>
-                            </div>
-                            <div class="circle-title">Anti-Hacking</div>
-                            <div class="circle-content">Network attack blocker & anti-ransomware prevent hackers breaking into your home network & intercepting your data.</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="Feature_icon__3OtVF circle">
-                                <img src="https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/modernization/key%20features/anti-virus/anti-virus.svg"/>
-                            </div>
-                            <div class="circle-title">Anti-Virus</div>
-                            <div class="circle-content">Real-time antivirus works to guard you from common threats like worms & trojans to complex ones like botnets, rootkits & rogues.</div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="Feature_icon__3OtVF circle">
-                                <img src="https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/modernization/key%20features/anti-malware/anti-malware.svg"/>
-                            </div>
-                            <div class="circle-title">Anti-Malware</div>
-                            <div class="circle-content">Advanced anti-malware neutralizes threats including spyware, adware, keyloggers, spear phishing & hard-to-detect fileless attacks.</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section> {% endcomment %}
         <div>{% include 'footer.html' %}</div>
         
     </body>

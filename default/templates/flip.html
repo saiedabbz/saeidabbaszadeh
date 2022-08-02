@@ -52,3 +52,57 @@
     </div>
   </div>
 </section>
+
+<section id="customer">
+  <div class="container-fluid bg-color-1">
+    <div class="padding">
+      <p class="font-services pad-bot"> مشتری ها</p>
+    </div>
+    <div class="container"><hr/></div>
+    
+    
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        {% for customer in customers  %}
+          <div class="swiper-slide disp_customer">
+              <div class="Card_card_customer">
+                <div class="row row-logo-card-customer">
+                  <img src="{{ customer.image.url }}"/>
+                </div>
+                <div class="row slide-item-top customer_title">
+                  <p>{{ customer.title }}</p>
+                </div>
+              </div>
+          </div>
+        
+        {% endfor %}
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    slidesPerGroup: 5,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

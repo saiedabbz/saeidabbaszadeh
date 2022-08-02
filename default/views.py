@@ -7,6 +7,7 @@ from default.models import Category
 from product.models import Product, Collection, ProductImage
 from django.shortcuts import redirect, get_object_or_404
 from service.models import Service
+from customer.models import Customer
 
 from django.views.generic import UpdateView
 from django.template import loader
@@ -22,11 +23,13 @@ def HomePage(request):
     categories = Collection.objects.filter(parent_id=None, collection_type_id=1)
     services = Service.objects.all()
     products = Product.objects.all()
+    customers = Customer.objects.all()
     
     context = {
         'categories': categories ,
         'services': services ,
         'products': products ,
+        'customers': customers ,
     }
     
     return render(request, 'index.html', context)

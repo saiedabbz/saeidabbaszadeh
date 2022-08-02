@@ -565,14 +565,15 @@ div.icon svg {
 
 section#services {
     background-color: #FFFFFF;
+    min-height: 700px;
 }
 
 section#software{
-
+    min-height: 700px;
 }
 
-section {
-    min-height: 700px;
+section#customer{
+    padding-top: 80px;
 }
 
 .bg-color-2 {
@@ -617,4 +618,45 @@ section {
 
 .pici img {
     margin-left: 20px;
+}
+
+
+.Card_card_customer {
+    background-repeat: no-repeat;
+    box-shadow: 0 12px 24px rgb(29 29 27 / 12%);
+    border-radius: 4px;
+    padding: 52px 10px 10px;
+    margin: 32px 8px 36px;
+    border-bottom: 4px solid transparent;
+    /* min-height: 410px; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .row-logo-card-customer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 29px;
+    width: 168px;
+}
+
+.disp_customer {
+    background: inherit;
+    width: 264px;
+    margin-left: 20px;
+    height: 270px;
+}
+
+.swiper_customer {
+    width: 90%;
+    height: 71%;
+}
+
+.customer_title p {
+    font-size: 15px;
 }
