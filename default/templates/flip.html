@@ -39,7 +39,8 @@
                       <div class="flip-card-back">
                         <div class="back-face">
                           {% for sub_cat in cat.collection_set.all%}
-                            <button class="btn btn-flip"><a href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a></button><br><br>
+                            {% comment %} <a class="btn btn-flip" href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a><br><br> {% endcomment %}
+                            <a class="btn btn-flip" href="/products/{{sub_cat.slug}}/">{{sub_cat.title}}</a><br><br>
                           {% endfor %}
                         </div>
                       </div>
@@ -53,15 +54,14 @@
   </div>
 </section>
 
-<section id="customer">
-  <div class="container-fluid bg-color-1">
+<section id="customers">
+  <div class="container bg-color-1">
     <div class="padding">
       <p class="font-services pad-bot"> مشتری ها</p>
     </div>
-    <div class="container"><hr/></div>
+    <hr/>
     
-    
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper" style="height: 350px">
       <div class="swiper-wrapper">
         {% for customer in customers  %}
           <div class="swiper-slide disp_customer">
@@ -93,7 +93,7 @@
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 5,
     spaceBetween: 20,
-    slidesPerGroup: 5,
+    slidesPerGroup: 1,
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {

@@ -17,7 +17,7 @@
               <a class="nav-link" href="{% url 'homepage' %}"> صفحه اول </a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item srvs">
               <a class="nav-link bef" aria-current="page" href="#">خدمات امنیتی </a>
               <div class="menu-tabs">
                 <!-- required for floating -->
@@ -25,31 +25,22 @@
                 <ul class="nav nav-tabs tabs-left sideways a">
                     {% for service in g_services %}
                       <li class="{% if forloop.first %}active{%endif%}">
-                        <a href="#sec-{{service.id}}" data-toggle="tab">{{service.title}}</a>
+                        <a href="/service/{{service.id}}">{{service.title}}</a>
                       </li>
                     {% endfor %}
                 </ul>
               
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  {% for service in g_services %}
-                    <div class="tab-pane justi {% if forloop.first %}active{% endif %}" id="sec-{{service.id}}">
-                      
-                      <a href="/service/{{ service.id }}/">
-                        <img src="{{service.image.url}}" alt="{{service.title}}" />
-                      </a>
+               
 
-                    </div>
-                  {% endfor %}
-                </div>
               </div>
+
             </li>
 
 
 
 
 
-            <li class="nav-item">
+            <li class="nav-item business">
               <a class="nav-link bef" aria-current="page" href="#">محصولات سازمانی</a>
               <div class="menu-tabs">
               
@@ -87,7 +78,7 @@
                       {% for child in cat.collection_set.all %}
                         {% if child.collection_type_id == 4%}
                             <div class="row" style="justify-content: center;">
-                              <a href="/products/{{child.id}}/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
+                              <a href="/products/{{child.slug}}/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
                             </div>  
                         {% endif %}
                       {% endfor %}
@@ -101,7 +92,7 @@
             </li>
 
             
-            <li class="nav-item">
+            <li class="nav-item home">
               <a class="nav-link bef" href="#">محصولات خانگی </a>
               <div class="menu-tabs">
 
@@ -143,7 +134,7 @@
                       {% for child in cat.collection_set.all %}
                         {% if child.collection_type_id == 3%}
                             <div class="row" style="justify-content: center;">
-                              <a href="/products/{{child.id}}/" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
+                              <a href="/products/{{child.slug}}" class="btn btn-secondary eset-list-btn">لیست محصولات</a>
                             </div>  
                         {% endif %}
                       {% endfor %}

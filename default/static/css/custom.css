@@ -85,6 +85,21 @@ body {
     display: flex;
 }
 
+.nav-item.business .menu-tabs{
+    margin-right: -156px;
+}
+.nav-item.home .menu-tabs{
+    margin-right: -335.88px;
+}
+.nav-item.srvs .menu-tabs{
+    width: auto;
+    /* display: flex; */
+}
+
+.eset-list .img-fluid{
+    height: 164px;
+}
+
 .bgg-white a.nav-link{
     color: #FFF;
 }
@@ -583,6 +598,14 @@ section#customer{
     position: relative;
     color: #222222;
 
+}
+
+.swiper-button-next, .swiper-button-prev{
+    top: 36%;
+}
+
+#customers .swiper-slide{
+    background: none;
 }
 
 @media only screen and (max-width:600px){
