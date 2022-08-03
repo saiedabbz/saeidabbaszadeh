@@ -25,19 +25,12 @@
                 <ul class="nav nav-tabs tabs-left sideways a">
                     {% for service in g_services %}
                       <li class="{% if forloop.first %}active{%endif%}">
-                        <a href="/service/{{service.id}}">{{service.title}}</a>
+                        <a href="/service/{{service.slug}}">{{service.title}}</a>
                       </li>
                     {% endfor %}
                 </ul>
-              
-               
-
               </div>
-
             </li>
-
-
-
 
 
             <li class="nav-item business">
@@ -47,7 +40,7 @@
                 <ul class="nav nav-tabs tabs-left sideways a">
                   {% for cat in g_categories %}
                     <li class="{% if forloop.first %}active{% endif %}">
-                      <a href="#bus-{{ cat.id }}" data-toggle="tab">{{ cat.title }}</a>
+                      <a href="#business-{{ cat.slug }}" data-toggle="tab">{{ cat.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
@@ -56,23 +49,26 @@
                 <div class="tab-content">
                   {% for cat in g_categories %}
                   
-                    <div class="tab-pane {% if forloop.first %}active{% endif%}" id="bus-{{ cat.id }}">
+                    <div class="tab-pane {% if forloop.first %}active{% endif%}" id="business-{{ cat.slug }}">
                       <div class="row justi">
-                        <div class="col-md-4 pici">
-                          
-                          {% for child in cat.collection_set.all %}
+                        {% comment %} <div class="col-md-4 pici"> {% endcomment %}
+                          <div class="col-sm-4">
+                            {% for child in cat.collection_set.all %}
                             {% if child.collection_type_id == 4%}
                               {% for product in g_products %}
                                 {% if product.collections.first.id == child.id%}
-                                <a href="/product/{{product.slug}}/">
-                                  <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
-                                </a>
+                                  <div class="row item_product">
+                                    <a href="/product/{{product.slug}}/">
+                                      <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
+                                      <p>{{ product.title }}</p>
+                                    </a>
+                                  </div>
                                 {% endif %}
                               {% endfor %}
                             {% endif %}
-                          {% endfor %}
-
-                        </div>
+                            {% endfor %}
+                          </div>
+                        {% comment %} </div> {% endcomment %}
                       </div>
                       
                       {% for child in cat.collection_set.all %}
@@ -82,7 +78,6 @@
                             </div>  
                         {% endif %}
                       {% endfor %}
-                      
                       
                     </div>
                   {% endfor %}
@@ -101,7 +96,7 @@
                 <ul class="nav nav-tabs tabs-left sideways a">
                   {% for cat in g_categories %}
                     <li class="{% if forloop.first %}active{% endif %}">
-                      <a href="#home-{{ cat.id }}" data-toggle="tab">{{ cat.title }}</a>
+                      <a href="#home-{{ cat.slug }}" data-toggle="tab">{{ cat.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
@@ -110,26 +105,27 @@
                 <div class="tab-content">
                   {% for cat in g_categories %}
                   
-                    <div class="tab-pane {% if forloop.first %}active{% endif%}" id="home-{{ cat.id }}">
+                    <div class="tab-pane {% if forloop.first %}active{% endif%}" id="home-{{ cat.slug }}">
                       <div class="row justi">
-                        <div class="col-md-4 pici">
-                          
-                          {% for child in cat.collection_set.all %}
+                        {% comment %} <div class="col-md-4 pici"> {% endcomment %}
+                          <div class="col-sm-4">
+                            {% for child in cat.collection_set.all %}
                             {% if child.collection_type_id == 3%}
-                              {% comment %} {{child.title}} - {{child.id}} {% endcomment %}
-                              {% comment %} <hr /> {% endcomment %}
                               {% for product in g_products %}
                                 {% if product.collections.first.id == child.id%}
-                                {% comment %} {{product.title}} - {{product.collections.first.id}} {% endcomment %}
-                                <a href="/product/{{product.slug}}/">
-                                  <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
-                                </a>
-                                {%endif%}
+                                  <div class="row item_product">
+                                    <a href="/product/{{product.slug}}/">
+                                      <img src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
+                                      <p>{{ product.title }}</p>
+                                    </a>
+                                  </div>
+                                {% endif %}
                               {% endfor %}
-                            {%endif%}
-                          {% endfor %}
+                            {% endif %}
+                            {% endfor %}
+                          </div>
 
-                        </div>
+                        {% comment %} </div> {% endcomment %}
                       </div>
                       {% for child in cat.collection_set.all %}
                         {% if child.collection_type_id == 3%}
@@ -144,21 +140,6 @@
                 </div>
               </div>
             </li>
-            {% comment %} <li class="nav-item">
-              <a class="nav-link" href="#">درباره ما </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">تماس با ما </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'customerlist' %}">مشتری</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'order' %}">سفارش ها</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'productlist' %}">محصولات</a>
-            </li> {% endcomment %}
             
           </ul>
         </div>

@@ -9,8 +9,8 @@
     <div class="row padding services">
       {% for serv in services  %}
       <div class="col-lg-3 col-md-6 kh-p service-card">
-        <a href="{% url 'services' serv.id %}"><img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} /></a>
-        <a href="{% url 'services' serv.id %}"><p>{{ serv.title }}</p></a>
+        <a href="/service/{{ serv.slug }}/"><img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} /></a>
+        <a href="/service/{{ serv.slug }}/"><p>{{ serv.title }}</p></a>
       </div>
       {% endfor %}
     </div>

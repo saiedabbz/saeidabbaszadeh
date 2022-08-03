@@ -5,7 +5,7 @@ from . import apis
 urlpatterns = [
     path('', views.HomePage, name="homepage"),
     path('products/<slug:slug>/', views.ProductsView, name="products"),
-    path('service/<int:id>/', views.ServiceView, name="service"),
+    path('service/<slug:slug>/', views.ServiceView, name="service"),
 
 
 
@@ -18,5 +18,5 @@ urlpatterns = [
 
     path('product/<slug:pro_slug>/', views.ProductDetail, name="eset"),
 
-    path('service/<int:id>', views.ServiceView, name="services"),
+    # path('service/<int:id>', views.ServiceView, name="services"),
 ]

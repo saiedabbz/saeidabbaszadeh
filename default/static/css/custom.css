@@ -107,9 +107,7 @@ body {
     background-color: #444444 !important;
 }
 
-.navbar img {
-    width: 7rem;
-}
+
 
 
 #navbarNav {
@@ -174,11 +172,38 @@ body {
 
 .tab-content{
     width: 100%;
-    height: 18rem;
+    height: inherit;
     min-width: 85vh;
     padding: 10px;
     background-color: #444;
 }
+
+.tab-content .col-sm-4{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+}
+.item_product{
+    padding: 15px;
+}
+.item_product p{
+    line-height: normal;
+    padding-top: 24px;
+    font-size: 14px;
+    width: max-content;
+    font-weight: 600;
+    display: inline-block;
+}
+
+
+.navbar img {
+    width: 132px;
+    height: 136px;
+    border-radius: 10px;
+}
+
+
 
 .tab-content .tab-pane{
     color: #FFF
@@ -226,9 +251,6 @@ body {
 
 #grad {
     background-color: #FFF;
-    /* background-image: url(/static/img/fingerprint.png);
-    background-repeat: no-repeat;
-    background-position: 154px 127px; */
 }
 
 .bannerContainer {

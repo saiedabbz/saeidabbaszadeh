@@ -100,8 +100,8 @@ def ProductDetail(request, pro_slug):
 
 
 
-def ServiceView(request, id):
-    service = Service.objects.get(pk=id)
+def ServiceView(request, slug):
+    service = Service.objects.get(slug=slug)
     context = {
         'service': service ,
     }

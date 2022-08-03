@@ -22,7 +22,7 @@
 
 .mic-logo {
     width: 200px;
-    padding-top: 27px;
+    border-radius: 15px;    
 }
 
 .con-flu-mic {
@@ -181,6 +181,10 @@
       flex-wrap: wrap;
     }
   }
+
+.text-center img {
+  height: 105px;
+}
 
 
 
