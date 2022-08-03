@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-brand{
-    background-image: url('../img/logo-black.png');
+    background-image: url('../img/logo-white.png');
     width: 171px;
     height: 67px;
     background-size: cover;
@@ -198,7 +198,6 @@ body {
 
 
 .navbar img {
-    width: 132px;
     height: 136px;
     border-radius: 10px;
 }
@@ -517,7 +516,7 @@ footer {
 
 
 div.icon svg {
-    background: #FFF;
+    background: #fafbfc;
     margin-bottom: 20px;
 }
 
