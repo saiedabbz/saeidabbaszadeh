@@ -351,7 +351,6 @@ body {
     text-align: -webkit-center;
 }
 .flip-logo{
-    /* background-color: blue; */
     background: none;
     padding: 12px 12px;
     display: flex;
@@ -369,7 +368,6 @@ body {
     width: 260px;
     height: 240px;
     perspective: 1000px;
-    /* box-shadow:blue; */
   }
   
   .flip-card-inner {
@@ -528,9 +526,6 @@ div.icon svg {
     height: 350px;
     padding-bottom: 400px;
     justify-content: space-evenly;
-    /* width: 85%; */
-    /* display: flex; */
-    /* flex-direction: row; */
     align-content: space-between;
 }
 
@@ -566,7 +561,6 @@ div.icon svg {
 }
 
 .services-banner {
-    /* background: url(https://ravinacademy.com/wp-content/uploads/2020/04/Corporate_Training.png) center center / cover scroll no-repeat; */
     position: absolute;
     z-index: 0;
     height: 550px;
@@ -673,7 +667,7 @@ section#customer{
     padding: 52px 10px 10px;
     margin: 32px 8px 36px;
     border-bottom: 4px solid transparent;
-    /* min-height: 410px; */
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -705,3 +699,309 @@ section#customer{
 .customer_title p {
     font-size: 15px;
 }
+
+
+
+
+
+/**********************************************************************/
+
+.techvio {
+    align-items: center!important;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.techvio img{
+    text-align: center;
+}
+
+.overview-content{
+    direction: ltr;
+}
+
+.overview-content h6 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #FF9800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.overview-content h2 {
+    font-size: 38px;
+    color: #0b0b31;
+    margin: 8px 0 15px 0;
+}
+
+.overview-content p {
+    margin: 0 0 0 0;
+}
+
+.overview-content .features-list {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-top: 16px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.overview-content .features-list li {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.overview-content .features-list li span {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px 15px;
+    z-index: 1;
+    position: relative;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    color: #0b0b31;
+    border-left: 2px solid #7b68ee;
+    font-weight: 600;
+    font-size: 14px;
+    -webkit-box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
+    box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
+}
+.overview-content .features-list li span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 3px;
+    background-color: #7b68ee;
+    z-index: -1;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.overview-content .features-list li span:hover {
+	color: #ffffff;
+}
+
+.overview-content .features-list li span:hover::before {
+	width: 100%;
+}
+
+
+
+
+/************************* counter area *****************************************/
+
+.counter-area {
+    text-align: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    background: url('../img/building.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.counter-area::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .6;
+    background: #03030c;
+}
+.counter-area .section-title h5 {
+	color: #ffffff;
+}
+.counter-area .section-title h2 {
+	color: #fff;
+}
+
+.section-padding-bg {
+    padding: 100px 0;
+}
+
+.counter-content h2 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    word-spacing: -10px;
+}
+
+.counter-content h3 {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.counter {
+    animation-duration: 1s;
+    animation-delay: 0s;
+  }
+
+
+
+/************************* End Counter Up ************************************/
+
+
+
+
+/************************* Deep Card ************************************/
+
+#deep-card {
+    padding-top: 50px;
+}
+
+#deep-card body {
+    margin: 40px 0;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #BCAAA4;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+#deep-card .title {
+    font-family: "Raleway";
+    font-size: 24px;
+    font-weight: 700;
+    color: #5D4037;
+    text-align: center;
+  }
+  
+#deep-card p {
+    line-height: 1.5em;
+  }
+  
+#deep-card h1 + p, p + p {
+    margin-top: 10px;
+  }
+  
+#deep-card .container {
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+#deep-card .card-wrap {
+    margin: 10px;
+    transform: perspective(800px);
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+#deep-card .card-wrap:hover .card-info {
+    transform: translateY(0);
+  }
+#deep-card .card-wrap:hover .card-info p {
+    opacity: 1;
+  }
+#deep-card .card-wrap:hover .card-info, .card-wrap:hover .card-info p {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+#deep-card .card-wrap:hover .card-info:after {
+    transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 1;
+    transform: translateY(0);
+  }
+#deep-card .card-wrap:hover .card-bg {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.8;
+  }
+#deep-card .card-wrap:hover .card {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
+  }
+  
+#deep-card .card {
+    position: relative;
+    flex: 0 0 240px;
+    width: 215px;
+    height: 320px;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  
+#deep-card .card-bg {
+    opacity: 0.5;
+    position: absolute;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    pointer-events: none;
+    width: 256px;
+    height: 355px;
+    right: -20px;
+    top: -20px;
+  }
+  
+#deep-card .card-info {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    transform: translateY(40%);
+    transition: 0.3s 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+#deep-card .card-info p {
+    opacity: 0;
+    text-shadow: black 0 2px 3px;
+    transition: 0.3s 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+#deep-card .card-info * {
+    position: relative;
+    z-index: 1;
+  }
+#deep-card .card-info:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    background-blend-mode: overlay;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  
+#deep-card .card-info h1 {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  }
+
+
+
+
+/************************* End Deep Card ***********************************/
+
