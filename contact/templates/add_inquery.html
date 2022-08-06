@@ -15,9 +15,9 @@
                 <div class="form-group">
                     <label for="product">محصول</label>
                     <select class="form-control" id="product" name="product">
-                        {% for prod in products %}
-                            <option {% if prod.slug == contact.product.slug %} selected="selected" {% endif %} value="{{ prod.slug }}" >{{ prod }}</option>
-                        {% endfor %}
+                        {% comment %} {% for prod in products %} {% endcomment %}
+                            <option {% if products.slug == contact.product.slug %} selected="selected" {% endif %} value="{{ products.id }}" >{{ products }}</option>
+                        {% comment %} {% endfor %} {% endcomment %}
                     </select>
                 </div><br/>
 

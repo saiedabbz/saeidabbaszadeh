@@ -6,7 +6,7 @@ from product.models import Product
 
 
 def InQuery(request, slug):
-    products = Product.objects.all()
+    products = Product.objects.get(slug=slug)
 
     if request.method == "POST":
         product = request.POST.get('product')
