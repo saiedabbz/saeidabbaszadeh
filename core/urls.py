@@ -41,7 +41,7 @@ urlpatterns = [
     path('', include("product.urls")),
     path('',include("order.urls")),
     path('customer/', include('customer.urls')),
-    # path('', include('user.urls')),
+    path('', include('contact.urls')),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

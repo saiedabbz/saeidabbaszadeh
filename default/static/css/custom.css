@@ -1005,3 +1005,17 @@ section#customer{
 
 /************************* End Deep Card ***********************************/
 
+
+
+/************************* InQuery form ***********************************/
+.gfield_required{
+    color: red;
+
+}
+span .gfield_required {
+    margin-left: 0;
+    margin-right: 4px;
+}
+
+
+/************************* End InQuery form ***********************************/
