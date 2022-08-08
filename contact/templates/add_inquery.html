@@ -8,16 +8,14 @@
         {% include 'nav.html' %}
 
         <div class="container" style="direction:rtl;">
-            <form method="POST" action="/add_inquery/{{ prod.slug }}" enctype="multipart/form-data" style="padding-top: 135px;">
+            <form method="POST" action="/add_inquery/{{ products.slug }}/" enctype="multipart/form-data" style="padding-top: 135px;">
 
                 {% csrf_token %}
 
                 <div class="form-group">
                     <label for="product">محصول</label>
                     <select class="form-control" id="product" name="product">
-                        {% comment %} {% for prod in products %} {% endcomment %}
-                            <option {% if products.slug == contact.product.slug %} selected="selected" {% endif %} value="{{ products.id }}" >{{ products }}</option>
-                        {% comment %} {% endfor %} {% endcomment %}
+                        <option {% if products.slug == contact.product.slug %} selected="selected" {% endif %} value="{{ products.id }}" >{{ products }}</option>
                     </select>
                 </div><br/>
 

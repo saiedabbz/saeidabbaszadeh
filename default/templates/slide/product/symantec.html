@@ -1,11 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <style>
-        p {
-            color:red;
-        }
-    </style>
+    
     <head>{% include 'header.html' %}</head>
     <body>
         {% include "nav.html" %}
@@ -14,9 +10,9 @@
         </section>
         <section class="section half-home">
             <div class="sym-pro-ban">
-                <img src="{% static 'img/symantec_code_banner.jpg' %}">
+                {% comment %} <img src="{% static 'img/symantec_code_banner.jpg' %}"> {% endcomment %}
             </div>
-            <div class="container">
+            <div class="container" style="padding-top: 55px;">
                 <h1 class="symantec-title">Endpoint Security</h1>
             </div>
             <div class="row mrg">

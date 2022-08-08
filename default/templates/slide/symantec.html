@@ -37,18 +37,19 @@
             <div class="col-lg-4">
               <div class="text-center bg-white mt-3 p-5 border">
                 <div>
-                  <a href="{{ prod.id }}"><img class="d-block mx-auto img-fluid" src={{ prod.images.first.image.url }}></a>
+                  <a href="/product/{{prod.slug}}/"><img class="d-block mx-auto img-fluid" src={{ prod.images.first.image.url }}></a>
                 </div>
-                <div>{{ prod.title }}
+                <div style="padding-top: 15px;">{{ prod.title }}
                   <p class="text-muted mt-4">{{ prod.description }}</p>
                 </div>
                 <div class="text-center ">
                   <a href="#" class="btn btn-success w-x">خرید محصول</a>
                 </div>
                 <div class="text-center top-pad">
-                  <p>
-                    <a class="text-color" href="/product/{{prod.slug}}/">اطلاعات بیشتر</a>
-                  </p>
+                  <a class="btn btn-link" href="/product/{{prod.slug}}/">اطلاعات بیشتر</a>
+                </div>
+                <div class="text-center">
+                  <a class="btn btn-link" href="/add_inquery/{{ prod.slug }}">استعلام محصول</a>
                 </div>
 
                 {{prod.extras.first.desc|safe}}

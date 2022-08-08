@@ -82,13 +82,12 @@
 
 .sym-pro-ban {
     position: relative;
-    height: 400px;
+    height: 420px;
+    background: url(../img/symantec-banner-pro.webp) no-repeat center ;
+    background-size: cover; 
 }
 
-.sym-pro-ban img{
-    height: 359px;
-    padding-top: 83px;
-}
+
 
 .mrg {
     margin-top: 3rem!important;
