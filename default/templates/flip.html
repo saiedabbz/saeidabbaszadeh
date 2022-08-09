@@ -90,7 +90,7 @@
   <div class="container">
     <div class="row techvio">
       <div class="col-lg-6">
-        <div style="float:left;">
+        <div class="img-animation" style="float:left;">
           <img src="{% static 'img/choose-1.jpg' %}" alt="image">
         </div>
       </div>
@@ -131,7 +131,7 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <div style="float:left;">
+        <div class="img-animation" style="float:left;">
           <img src="{% static 'img/choose-2.jpg' %}" alt="image">
         </div>
       </div>
@@ -202,20 +202,20 @@
   <h1 class="title">Hover over the cards</h1>
 
   <div id="app" class="container">
-    <card data-image="{% static 'img/microsoft_logo.png' %}">
-      <h1 slot="header">Canyons</h1>
-      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <card data-image="{% static 'img/ooda-logo.png' %}">
+      {% comment %} <h1 slot="header">Canyons</h1> {% endcomment %}
+      <p slot="content">چرخه ooda</p>
     </card>
     <card data-image="https://www.offensive-security.com/wp-content/uploads/2021/11/SOC-200.svg">
-      <h1 slot="header">Beaches</h1>
+      {% comment %} <h1 slot="header">Beaches</h1> {% endcomment %}
       <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </card>
     <card data-image="{% static 'img/wald.jpg' %}">
-      <h1 slot="header">Trees</h1>
+      {% comment %} <h1 slot="header">Trees</h1> {% endcomment %}
       <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </card>
     <card data-image="{% static 'img/building.jpg' %}">
-      <h1 slot="header">Lakes</h1>
+      {% comment %} <h1 slot="header">Lakes</h1> {% endcomment %}
       <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </card>
   </div>

@@ -1,13 +1,27 @@
 {% load static %}
 
 
-<div class="home-content">
-  <div class="right">
+<div class="home-content bg-gradient-1 section-bottom-right-rounded">
+  <div class="box-decorative bg-gradient-2 section-top-left-rounded"></div>
+  <div class="right animated animatedFadeInUp fadeInUp">
     <h1> مهر سامان </h1>
     <h3> ارائه دهنده راهکارهای امنیتی </h3>
   </div>
-  <div class="left">
-    <img src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
+  {% comment %} <div class="left">
+    <img class="fade-in-text" src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
+  </div> {% endcomment %}
+  <div id="parallax" class="items left">
+    <div class="items__inner" id="js-scene">
+      <div class="items__layer layer" data-depth="0.85">
+        <div>
+          <img class="fade-in-text" src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
+        </div>
+      </div>
+      {% comment %} <div class="items__layer layer" data-depth="0.70"><div class="items__item" data-title="no.2"></div></div> {% endcomment %}
+      {% comment %} <div class="items__layer layer" data-depth="0.65"><div class="items__item" data-title="no.3"></div></div> {% endcomment %}
+      {% comment %} <div class="items__layer layer" data-depth="1.20"><div class="items__item" data-title="no.4"></div></div> {% endcomment %}
+      {% comment %} <div class="items__layer layer" data-depth="0.00"><div class="items__item" data-title="no.5"></div></div> {% endcomment %}
+    </div>
   </div>
 </div>
 
@@ -26,3 +40,10 @@
       color: #000000;
   }
 </style>
+
+<script src="{% static 'js/parallax.min.js' %}"></script>
+
+<script>
+  var scene = document.getElementById('js-scene');
+  var parallax = new Parallax(scene);
+</script>

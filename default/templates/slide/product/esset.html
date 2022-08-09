@@ -15,7 +15,7 @@
                 {{ product.extras.all.2.desc|safe }}
                 <div class="home-center ">
                     <div class="home-desc-center">
-                        <div class="container content-page">
+                        <div class="container content-page animated animatedFadeInUp fadeInUp">
                             <div class="row">
                                 <div class="top-title-1 col-md-12">حفاظت پیشرفته در برابر انواع تهدیدات</div>
                             </div>
@@ -25,12 +25,11 @@
                             <div class="row">
                                 <div class="top-title-3 col-md-5 ">ایده آل برای کاربران مدرن نگران حریم خصوصی خود، که فعالانه از اینترنت برای خرید، بانکداری، کار و ارتباطات استفاده می کنند. دستگاه های Windows، macOS و Android را ایمن می کند.</div>
                             </div>
-                            <div class="row">
+                            {% comment %} <div class="row">
                                 <div class="top-title-2 col-md-4 d-grid gap-2">
-                                    {% comment %} <button href="{% url 'homepage' %}" type="button" class="btnbtn-success">خرید محصول</button> {% endcomment %}
                                     <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a>
                                 </div>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>

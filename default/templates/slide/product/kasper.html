@@ -13,21 +13,17 @@
               <div class="home-desc-center" style="direction: rtl;">
                 <div class="container content-page-kasper">
 
+                    <div class="row">
+                    <div class="top-title-kasper-2 col-md-12 animated animatedFadeInUp fadeInUp">{{ product.title }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="top-title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
+                    </div>
                     {% comment %} <div class="row">
-                        <div class="top-title-kasper-1 col-md-12">حفاظت پیشرفته در برابر انواع تهدیدات</div>
-                    </div> {% endcomment %}
-                    <div class="row">
-                    <div class="top-title-kasper-2 col-md-12">{{ product.title }}</div>
-                    </div>
-                    <div class="row">
-                        <div class="top-title-kasper-3 col-md-5 ">{{ product.description }}</div>
-                    </div>
-                    <div class="row">
                         <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
-                            {% comment %} <button href="{% url 'homepage' %}" type="button" class="btnbtn-success">خرید محصول</button> {% endcomment %}
                             <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                     
                 </div>
               </div>
@@ -38,7 +34,6 @@
         <section style="padding-top: 50px;">
             <div class="container-fluid con-flu-col">
                 <div class="row">
-                    <div></div>
                     <div class="col-lg-12">
                         <div class="col-md-4">
                             <div class="Feature_icon__3OtVF circle">

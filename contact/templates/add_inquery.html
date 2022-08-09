@@ -1,5 +1,6 @@
 {% load static %}
 <html>
+    
     <head>
         {% include 'header.html' %}
     </head>
@@ -8,70 +9,84 @@
         {% include 'nav.html' %}
 
         <div class="container" style="direction:rtl;">
-            <form method="POST" action="/add_inquery/{{ products.slug }}/" enctype="multipart/form-data" style="padding-top: 135px;">
-
-                {% csrf_token %}
-
-                <div class="form-group">
-                    <label for="product">محصول</label>
-                    <select class="form-control" id="product" name="product">
-                        <option {% if products.slug == contact.product.slug %} selected="selected" {% endif %} value="{{ products.id }}" >{{ products }}</option>
-                    </select>
-                </div><br/>
-
-                <div class="form-group">
-                    <label for="companyname">نام شرکت / نام ارگان / نام سازمان</label>
-                    <span class="gfield_required">*</span>
-                    <input type="text" name="company_name" id="companyname" class="form-control" placeholder="نام شرکت خود را در این قسمت وارد کنید"/>
-                </div><br/>
-
-                <div class="form-group">
-                    <label for="firstname">نام مسئول</label>
-                    <span class="gfield_required">*</span>
-                    <input type="text" name="first_name" id="firstname" class="form-control" placeholder="نام خود را در این قسمت وارد کنید"/>
-                </div><br/>
-
-                <div class="form-group">
-                    <label for="lastname">نام خانوادگی مسئول</label>
-                    <span class="gfield_required">*</span>
-                    <input type="text" name="last_name" id="lastname" class="form-control" placeholder="نام خانوادگی خود را در این قسمت وارد کنید"/>
-                </div><br/>
-
-                <div class="form-group">
-                    <label for="email">ایمیل</label>
-                    <span class="gfield_required">*</span>
-                    <input type="email" name="email" id="email" class="form-control" style="text-align: end;" placeholder="ایمیل خود را وارد کنید"/>
-                </div><br/>
-
-                <div class="form-group">
-                    <label for="phone">تلفن</label>
-                    <span class="gfield_required">*</span>
-                    <input type="tel" name="phone" id="email" class="form-control" style="text-align: end; " placeholder="تلفن خود را وارد کنید"/>
-                </div><br/>
-
-                <div class="form-group">
-                    <label for="quantity">تعداد کامپیوتر های سازمان</label>
-                    <span class="gfield_required">*</span>
-                    <input type="number" name="quantity" id="quantity" class="form-control"/>
-                </div><br/>
-
-                <div class="form-group">
-                    <label for="description">توضیحات</label>
-                    <input type="text" name="description" id="description" class="form-control" placeholder="اگر توضیحاتی در مورد استعلام آنتی ویروس سازمانی دارید می توانید در این قسمت وارد نمایید."/>
-                </div><br/>
 
 
+            <div class="row">
+                <div class="col-lg-6" style="line-height: 20px;">
+                    <form id="contact-form" class="contact-form form" method="POST" action="/add_inquery/{{ product.slug }}/" enctype="multipart/form-data" style="padding-top: 135px;">
 
-                {% comment %} <div class="form-group">
-                    <label for="image">Upload Image:</label>
-                    <input class="form-control" name="image" type="file" id="image"/>
-                </div><br/> {% endcomment %}
+                        {% csrf_token %}
 
-                <div class="button-box">
-                    <button class="btn btn-success" type="submit"><span>ارسال</span></button>
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12" style="text-align: center;
+                            padding-bottom: 46px;">
+                                <h2>فرم استعلام محصول</h2>
+                            </div>
+
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" name="company_name" id="companyname" class="form-control" placeholder="نام شرکت / نام ارگان / نام سازمان"/>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="first_name" id="firstname" class="form-control" placeholder="نام مسئول"/>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control" style="text-align: end;" placeholder="ایمیل "/>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="tel" name="phone" id="email" class="form-control" style="text-align: end; " placeholder="تلفن "/>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="quantity" id="quantity" style="text-align: end;" class="form-control" placeholder="تعداد کامپیوتر" />
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="description" id="description" class="form-control" cols="35" row="8" style="resize: none;height: 90px;" placeholder="اگر توضیحاتی در مورد استعلام محصول مورد نظر دارید می توانید در این قسمت وارد نمایید."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <button class="send-btn" type="submit">ارسال</button>
+                                    <span style="top: 61.7188px; left: 9px;"></span>
+                                </div>
+                            </div>
+
+                        </div>
+        
+        
+                        <div class="button-box">
+                            
+                        </div>
+        
+                    </form>
                 </div>
-
-            </form>
+                <div class="col-lg-6">
+                    <div class="form-group pro-info">
+                        
+                        <h1 class="animated animatedFadeInUp fadeInUp">{{ product.title }}</h1>
+                        <img class="fade-in-text" src="{{ product.images.first.image.url }}">
+                        
+                    </div><br/>
+                </div>
+            </div>
+            
         </div>
     </body>
 </html>

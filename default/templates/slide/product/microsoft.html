@@ -9,8 +9,6 @@
         </div>
         </section>
         <section class="section-mic">
-            
-            {% comment %} <div class="top-banner"></div> {% endcomment %}
             <div class="home-center pro">
                 <div style="padding-top: 30px;">
                     <img class="mic-logo" src="{{ product.images.first.image.url }}" />
@@ -19,17 +17,16 @@
                 <div class="container content-page-mic">
 
                     <div class="row">
-                    <div class="top-title-kasper-2 col-md-12">{{ product.title }}</div>
+                        <div class="top-title-micro-1 col-md-12 animated animatedFadeInUp fadeInUp">{{ product.title }}</div>
                     </div>
                     <div class="row">
-                        <div class="top-title-kasper-3 col-md-5 ">{{ product.description }}</div>
+                        <div class="top-title-micro-2 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
                     </div>
-                    <div class="row">
+                    {% comment %} <div class="row">
                         <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
-                            {% comment %} <button href="{% url 'homepage' %}" type="button" class="btnbtn-success">خرید محصول</button> {% endcomment %}
                             <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                     
                 </div>
               </div>
