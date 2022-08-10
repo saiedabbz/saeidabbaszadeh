@@ -11,7 +11,7 @@
         <section class="section-mic">
             <div class="home-center pro">
                 <div style="padding-top: 30px;">
-                    <img class="mic-logo" src="{{ product.images.first.image.url }}" />
+                    <img class="mic-logo fade-in-text" src="{{ product.images.first.image.url }}" />
                 </div>
               <div class="home-desc-center" style="direction: rtl;">
                 <div class="container content-page-mic">
@@ -35,7 +35,57 @@
 
 
         <section>
-            {{ product.extras.all.0.desc|safe }}
+            {% comment %} {{ product.extras.all.0.desc|safe }} {% endcomment %}
+
+            <div class="container">
+                <div class="row row-50 row-lg-60 row-xl-90 justify-content-center">
+                    <div class="row" style="text-align: center;padding-bottom: 58px;">
+                        <h1>امنیت همه جانبه برای ویندوز</h1><br/>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon iconn icon-lg mdi mdi-newspaper fa-brands fa-windows"></div>
+                        <h4 class="box-classic-title">8 Themes Inside</h4>
+                        <p class="box-classic-text">Crafter contains 8 different and colorful themes that will perfectly fit your website.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon iconn icon-lg mdi mdi-rotate-left fa-brands fa-windows"></div>
+                        <h4 class="box-classic-title">Regular Updates</h4>
+                        <p class="box-classic-text">The template will be regularly updated with new amazing themes and features.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon iconn icon-lg mdi mdi-border-vertical fa-brands fa-windows"></div>
+                        <h4 class="box-classic-title">Tons of Blocks &amp; Elements</h4>
+                        <p class="box-classic-text">We supply the template with a variety of fully functional blocks and elements.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon iconn icon-lg mdi mdi-code-tags fa-brands fa-windows"></div>
+                        <h4 class="box-classic-title">Easy to Edit Code</h4>
+                        <p class="box-classic-text">Every theme in this template is written in 100% clean code that is easy to edit.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon iconn icon-md mdi mdi-tablet-ipad fa-brands fa-windows"></div>
+                        <h4 class="box-classic-title">Responsive Design</h4>
+                        <p class="box-classic-text">Crafter template is fully responsive and it easily adapts to any display and device.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon iconn icon-lg mdi mdi-message-outline fa-brands fa-windows"></div>
+                        <h4 class="box-classic-title">24/7 support</h4>
+                        <p class="box-classic-text">Our professional customer support is always ready to help you 24/7.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
             
         </section>
         <div>{% include 'footer.html' %}</div>

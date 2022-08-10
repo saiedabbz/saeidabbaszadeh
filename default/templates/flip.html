@@ -1,6 +1,6 @@
 {% load static %}
 
-<section id="services">
+<section id="services" class="bg-gray-100 section-bottom-left-rounded">
   <div class="container-fluid bg-color-1">
     <div class="padding">
       <p class="font-services pad-bot">خدمات امنیتی</p>
@@ -25,27 +25,27 @@
       <div class="row padding">
         {% if categories %}
           {% for cat in categories %}
-            <div class="col-lg-3 col-md-6">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                      <div class="flip-card-front">
-                        <div class="flip-logo">
-                          <img src="{{ cat.image.url }}" alt="Avatar">
-                        </div>
-                        <div>
-                          <p>{{ cat.title }}</p>
-                        </div>
+            <div class="col-lg-3 col-md-12">
+              <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <div class="flip-logo">
+                        <img src="{{ cat.image.url }}" alt="Avatar">
                       </div>
-                      <div class="flip-card-back">
-                        <div class="back-face">
-                          {% for sub_cat in cat.collection_set.all%}
-                            {% comment %} <a class="btn btn-flip" href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a><br><br> {% endcomment %}
-                            <a class="btn btn-flip" href="/products/{{sub_cat.slug}}/">{{sub_cat.title}}</a><br><br>
-                          {% endfor %}
-                        </div>
+                      <div>
+                        <p>{{ cat.title }}</p>
                       </div>
                     </div>
-                </div><br/>
+                    <div class="flip-card-back">
+                      <div class="back-face">
+                        {% for sub_cat in cat.collection_set.all%}
+                          {% comment %} <a class="btn btn-flip" href="/products/{{sub_cat.id}}/">{{sub_cat.title}}</a><br><br> {% endcomment %}
+                          <a class="btn btn-flip" href="/products/{{sub_cat.slug}}/">{{sub_cat.title}}</a><br><br>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+              </div><br/>
             </div>
             {% endfor %}
           {% endif %} 
@@ -53,6 +53,108 @@
     </div>
   </div>
 </section>
+
+
+
+<section style="background-color:#fff;">
+  <div class="container">
+    <div class="row techvio">
+      <div class="col-lg-6">
+        <div class="img-animation" style="float:left;">
+          <img style="padding-top: 25px;" src="{% static 'img/choose-1.jpg' %}" alt="image">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="overview-content">
+          <h6>محصولات سازمانی</h6>
+          <h2>محبوب ترین محصولات</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <ul class="features-list">
+ 
+            {% for product in top_products.business %}
+              <a href="/product/{{product.slug}}/"><li><span>{{ product.title}}
+                <img style="height: 33px;" src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
+              </span></li></a>
+            {% endfor%}
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="background-color:#fff;">
+  <div class="container">
+    <div class="row techvio">
+      <div class="col-lg-6">
+        <div class="overview-content">
+          <h6>محصولات خانگی</h6>
+          <h2>محبوب ترین محصولات</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <ul class="features-list">
+            {% for product in top_products.home %}
+              <a href="/product/{{product.slug}}/"><li><span>{{ product.title}}
+                <img style="height: 33px;" src="{{ product.images.first.image.url }}" alt="{{ cat.title }}"/>
+              </span></li></a>
+            {% endfor%}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="img-animation" style="float:left;">
+          <img style="padding-top: 25px;" src="{% static 'img/choose-2.jpg' %}" alt="image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<body onload="load()">
+  <section class="counter-area section-padding-bg">
+    <div class="container" >
+      <div class="row" style="direction:rtl;">
+
+        <div class="col-lg-4 col-md-6 counter-item">
+          <div class="single-counter">
+            <div class="counter-content">
+              <h2>
+                <span>+</span>
+                <span id='0101' class="counter">{{g_configs.org_users.value}}</span>
+              </h2>
+              <h3 class="counter-heading">{{g_configs.org_users.title}}</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 counter-item">
+          <div class="single-counter">
+            <div class="counter-content">
+              <h2>
+                <span>+</span>
+                <span id='0102' class="counter">{{g_configs.home_users.value}}</span>
+              </h2>
+              <h3 class="counter-heading">{{g_configs.home_users.title}}</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 counter-item">
+          <div class="single-counter">
+            <div class="counter-content">
+              <h2>
+                <span>+</span>
+                <span id='0103' class="counter">{{g_configs.users_count.value}}</span>
+              </h2>
+              <h3 class="counter-heading">{{g_configs.users_count.title}}</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
 
 <section id="customers">
   <div class="container bg-color-1">
@@ -86,145 +188,29 @@
   </div>
 </section>
 
-<section style="background-color:#fff;">
-  <div class="container">
-    <div class="row techvio">
-      <div class="col-lg-6">
-        <div class="img-animation" style="float:left;">
-          <img src="{% static 'img/choose-1.jpg' %}" alt="image">
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="overview-content">
-          <h6>why choose us?</h6>
-          <h2>Safeguard your brand with Cyber-Security & IT Solutions</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <ul class="features-list">
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section style="background-color:#fff;">
-  <div class="container">
-    <div class="row techvio">
-      <div class="col-lg-6">
-        <div class="overview-content">
-          <h6>why choose us?</h6>
-          <h2>Safeguard your brand with Cyber-Security & IT Solutions</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <ul class="features-list">
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-            <li><span>Remote It Assistance</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="img-animation" style="float:left;">
-          <img src="{% static 'img/choose-2.jpg' %}" alt="image">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<body onload="load()">
-  <section class="counter-area section-padding-bg">
-    <div class="container" >
-      <div class="row" style="direction:ltr;">
-        <div class="col-lg-3 col-md-6 counter-item">
-          <div class="single-counter">
-            <div class="counter-content">
-              <h2>
-                <span id='0101' class="counter">27</span>
-                <span>+</span>
-              </h2>
-              <h3 class="counter-heading">Years Helping Business</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 counter-item">
-          <div class="single-counter">
-            <div class="counter-content">
-              <h2>
-                <span id='0104' class="counter">500</span>
-                <span>M</span>
-              </h2>
-              <h3 class="counter-heading">Employees</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 counter-item">
-          <div class="single-counter">
-            <div class="counter-content">
-              <h2>
-                <span id='0102' class="counter">30</span>
-                <span>M</span>
-              </h2>
-              <h3 class="counter-heading">Complete Projects</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 counter-item">
-          <div class="single-counter">
-            <div class="counter-content">
-              <h2>
-                <span id='0103' class="counter">90</span>
-                <span>K+</span>
-              </h2>
-              <h3 class="counter-heading">5 Star Rating</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</body>
-
-
-
+{% comment %} 
 <div id="deep-card">
   <h1 class="title">Hover over the cards</h1>
 
   <div id="app" class="container">
     <card data-image="{% static 'img/ooda-logo.png' %}">
-      {% comment %} <h1 slot="header">Canyons</h1> {% endcomment %}
+      <h1 slot="header">Canyons</h1>
       <p slot="content">چرخه ooda</p>
     </card>
     <card data-image="https://www.offensive-security.com/wp-content/uploads/2021/11/SOC-200.svg">
-      {% comment %} <h1 slot="header">Beaches</h1> {% endcomment %}
+      <h1 slot="header">Beaches</h1>
       <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </card>
     <card data-image="{% static 'img/wald.jpg' %}">
-      {% comment %} <h1 slot="header">Trees</h1> {% endcomment %}
+      <h1 slot="header">Trees</h1>
       <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </card>
     <card data-image="{% static 'img/building.jpg' %}">
-      {% comment %} <h1 slot="header">Lakes</h1> {% endcomment %}
+      <h1 slot="header">Lakes</h1>
       <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </card>
   </div>
-</div>
-
-
-
-
-
+</div> {% endcomment %}
 
 
 
@@ -256,13 +242,11 @@
   let text1 = document.getElementById('0101');
   let text2 = document.getElementById('0102');
   let text3 = document.getElementById('0103');
-  let text4 = document.getElementById('0104');
 
   const load = () => {
-     animate(text1, 0, 27, 7000);
-     animate(text2, 0, 30, 7000);
-     animate(text3, 100, 90, 7000);
-     animate(text4, 150, 500, 7000);
+     animate(text1, 50, {{g_configs.org_users.value}}, 7000);
+     animate(text2, 50, {{g_configs.home_users.value}}, 7000);
+     animate(text3, 100, {{g_configs.users_count.value}}, 7000);
 
   }
 </script>

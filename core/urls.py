@@ -39,9 +39,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("default.urls")),
     path('', include("product.urls")),
-    path('',include("order.urls")),
+    path('', include("order.urls")),
     path('customer/', include('customer.urls')),
     path('', include('contact.urls')),
+    path('', include("config.urls")),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

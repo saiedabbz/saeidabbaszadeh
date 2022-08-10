@@ -248,3 +248,226 @@
     content: "\f12d";
     font-size: 30px;
 }
+
+
+/******************************************************************************/
+
+
+.box-decorative {
+	pointer-events: none;
+	position: absolute;
+	top: 35px;
+	left: 48%;
+	transform: translateX(-50%);
+	bottom: 0;
+	width: 73.4vw;
+}
+
+.box-classic {
+	padding: 0 15px 20px;
+	background-color: #F6F8FB;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+	.box-classic {
+		padding: 0 30px 30px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.box-classic {
+    padding: 1px 40px 37px;
+    margin-block: 20px;
+  }
+}
+
+.iconn::before {
+  content: "\f17a";
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  font-style: normal;
+  speak: none;
+  text-transform: none;
+  font-size: 40px;
+}
+
+.bg-gray-100 .box-classic {background-color: #ffffff;}
+
+.box-classic-icon {
+	margin-top: -30px;
+	position: relative;
+	color: #ffffff;
+	width: 70px;
+	height: 70px;
+	border-radius: 10em;
+	background: linear-gradient(98.15deg, #5540BF 17.7%, #8E7AF5 81.94%);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.box-classic-icon::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+* + .box-classic-title {
+	margin-top: 23px;
+  height: 50px;
+}
+
+* + .box-classic-text {
+	margin-top: 6px;
+}
+
+.box-modern {
+	max-width: 380px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.box-modern:not(.box-modern-soon):hover .box-modern-figure {
+	transform: translate(0, -10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.box-modern-figure {
+	position: relative;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.box-modern-figure img {
+	transition: all 0.3s ease-in-out;
+}
+
+.box-modern-figure:hover img {
+	opacity: .8;
+}
+
+* + .box-modern-title {
+	margin-top: 15px;
+}
+
+@media (min-width: 1200px) {
+	* + .box-modern-title {
+		margin-top: 22px;
+	}
+}
+
+.box-modern-soon .box-modern-figure p, .box-modern-soon .box-modern-figure::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+.box-modern-soon .box-modern-figure p {
+	font-weight: 600;
+	letter-spacing: .05em;
+	line-height: 1.01;
+	text-transform: uppercase;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	background: linear-gradient(65.38deg, #5540BF -1.92%, #A293F0 99.19%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.box-modern-soon .box-modern-figure::before {
+	content: '';
+	width: 112px;
+	height: 112px;
+	border-radius: 10em;
+	background-color: #ffffff;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.box-modern-soon .box-modern-figure img {
+	background-color: #ffffff;
+	opacity: .24;
+}
+
+.box-elements {
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 20px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+	.box-elements {
+		margin-right: 55px;
+	}
+}
+
+* + .box-elements {
+	margin-top: 40px;
+}
+
+.box-elements-item {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 137px;
+	width: 50%;
+	max-width: 50%;
+	flex-basis: 50%;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 575.98px) {
+	.box-elements-item:nth-of-type(n + 3) {
+		border-top: 1px solid #DBDBDB;
+	}
+	.box-elements-item:nth-of-type(2n) {
+		border-left: 1px solid #DBDBDB;
+	}
+}
+
+@media (min-width: 576px) {
+	.box-elements-item {
+		width: 25%;
+		max-width: 25%;
+		flex-basis: 25%;
+	}
+	.box-elements-item:nth-of-type(n + 5) {
+		border-top: 1px solid #DBDBDB;
+	}
+	.box-elements-item:nth-of-type(2n) {
+		border-left: 1px solid #DBDBDB;
+		border-right: 1px solid #DBDBDB;
+	}
+	.box-elements-item:nth-of-type(4n) {
+		border-right: 0;
+	}
+}
+
+.box-elements-item:hover {
+	background-color: #F6F8FB;
+}
+
+.box-elements-item:hover * {
+	color: #5540BF;
+}
+
+.box-elements-icon {
+	transition: all 0.3s ease-in-out;
+}
+
+.box-elements-text {
+	margin-top: 0;
+	color: #3D3D3D;
+}

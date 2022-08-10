@@ -33,6 +33,7 @@ class ProductAdmin(admin.ModelAdmin):
         'id',
         'title',
         'slug',
+        'order_id',
         'description',
         'collection_titles',
         'active',

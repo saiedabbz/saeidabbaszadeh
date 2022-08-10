@@ -15,6 +15,7 @@ class Product(models.Model):
     created_at = models.DateTimeField(_("created at"), auto_now_add=True)
     updated_at = models.DateTimeField(_("updated at"), auto_now=True)
     theme = models.CharField(_("Theme"), max_length=64, null=True, blank=True)
+    order_id = models.IntegerField(_("order id"), blank=True, null=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)

@@ -1,20 +1,23 @@
-from gc import get_objects
-from itertools import product
-from multiprocessing import context
-from unicodedata import category
+# from gc import get_objects
+# from itertools import product
+# from multiprocessing import context
+# from unicodedata import category
+from http.client import REQUEST_URI_TOO_LONG
+from urllib import request
 from django.shortcuts import render
 from default.models import Category
 from product.models import Product, Collection, ProductImage
-from django.shortcuts import redirect, get_object_or_404
+from django.shortcuts import redirect
 from service.models import Service
 from customer.models import Customer
+from config.models import Config
 
 from django.views.generic import UpdateView
 from django.template import loader
 
 from product.services import collections, product_detail, products
 
-
+from pprint import pprint
 
 
 
@@ -24,12 +27,18 @@ def HomePage(request):
     services = Service.objects.all()
     products = Product.objects.all()
     customers = Customer.objects.all()
+    top_products_business = Product.objects.filter(collections__collection_type_id=4).order_by("order_id")[:3]
+    top_products_home = Product.objects.filter(collections__collection_type_id=3).order_by("order_id")[:3]
     
     context = {
         'categories': categories ,
         'services': services ,
         'products': products ,
         'customers': customers ,
+        'top_products': {
+            'business': top_products_business,
+            'home': top_products_home
+        }
     }
     
     return render(request, 'index.html', context)
@@ -106,3 +115,4 @@ def ServiceView(request, slug):
         'service': service ,
     }
     return render(request, 'services.html', context )
+

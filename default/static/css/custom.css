@@ -1,7 +1,7 @@
 body {
     font-family: IRANSans, sans-serif;
     padding: 0;
-    background-color: #fafbfc;
+    background-color:#FAFBFC;
 }
 
   
@@ -240,13 +240,15 @@ body {
 
 .home-content .right h1 {
     font-weight: 800;
-    color: #6d6d6d;
+    font-size: 58px;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 .home-content .right h3 {
     font-size: 21px;
-    color: #555;
+    /* color: #555; */
+    color: #fff;
 }
 
 #grad {
@@ -412,7 +414,8 @@ body {
 }
 
 .btn-flip{
-    background-color: rgb(0 133 127);
+    /* background-color: rgb(0 133 127); */
+    background-color: #7B68EE;
     color: #fff;
     width: 80%;
     max-width: 100% !important;
@@ -421,7 +424,8 @@ body {
     height: 37px;
 }
 .btn-flip:hover{
-    background-color: rgb(1, 110, 105);
+    /* background-color: rgb(1, 110, 105); */
+    background-color: #5A45C2;
     color: #fff;
 }
 
@@ -532,7 +536,7 @@ div.icon svg {
 
 
 .font-services {
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 600;
     text-align: center;
 }
@@ -596,8 +600,9 @@ div.icon svg {
 }
 
 section#services {
-    background-color: #FFFFFF;
+    background-color:#FAFBFC;
     min-height: 700px;
+    box-shadow: 0 8px 11px 0px rgb(128 128 128 / 10%)
 }
 
 section#software{
@@ -705,7 +710,7 @@ section#customer{
 
 
 
-/**********************************************************************/
+/********************************  Best of Product **************************************/
 
 .techvio {
     align-items: center!important;
@@ -715,6 +720,7 @@ section#customer{
 
 .techvio img{
     text-align: center;
+    height: 500px;
 }
 
 .overview-content{
@@ -722,6 +728,7 @@ section#customer{
 }
 
 .overview-content h6 {
+    direction: rtl;
     font-size: 16px;
     font-weight: 700;
     color: #FF9800;
@@ -730,6 +737,7 @@ section#customer{
 }
 
 .overview-content h2 {
+    direction: rtl;
     font-size: 38px;
     color: #0b0b31;
     margin: 8px 0 15px 0;
@@ -751,13 +759,14 @@ section#customer{
     margin-top: 16px;
     margin-left: -10px;
     margin-right: -10px;
+    flex-direction: column;
 }
 
 .overview-content .features-list li {
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
     flex: 0 0 50%;
-    max-width: 50%;
+    /* max-width: 50%; */
     margin-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
@@ -778,6 +787,9 @@ section#customer{
     font-size: 14px;
     -webkit-box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
     box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .overview-content .features-list li span::before {
     content: '';
@@ -821,8 +833,11 @@ section#customer{
 
 
 
+/******************************** End best of product ************************************/
 
-/************************* counter area *****************************************/
+
+
+/*********************************** counter area *****************************************/
 
 .counter-area {
     text-align: center;
@@ -885,176 +900,6 @@ section#customer{
 
 
 
-
-/************************* Deep Card ************************************/
-
-#deep-card {
-    padding-top: 50px;
-}
-
-#deep-card body {
-    margin: 40px 0;
-    font-family: "Raleway";
-    font-size: 14px;
-    font-weight: 500;
-    background-color: #BCAAA4;
-    -webkit-font-smoothing: antialiased;
-  }
-  
-#deep-card .title {
-    font-family: "Raleway";
-    font-size: 24px;
-    font-weight: 700;
-    color: #5D4037;
-    text-align: center;
-  }
-  
-#deep-card p {
-    line-height: 1.5em;
-  }
-  
-#deep-card h1 + p, p + p {
-    margin-top: 10px;
-  }
-  
-#deep-card .container {
-    padding: 40px 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-#deep-card .card-wrap {
-    margin: 10px;
-    transform: perspective(800px);
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-#deep-card .card-wrap:hover .card-info {
-    transform: translateY(0);
-  }
-#deep-card .card-wrap:hover .card-info p {
-    opacity: 1;
-  }
-#deep-card .card-wrap:hover .card-info, .card-wrap:hover .card-info p {
-    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-#deep-card .card-wrap:hover .card-info:after {
-    transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
-    opacity: 1;
-    transform: translateY(0);
-  }
-#deep-card .card-wrap:hover .card-bg {
-    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
-    opacity: 0.8;
-  }
-#deep-card .card-wrap:hover .card {
-    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
-  }
-  
-/* #deep-card .card {
-    position: relative;
-    flex: 0 0 240px;
-    width: 215px;
-    height: 320px;
-    background-color: #333;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
-    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  } */
-
-  #deep-card .card {
-    position: relative;
-    flex: 0 0 240px;
-    width: 215px;
-    height: 212px;
-    background-color: #333;
-    overflow: hidden;
-    border-radius: 195px;
-    box-shadow: rgb(0 0 0 / 66%) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgb(255 255 255 / 50%) 0 0 0 6px;
-    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-  
-/* #deep-card .card-bg {
-    opacity: 0.5;
-    position: absolute;
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    pointer-events: none;
-    width: 256px;
-    height: 355px;
-    right: -20px;
-    top: -20px;
-  } */
-
-
-  #deep-card .card-bg {
-    opacity: 0.5;
-    position: absolute;
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    pointer-events: none;
-    width: 195px;
-    height: 212px;
-    /* right: -20px; */
-    /* top: -20px; */
-    left: 8px;
-}
-  
-#deep-card .card-info {
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    color: #fff;
-    transform: translateY(40%);
-    transition: 0.3s 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-#deep-card .card-info p {
-    opacity: 0;
-    text-shadow: black 0 2px 3px;
-    transition: 0.3s 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-#deep-card .card-info * {
-    position: relative;
-    z-index: 1;
-  }
-#deep-card .card-info:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-    background-blend-mode: overlay;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  }
-  
-#deep-card .card-info h1 {
-    font-family: "Playfair Display";
-    font-size: 36px;
-    font-weight: 700;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
-}
-
-
-
-
-/************************* End Deep Card ***********************************/
-
-
-
 /************************* InQuery form ***********************************/
 .gfield_required{
     color: red;
@@ -1085,8 +930,8 @@ span .gfield_required {
 	height: 55px;
 	font-size: 15px;
 	border-right: 3px solid #7b68ee;
-	-webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.15);
-	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.15);   
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.068);
+	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.062); 
 }
 
 .contact-form .col-lg-6, .col-lg-12{
@@ -1135,9 +980,9 @@ span .gfield_required {
 }
 
 .contact-form .form-control:focus {
-	border-left: 3px solid #7b68ee;
-	-webkit-box-shadow: none;
-	box-shadow: none;
+	
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.192);
+	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.199);  
 }
 
 /************************* End InQuery form ***********************************/
@@ -1179,7 +1024,7 @@ span .gfield_required {
   }
 
 
-  /************************* End fade in image ***********************************/
+/***************************** End fade in image ***********************************/
 
 
 /******************************* fade in up ****************************************/
@@ -1223,12 +1068,13 @@ span .gfield_required {
 /******************************* End fade in up ****************************************/
 
 
-/******************************* Gradient ****************************************/
+/********************************** Gradient ****************************************/
 
 
 
 .bg-gradient-1 {
-    background: linear-gradient(65.38deg, #5540BF -1.92%, #A293F0 99.19%);
+    /* background: linear-gradient(65.38deg, #5540BF -1.92%, #A293F0 99.19%); */
+    background: linear-gradient(65.38deg, #bcafffc7 -1.92%, #A293F0 99.19%);
 }
 
 .bg-gradient-2 {
@@ -1252,6 +1098,66 @@ span .gfield_required {
     bottom: 0;
     width: 73.4vw;
 }
+.section-xxl {
+    padding: 60px 0 70px;
+}
+
+@media (min-width: 1200px){
+    .section-bottom-right-rounded {
+        border-bottom-right-radius: 250px;
+    }
+}
+@media (min-width: 768px){
+    .section-bottom-right-rounded {
+        border-bottom-right-radius: 210px;
+    }
+}
+@media (min-width: 992px){
+    .section-xxl {
+        padding: 211px 0 161px;
+    }
+}
+@media (min-width: 768px){
+    .section-xxl {
+        padding: 150px 0 100px;
+    }
+}
+
+/* .bg-gray-100 {
+    background-color: #0d5cd3;
+} */
+
+.section-bottom-right-rounded + .bg-gray-100 {
+    position: relative;
+}
+
+.section-bottom-left-rounded {
+    border-bottom-left-radius: 100px;
+}
+
+/* .section-bottom-right-rounded::before {
+    content: '';
+    position: absolute;
+    top: -250px;
+    left: 0;
+    right: 0;
+    height: 250px;
+    background-color:#FAFBFC;
+    z-index: -1;
+    
+} */
+
+@media (min-width: 1200px){
+    .section-bottom-left-rounded {
+        border-bottom-left-radius: 250px;
+    }
+}
+@media (min-width: 768px){
+    .section-bottom-left-rounded {
+        border-bottom-left-radius: 210px;
+    }
+}
+
 
 /*******************************  End Gradient ****************************************/
 
@@ -1359,3 +1265,147 @@ span .gfield_required {
     text-align: center;
     color: none;
   }
+
+
+/******************************* End Parallax ****************************************/
+
+
+/************************* Deep Card ************************************/
+
+/* #deep-card {
+    padding-top: 50px;
+}
+
+#deep-card body {
+    margin: 40px 0;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #BCAAA4;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+#deep-card .title {
+    font-family: "Raleway";
+    font-size: 24px;
+    font-weight: 700;
+    color: #5D4037;
+    text-align: center;
+  }
+  
+#deep-card p {
+    line-height: 1.5em;
+  }
+  
+#deep-card h1 + p, p + p {
+    margin-top: 10px;
+  }
+  
+#deep-card .container {
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+#deep-card .card-wrap {
+    margin: 10px;
+    transform: perspective(800px);
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+#deep-card .card-wrap:hover .card-info {
+    transform: translateY(0);
+  }
+#deep-card .card-wrap:hover .card-info p {
+    opacity: 1;
+  }
+#deep-card .card-wrap:hover .card-info, .card-wrap:hover .card-info p {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+#deep-card .card-wrap:hover .card-info:after {
+    transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 1;
+    transform: translateY(0);
+  }
+#deep-card .card-wrap:hover .card-bg {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.8;
+  }
+#deep-card .card-wrap:hover .card {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
+  }
+  
+#deep-card .card {
+    position: relative;
+    flex: 0 0 240px;
+    width: 215px;
+    height: 320px;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  
+#deep-card .card-bg {
+    opacity: 0.5;
+    position: absolute;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    pointer-events: none;
+    width: 256px;
+    height: 355px;
+    right: -20px;
+    top: -20px;
+  }
+
+  
+#deep-card .card-info {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    transform: translateY(40%);
+    transition: 0.3s 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+#deep-card .card-info p {
+    opacity: 0;
+    text-shadow: black 0 2px 3px;
+    transition: 0.3s 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+#deep-card .card-info * {
+    position: relative;
+    z-index: 1;
+  }
+#deep-card .card-info:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    background-blend-mode: overlay;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+  
+#deep-card .card-info h1 {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+} */
+
+
+
+
+/************************* End Deep Card ***********************************/
