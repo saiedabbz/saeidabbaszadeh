@@ -1,22 +1,31 @@
 from django.contrib import admin
 
-from .models import Contact
+from .models import Contact , InQueryType
 
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = [
         'id',
+        'product',
+        'service',
         'company_name',
-        'first_name',
-        'last_name',
+        'name',
         'email',
         'phone',
         'quantity',
-        'slug',
-        'product',
-        'description',
+        # 'slug',
+        # 'description',
         'created_at',
-        'contact_type',
+        # 'inquery_type',
         
+    ]
+
+@admin.register(InQueryType)
+class InQueryTypeAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'title',
+        'active',
+    
     ]

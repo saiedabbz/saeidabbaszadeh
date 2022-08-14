@@ -1,27 +1,63 @@
-# from contextlib import redirect_stderr
-# from itertools import product
 from django.shortcuts import render, redirect
 from contact.models import Contact
 from product.models import Product
+from service.models import Service
+
+def addInquery(request, slug):
+    try:
+        product = Product.objects.get(slug=slug)
+    except:
+        product = ""
+
+    try:
+        service = Service.objects.get(slug=slug)
+    except: 
+        service = ""
 
 
-def InQuery(request, slug):
-    product = Product.objects.get(slug=slug)
+    print(f"product: {product} , service: {service}")
+
+    return render(request, 'add_inquery.html', {'product': product, 'service': service})
+
+
+
+
+
+def insertInquery(request, slug):
+    try:
+        product = Product.objects.get(slug=slug)
+    except:
+        product = 0
+
+    try:
+        service = Service.objects.get(slug=slug)
+    except: 
+        service = 0
 
     if request.method == "POST":
-        # product = request.POST.get('product')
         company_name = request.POST.get('company_name')
-        first_name = request.POST.get('first_name')
-        # last_name = request.POST.get('last_name')
+        name = request.POST.get('name')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         quantity = request.POST.get('quantity')
         description = request.POST.get('description')
+        # inquery_type = request.POST.get('inq_type')
 
-        # prod = Product.objects.get(pk=product)
+        contact = Contact()
+        
+        if product != 0 :
+            contact.product = product
+        else:
+            contact.service = service
+        contact.company_name = company_name
+        contact.name = name
+        contact.email = email
+        contact.phone = phone
+        contact.quantity = quantity
+        contact.description = description
+        # contact.inquery_type = int(inq_type)
 
-        contact = Contact(product=product, company_name=company_name, first_name=first_name, email=email, phone=phone, quantity=quantity, description=description )
         contact.save()
         return redirect("homepage")
 
-    return render(request, 'add_inquery.html', {'product': product,})
+    

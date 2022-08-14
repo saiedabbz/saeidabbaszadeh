@@ -6,8 +6,8 @@
             <div class="row gy-4 gx-5">
                 <div class="col-lg-4 col-md-6">
                     <img src="{% static 'img/logo-black.png' %}" style="width: -webkit-fill-available;"/>
-                    <h6 class="footer-text">کارشناسان ما در ساعات اداری همه روزه (غیر از روزهای تعطیل) آماده پشتیبانی محصولات و پاسخگویی به سوالات شما هستند.</h6>
-                    <p class="small mb-0" style="color:white">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
+                    <h6 class="footer-text">{{ g_configs.footer_desc.description }}</h6>
+                    {% comment %} <p class="small mb-0" style="color:white">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p> {% endcomment %}
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">محصولات</h4>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <h4 class="text-white mb-3">نماد الکترونیک</h4>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    {% comment %} <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> {% endcomment %}
                    
                 </div>
             </div>

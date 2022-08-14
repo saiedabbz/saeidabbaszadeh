@@ -37,15 +37,20 @@
                       <div style="padding-top: 70px;">{{ prod.title }}
                         <p class="text-muted mt-4">{{ prod.description }}</p>
                       </div>
+
+                      {% if prod.collections.first.collection_type.title == 'home' %}
                       <div class="text-center ">
                         <a href="#" class="btn btn-success w-x">خرید محصول</a>
                       </div>
+                      {% else %}
+                      <div class="text-center top-pad">
+                        <a class="btn btn-success w-x" href="/add_inquery/{{ prod.slug }}">استعلام محصول</a>
+                      </div>
+                      {% endif %}
                       <div class="text-center top-pad">
                         <a class="btn btn-link" href="/product/{{ prod.slug }}/">اطلاعات بیشتر</a>
                       </div>
-                      <div class="text-center">
-                        <a class="btn btn-link" href="/add_inquery/{{ prod.slug }}">استعلام محصول</a>
-                      </div>
+                      
 
                     </div>
                     

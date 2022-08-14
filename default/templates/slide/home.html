@@ -1,16 +1,16 @@
 {% load static %}
 
 
-<div class="section-xxl home-content bg-gradient-1 section-bottom-right-rounded">
-  <div class="box-decorative bg-gradient-2 section-top-left-rounded"></div>
+<div class="section-xxl home-content ">
+  {% comment %} <div class="box-decorative bg-gradient-2 section-top-left-rounded"></div> {% endcomment %}
   <div class="right animated animatedFadeInUp fadeInUp">
     <h1> مهر سامان </h1>
     <h3> ارائه دهنده راهکارهای امنیتی </h3>
   </div>
-  {% comment %} <div class="left">
-    <img class="fade-in-text" src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
-  </div> {% endcomment %}
-  <div id="parallax" class="items left">
+  <div class="left">
+    <img src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
+  </div>
+  {% comment %} <div id="parallax" class="items left">
     <div class="items__inner" id="js-scene">
       <div class="items__layer layer" data-depth="0.85">
         <div>
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 </div>
 
   <style>
@@ -37,9 +37,9 @@
   }
 </style>
 
-<script src="{% static 'js/parallax.min.js' %}"></script>
+{% comment %} <script src="{% static 'js/parallax.min.js' %}"></script>
 
 <script>
   var scene = document.getElementById('js-scene');
   var parallax = new Parallax(scene);
-</script>
+</script> {% endcomment %}

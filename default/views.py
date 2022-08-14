@@ -47,7 +47,12 @@ def HomePage(request):
 
 def ProductsView(request, slug):
     products = Product.objects.filter(collections__slug=slug)
-    return render(request, products[0].collections.first().theme , {'products': products})
+    # prod = products.objects.all()
+    context = {
+        'products': products ,
+        # 'prod': prod
+    }
+    return render(request, products[0].collections.first().theme , context )
 
 
 

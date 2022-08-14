@@ -8,5 +8,6 @@ class ConfigAdmin(admin.ModelAdmin):
         'id',
         'title',
         'slug',
+        'description',
         'value',
     ]

@@ -1,6 +1,6 @@
 {% load static %}
 
-<section id="services" class="bg-gray-100 section-bottom-left-rounded">
+<section id="services">
   <div class="container-fluid bg-color-1">
     <div class="padding">
       <p class="font-services pad-bot">خدمات امنیتی</p>
@@ -68,7 +68,7 @@
         <div class="overview-content">
           <h6>محصولات سازمانی</h6>
           <h2>محبوب ترین محصولات</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>راهکار های امنیتی برای حفاظت از داده های تجاری و سازمانی و کاربران سیستم.</p>
           <ul class="features-list">
  
             {% for product in top_products.business %}
@@ -90,7 +90,7 @@
         <div class="overview-content">
           <h6>محصولات خانگی</h6>
           <h2>محبوب ترین محصولات</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>ایده آل برای خانه یا دفاتر کوچک که به دنبال امنیت دستگاه با کاربری آسان هستند.</p>
           <ul class="features-list">
             {% for product in top_products.home %}
               <a href="/product/{{product.slug}}/"><li><span>{{ product.title}}
@@ -211,6 +211,20 @@
     </card>
   </div>
 </div> {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

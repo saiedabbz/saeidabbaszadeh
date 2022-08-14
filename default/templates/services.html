@@ -14,16 +14,31 @@
         </section>
         <section>
             <div class="container">
-                <div class="padding"><h2>{{service.title}}</h2></div>
+                {% comment %} <div class="padding service-send-btn">
+                    <h2>{{service.title}}</h2>
+                    <a class="send-btn" href="/add_inquery/{{ service.slug }}">استعلام سرویس</a>
+                </div> {% endcomment %}
                 <div class="container text-kh">
-                    {{service.body|safe}}
+                    <div class="row service-text">
+                        {{service.body|safe}}
+                        {% comment %} <div class="container-fluid">
+                            <img src="{% static 'img/network-security-banner-top.jpg'%}">
+                        </div> {% endcomment %}
+                    </div>
+                    
                 </div>
+                
             </div>
         </section>
         <div>{% include 'footer.html' %}</div>
         <style>
             body{
                 background: #f6f6f6;
+            }
+            .service-text img {
+                height: 265px;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             }
         </style>
     </body>

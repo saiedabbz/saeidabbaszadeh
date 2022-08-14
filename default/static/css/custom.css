@@ -35,7 +35,7 @@ body {
     height: 67px;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-left: 140px;
+    margin-left: 100px;
 }
 
 .navbar:hover .navbar-brand,
@@ -241,14 +241,15 @@ body {
 .home-content .right h1 {
     font-weight: 800;
     font-size: 58px;
-    color: #fff;
+    /* color: #fff; */
+    color: #555;
     margin-bottom: 20px;
 }
 
 .home-content .right h3 {
     font-size: 21px;
-    /* color: #555; */
-    color: #fff;
+    color: #555;
+    /* color: #fff; */
 }
 
 #grad {
@@ -432,6 +433,19 @@ body {
 
 .padding {
     padding: 25px;
+    
+}
+
+.service-send-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inq {
+    background-color: #696969;
+}
+.inq:hover{
+    background-color: #4b4a4a;
 }
 
 
@@ -602,7 +616,7 @@ div.icon svg {
 section#services {
     background-color:#FAFBFC;
     min-height: 700px;
-    box-shadow: 0 8px 11px 0px rgb(128 128 128 / 10%)
+    /* box-shadow: 0 8px 11px 0px rgb(128 128 128 / 10%) */
 }
 
 section#software{
@@ -745,6 +759,7 @@ section#customer{
 
 .overview-content p {
     margin: 0 0 0 0;
+    direction: rtl;
 }
 
 .overview-content .features-list {

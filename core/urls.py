@@ -43,6 +43,7 @@ urlpatterns = [
     path('customer/', include('customer.urls')),
     path('', include('contact.urls')),
     path('', include("config.urls")),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

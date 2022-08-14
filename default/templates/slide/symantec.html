@@ -46,10 +46,10 @@
                   <a href="#" class="btn btn-success w-x">خرید محصول</a>
                 </div>
                 <div class="text-center top-pad">
-                  <a class="btn btn-link" href="/product/{{prod.slug}}/">اطلاعات بیشتر</a>
+                  <a class="btn btn-success w-x inq" href="/add_inquery/{{ prod.slug }}">استعلام محصول</a>
                 </div>
-                <div class="text-center">
-                  <a class="btn btn-link" href="/add_inquery/{{ prod.slug }}">استعلام محصول</a>
+                <div class="text-center top-pad">
+                  <a class="btn btn-link" href="/product/{{prod.slug}}/">اطلاعات بیشتر</a>
                 </div>
 
                 {{prod.extras.first.desc|safe}}
