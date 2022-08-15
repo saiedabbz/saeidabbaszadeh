@@ -15,9 +15,9 @@ class Service(models.Model):
     theme = models.CharField(_("Theme"), max_length=64, null=True, blank=True)
 
 
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(Service, self).save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     self.slug = slugify(self.title)
+    #     super(Service, self).save(*args, **kwargs)
 
 
     def __str__(self):

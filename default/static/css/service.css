@@ -21,8 +21,11 @@
 .pad-ser {
     padding-top: 90px;
     padding-bottom: 33px;
-
 }
+
+
+
+/******************************* Parallax ********************************/
 
 .network-banner{
     text-align: center;
@@ -31,10 +34,8 @@
     text-align: center;
     background: url(../img/network-security-banner-2.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 200px;
+    /* background-attachment: fixed; */
+    height: 210px;
 }
 
 .network-banner::after {
@@ -49,4 +50,7 @@
     opacity: .6;
     background: #03030c6e;
 }
-
+/* .section-1{
+    background-image:url(../img/network-security-banner-2.jpg);
+    background-position:center;
+} */

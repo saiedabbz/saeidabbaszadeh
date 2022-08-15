@@ -12,6 +12,9 @@
                 </div>
             </div>
         </section>
+        {% comment %} <div class="containerr section-1">
+            Welcome to this test!
+        </div> {% endcomment %}
         <section>
             <div class="container">
                 {% comment %} <div class="padding service-send-btn">
@@ -21,11 +24,7 @@
                 <div class="container text-kh">
                     <div class="row service-text">
                         {{service.body|safe}}
-                        {% comment %} <div class="container-fluid">
-                            <img src="{% static 'img/network-security-banner-top.jpg'%}">
-                        </div> {% endcomment %}
                     </div>
-                    
                 </div>
                 
             </div>
@@ -42,4 +41,20 @@
             }
         </style>
     </body>
+    
 </html>
+<script>
+    var velocity = 0.5;
+
+    function update(){ 
+    var pos = $(window).scrollTop(); 
+    $('.network-banner').each(function() { 
+        var $element = $(this);
+        // subtract some from the height b/c of the padding
+        var height = $element.height()-18;
+        $(this).css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
+    }); 
+    };
+
+    $(window).bind('scroll', update);
+</script>
