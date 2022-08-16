@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.HomePage, name="homepage"),
     path('products/<slug:slug>/', views.ProductsView, name="products"),
     path('service/<slug:slug>/', views.ServiceView, name="service"),
+    path('about_us/', views.AboutUs, name="aboutus"),
 
 
 

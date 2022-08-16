@@ -121,3 +121,7 @@ def ServiceView(request, slug):
     }
     return render(request, 'services.html', context )
 
+
+
+def AboutUs(request):
+    return render(request, 'aboutus.html', {})

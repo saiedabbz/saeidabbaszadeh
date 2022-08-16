@@ -23,6 +23,11 @@
     padding-bottom: 33px;
 }
 
+.service-text img {
+    height: 265px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 
 /******************************* Parallax ********************************/
@@ -34,8 +39,8 @@
     text-align: center;
     background: url(../img/network-security-banner-2.jpg);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     height: 210px;
+    border-radius: 7px;
 }
 
 .network-banner::after {
@@ -49,6 +54,7 @@
     width: 100%;
     opacity: .6;
     background: #03030c6e;
+    border-radius: 7px;
 }
 /* .section-1{
     background-image:url(../img/network-security-banner-2.jpg);

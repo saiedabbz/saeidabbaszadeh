@@ -3,6 +3,39 @@ from contact.models import Contact
 from product.models import Product
 from service.models import Service
 
+
+
+def addContactUs(request):
+    return render(request, 'contact_us.html')
+
+
+
+def insertContactUs(request):
+    # contact = Contact.objects.filter(inquery_type_id = 3)
+
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        description = request.POST.get('description')
+
+        contact = Contact()
+
+        contact.name = name
+        contact.email = email
+        contact.phone = phone
+        contact.inquery_type_id = 3
+        contact.description = description
+
+        contact.save()
+
+    return redirect("homepage")
+
+
+
+
+
+
 def addInquery(request, slug):
     try:
         product = Product.objects.get(slug=slug)

@@ -34,11 +34,6 @@
             body{
                 background: #f6f6f6;
             }
-            .service-text img {
-                height: 265px;
-                border-radius: 15px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
         </style>
     </body>
     
@@ -52,7 +47,7 @@
         var $element = $(this);
         // subtract some from the height b/c of the padding
         var height = $element.height()-18;
-        $(this).css('backgroundPosition', '50% ' + Math.round((height - pos) * velocity) + 'px'); 
+        $(this).css('backgroundPosition', '60% ' + Math.round((height - pos) * velocity) + 'px'); 
     }); 
     };
 

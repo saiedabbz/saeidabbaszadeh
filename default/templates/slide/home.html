@@ -7,10 +7,10 @@
     <h1> مهر سامان </h1>
     <h3> ارائه دهنده راهکارهای امنیتی </h3>
   </div>
-  <div class="left">
+  {% comment %} <div class="left">
     <img src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
-  </div>
-  {% comment %} <div id="parallax" class="items left">
+  </div> {% endcomment %}
+  <div id="parallax" class="items left">
     <div class="items__inner" id="js-scene">
       <div class="items__layer layer" data-depth="0.85">
         <div>
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  </div> {% endcomment %}
+  </div>
 </div>
 
   <style>
@@ -37,9 +37,9 @@
   }
 </style>
 
-{% comment %} <script src="{% static 'js/parallax.min.js' %}"></script>
+<script src="{% static 'js/parallax.min.js' %}"></script>
 
 <script>
   var scene = document.getElementById('js-scene');
   var parallax = new Parallax(scene);
-</script> {% endcomment %}
+</script>

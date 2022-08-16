@@ -1,0 +1,76 @@
+{% load static %}
+<html>
+    
+    <head>
+        {% include 'header.html' %}
+    </head>
+
+    <body>
+        {% include 'nav.html' %}
+
+        <div class="container" style="direction:rtl;">
+
+
+            <div class="row">
+                <div class="col-lg-6" style="line-height: 20px;">
+                    <form id="contact-form" class="contact-form form" method="POST" action="/insert_contact_us/" enctype="multipart/form-data" style="padding-top: 135px;">
+
+                        {% csrf_token %}
+
+                        {% comment %} <input type="hidden" name="inq_type" value={% if inquery_type_id != 3 %}3{% endif %} /> {% endcomment %}
+
+                        <div class="row">
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="نام مسئول"/>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" style="text-align: end;" placeholder="ایمیل "/>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <input type="tel" name="phone" class="form-control" style="text-align: end; " placeholder="تلفن "/>
+                                </div>
+                            </div>
+
+                            {% comment %} <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" name="quantity" id="quantity" style="text-align: end;" class="form-control" placeholder="تعداد کامپیوتر" />
+                                </div>
+                            </div> {% endcomment %}
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="description" class="form-control" cols="35" row="8" style="resize: none;height: 90px;" placeholder="اگر توضیحاتی در مورد استعلام محصول مورد نظر دارید می توانید در این قسمت وارد نمایید."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <button class="send-btn" type="submit">ارسال</button>
+                                    <span style="top: 61.7188px; left: 9px;"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                {% comment %} <div class="col-lg-6">
+                    <div class="form-group pro-info">
+                        
+                        <h1 class="animated animatedFadeInUp fadeInUp">{% if product != '' %}{{ product.title }}{% else %}{{ service.title }}{% endif %}</h1>
+                        <img class="fade-in-text" src="{% if product != '' %}{{ product.images.first.image.url }}{% else %}{{ service.image.url }}{% endif %}">
+                        
+                    </div><br/>
+                </div> {% endcomment %}
+            </div>
+            
+        </div>
+    </body>
+</html>

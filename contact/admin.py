@@ -7,6 +7,7 @@ from .models import Contact , InQueryType
 class ContactAdmin(admin.ModelAdmin):
     list_display = [
         'id',
+        'inquery_type',
         'product',
         'service',
         'company_name',
@@ -16,8 +17,7 @@ class ContactAdmin(admin.ModelAdmin):
         'quantity',
         # 'slug',
         # 'description',
-        'created_at',
-        # 'inquery_type',
+        # 'created_at',
         
     ]
 
