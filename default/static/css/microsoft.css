@@ -278,7 +278,7 @@
 
 @media (min-width: 1200px) {
 	.box-classic {
-    padding: 1px 40px 37px;
+    /* padding: 1px 40px 37px; */
     margin-block: 20px;
   }
 }

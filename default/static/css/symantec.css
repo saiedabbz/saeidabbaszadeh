@@ -98,5 +98,10 @@
 }
 
 .mrg .col-sm-3 {
-    width: 23%;
+    margin-left: 20px;
+}
+
+.mrg .bg-white{
+    background-color: #ffffff !important;
+    min-height: 350px;
 }

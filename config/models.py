@@ -8,6 +8,7 @@ class Config(models.Model):
     description = models.TextField(_("description"), max_length=120, null=True, blank=True)
     slug = models.SlugField(_("slug"), blank=True, null=True)
     value = models.IntegerField(_("value"), blank=True, null=True)
+    image = models.ImageField(_("image"),upload_to='config_img/', blank=True, null=True)
 
     def __str__(self):
         return self.title

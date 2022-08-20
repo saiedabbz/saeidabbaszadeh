@@ -28,9 +28,9 @@
                         <div class="about-content">
                             <div class="about-content-text">
                                 <h6>درباه شرکت ما</h6>
-                                <h2>ارائه خدمات امنیتی با کیفیت به کسب و کار شما علاقه ماست.</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, nostrud</p>
-                                <div class="skills">
+                                <h2>ارائه بهترین راهکارهای امنیتی .</h2>
+                                <p>شرکت مهرسامان در سال ۱۳۸۱ فعالیت خود را آغاز نموده است. هدف شرکت پایداری و گسترش امنیت اطلاعات با استفاده از نرم افزار های اورجینال بوده و درطی سال های گذشته این شرکت نمایندگی رسمی شرکت های babylon, autodesk ,Symantec ,Microsoft Bitdefender ,Eset ,Kaspersky را بدست آورده است. و ضمن دارا بودن دانش فنی جهت مشاوره و پشتیبانی محصولات فوق، آن ها را گارانتی نموده است.</p>
+                                {% comment %} <div class="skills">
                                     <div class="skill-item">
                                         <h6>IT Consulting <em>90%</em></h6>
                                         <div class="skill-progress">
@@ -49,9 +49,9 @@
                                             <div class="progres" data-value="80%" style="width: 80%;"></div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
                                 <div class="about-btn-box"> 
-                                    <a class="default-btn project-btn-1" href="projects.html">تماس با ما<span></span></a>
+                                    <a class="default-btn project-btn-1" href={% url 'contact_us' %}>تماس با ما<span></span></a>
                                 </div>
                             </div>
                         </div>
@@ -60,13 +60,62 @@
                         <div class="about-image">
                             <img src="{% static '/img/about.jpg' %}" alt="About image">
                             <div class="years-design">
-                                <h2>27</h2>
+                                <h2>20</h2>
                                 <h5>سال سابقه</h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="about-us" style="height: 500px;">
+            {% comment %} {{ product.extras.all.0.desc|safe }} {% endcomment %}
+
+            <div class="container">
+                <div class="row row-50 row-lg-60 row-xl-90 justify-content-center">
+                    <div class="row" style="text-align: center;padding-bottom: 58px;">
+                        <h1>لیست برخی از خدمات شرکت</h1><br/>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon-about icon-about icon-lg mdi mdi-newspaper fa-solid fa-people-line"></div>
+                        <p class="box-classic-text">ارائه خدمات به ده ها ارگان و سازمان دولتی</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon-about icon-about icon-lg mdi mdi-rotate-left fa-solid fa-people-line"></div>
+                        <p class="box-classic-text">ارائه خدمات به بیش از ۲۰۰ شرکت خصوصی</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon-about icon-about icon-lg mdi mdi-border-vertical fa-solid fa-people-line"></div>
+                        <p class="box-classic-text">ا بیش از ۱۰۰ هزار مشترک محصولات خانگی</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon-about icon-about icon-lg mdi mdi-code-tags fa-solid fa-people-line"></div>
+                        <p class="box-classic-text">تحت نظارت وزارت فرهنگ و ارشاد اسلامی</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon-about icon-about icon-md mdi mdi-tablet-ipad fa-solid fa-people-line"></div>
+                        <p class="box-classic-text">تضمین اصل بود خدمات خریداری شده</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                      <div class="box-classic">
+                        <div class="box-classic-icon-about icon-about icon-lg mdi mdi-message-outline fa-solid fa-people-line"></div>
+                        <p class="box-classic-text">ارائه بهترین خدمات پشتیبانی در کشور</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
         </section>
         <div>{% include 'footer.html' %}</div>
         

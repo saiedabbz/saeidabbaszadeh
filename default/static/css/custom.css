@@ -1399,6 +1399,7 @@ span .gfield_required {
 .about-content-text p {
     margin-bottom: 15px;
     line-height: 1.8;
+    text-align: justify;
 }
 .about-area .skills {
     margin-top: 30px;
@@ -1490,6 +1491,14 @@ span .gfield_required {
 @media (min-width: 992px){
     .offset-lg-1 {
         margin-left: 8.333333%;
+    }.contact-form .form-control {
+        background-color: #ffffff;
+        border: none;
+        height: 55px;
+        font-size: 15px;
+        border-right: 3px solid #7b68ee;
+        -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.068);
+        box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.062); 
     }
 }
 
@@ -1532,5 +1541,119 @@ span .gfield_required {
     text-align: center;
 }
 
+#about-us .icon-about::before {
+    content: url(../icon/icon_32.png);
+   
+  }
+
+#about-us .box-classic-icon-about {
+    margin-top: -30px;
+    position: relative;
+    color: #ffffff;
+    width: 70px;
+    height: 70px;
+    border-radius: 10em;
+    background: linear-gradient(98.15deg, #eef7e1 17.7%, #ccc3ff 81.94%);
+    box-shadow: 0 20px 40px rgb(0 0 0 / 20%);
+}
+
+#about-us .box-classic-icon-about::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#about-us .box-classic-text {
+    text-align: center;
+}
 
 /****************************** End About Us  **********************************/
+
+
+
+/****************************** Contact Us  **********************************/
+
+#contact-us{
+    height: 1020px;
+}
+
+#contact-us .head h1{
+    text-align: center;
+}
+#contact-us .head h3{
+    text-align: center;
+    padding-top: 27px;
+}
+
+#contact-us .head h6{
+    text-align: center;
+    padding-top: 35px;
+}
+#contact-us .head p{
+    text-align: center;
+    padding-top: 5px;
+    text-align: justify;
+}
+
+#contact-us .contact-form .form-control {
+	background-color: #ffffff;
+	border: none;
+	height: 55px;
+	font-size: 15px;
+	border-right: 3px solid #197e00;
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.068);
+	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.062); 
+}
+
+#contact-us .send-btn {
+    border: none;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    color: #ffffff;
+    background-color: #197e00;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: 0 7px 25px rgb(123 104 238 / 25%);
+}
+
+#contact-us .send-btn span {
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background-color: #197e00;
+	-webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+	transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	border-radius: 30px;
+}
+
+#contact-us .send-btn:hover{
+    color: #fff;
+    background-color:#185c07;    
+}
+
+#contact-us .contact-form .form-control:focus {
+	
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.192);
+	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.199);  
+}
+
+
+
+
+/****************************** End Contact Us  **********************************/

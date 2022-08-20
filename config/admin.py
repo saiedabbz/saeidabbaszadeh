@@ -10,4 +10,5 @@ class ConfigAdmin(admin.ModelAdmin):
         'slug',
         'description',
         'value',
+        'image',
     ]
