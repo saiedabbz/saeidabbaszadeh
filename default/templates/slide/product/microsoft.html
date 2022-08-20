@@ -22,11 +22,18 @@
                     <div class="row">
                         <div class="top-title-micro-2 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
                     </div>
-                    {% comment %} <div class="row">
-                        <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
-                            <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a>
-                        </div>
-                    </div> {% endcomment %}
+                    <div class="row" style="padding-top: 36px;">
+                      
+                      {% if product.collections.first.collection_type.title == 'home' %}
+                      <div class="text-center col-lg-4 col-md-12">
+                          <a href="#" class="btn btn-success m-b">خرید محصول</a>
+                      </div>
+                      {% else %}
+                      <div class="text-center top-pad col-lg-4 col-md-12">
+                          <a class="btn btn-success m-b" href="/add_inquery/{{ product.slug }}">استعلام محصول</a>
+                      </div>
+                      {% endif %}
+                    </div>
                     
                 </div>
               </div>

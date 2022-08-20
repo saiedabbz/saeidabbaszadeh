@@ -198,7 +198,7 @@ body {
 
 
 .navbar img {
-    width: 132px;
+    /* width: 132px; */
     height: 136px;
     border-radius: 10px;
 }
@@ -614,13 +614,21 @@ div.icon svg {
 }
 
 section#services {
-    background-color:#FAFBFC;
-    min-height: 700px;
-    /* box-shadow: 0 8px 11px 0px rgb(128 128 128 / 10%) */
+    background-color:#FFFFFF;
+    min-height: 800px;
+    box-shadow: 0 8px 11px 0px rgb(128, 128, 128)
 }
 
 section#software{
-    min-height: 700px;
+    background-color:#FAFBFC;
+    min-height: 750px;
+    box-shadow: 0 8px 11px 0px rgb(128, 128, 128)
+
+}
+section#bestproducts{
+    background-color:#ffffff;
+    box-shadow: 0 8px 11px 0px rgb(128, 128, 128)
+
 }
 
 section#customer{
@@ -1657,3 +1665,46 @@ span .gfield_required {
 
 
 /****************************** End Contact Us  **********************************/
+
+
+/****************************** Success Page  **********************************/
+
+section#success{
+    position: relative;
+    top: 10rem;
+}
+#success .row{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#success span{
+    background-color: #e9ecef;
+    border: none;
+    padding-block: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    box-shadow: 0px 0px 20px 0px rgb(82 90 101 / 12%);
+    border-radius: 12px;
+}
+#success a{
+    color: #ffffff;
+}
+#success a:hover{
+    color: #ffffff;
+}
+#success .btn{
+
+}
+
+#success .comment::after{
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #00db2a;
+    margin-right: 10px;
+}
+/***************************  End Success Page  **********************************/

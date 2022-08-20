@@ -1,9 +1,19 @@
+from importlib.resources import contents
+from multiprocessing import context
 from django.shortcuts import render, redirect
-from contact.models import Contact
+from contact.models import Contact, InQueryType
 from product.models import Product
 from service.models import Service
 
+def success(request):
+    contact = Contact.objects.all()
+    inq_type = InQueryType.objects.all()
 
+    context = {
+        'contact': contact ,
+        'inq_type': inq_type ,
+    }
+    return render(request, 'success.html', context)
 
 def addContactUs(request):
     return render(request, 'contact_us.html')
@@ -11,7 +21,6 @@ def addContactUs(request):
 
 
 def insertContactUs(request):
-    # contact = Contact.objects.filter(inquery_type_id = 3)
 
     if request.method == "POST":
         name = request.POST.get('name')
@@ -29,7 +38,7 @@ def insertContactUs(request):
 
         contact.save()
 
-    return redirect("homepage")
+    return redirect("success")
 
 
 
@@ -80,8 +89,10 @@ def insertInquery(request, slug):
         
         if product != 0 :
             contact.product = product
+            contact.inquery_type_id = 1
         else:
             contact.service = service
+            contact.inquery_type_id = 2
         contact.company_name = company_name
         contact.name = name
         contact.email = email
@@ -91,6 +102,6 @@ def insertInquery(request, slug):
         # contact.inquery_type = int(inq_type)
 
         contact.save()
-        return redirect("homepage")
+        return redirect("success")
 
     

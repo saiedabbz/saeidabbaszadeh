@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    
+    <head>
+        {% include 'header.html' %}
+    </head>
+
+    <body>
+        {% include 'nav.html' %}
+        <section id="success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <span>---{{ inq_type.first.title }}
+
+                            {% if inq_type.first.title == 'product' %}
+                                <h3 class="comment">استعلام شما با موفقیت ثبت شد.</h3>
+                            {% elif inq_type.first.title == 'service' %}
+                                <h3 class="comment">استعلام شما با موفقیت ثبت شد.</h3>
+                            {% else %}  
+                                <h3 class="comment">پیام شما با موفقیت ثبت شد.</h3>
+                            {% endif %}
+
+                            
+                        </span>
+                    </div>
+                    <div class="col-lg-6 col-md-12" style="padding-top: 60px;">
+                        <a class="btn btn-danger" href="{% url 'homepage' %}">برگشت به خانه</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

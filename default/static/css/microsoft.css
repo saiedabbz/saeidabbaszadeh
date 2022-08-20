@@ -307,6 +307,11 @@
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
+.m-b{
+  width: 14rem;
+  padding: 9px;
+  background-color: darkgreen;
+}
 .box-classic-icon::before {
 	position: absolute;
 	top: 50%;

@@ -5,15 +5,45 @@
     <head>{% include 'header.html' %}</head>
     <body>
         {% include "nav.html" %}
-        <section>
-            
-        </section>
         <section class="section half-home">
-            <div class="sym-pro-ban">
-                {% comment %} <img src="{% static 'img/symantec_code_banner.jpg' %}"> {% endcomment %}
+            <div class="sym-pro-ban"></div>
+
+            <div class="container" style="padding-top: 40px;">
+              <h1 class="symantec-title">Endpoint Security</h1>
             </div>
-            <div class="container" style="padding-top: 55px;">
-                <h1 class="symantec-title">Endpoint Security</h1>
+            
+
+            <div class="container" style="display: flex;padding-top: 40px;">
+              <div class=" col-lg-8 col-md-12" style="padding-right: 30px;">
+                <div class="row">
+                  <div class="top-title-kasper-2 col-md-12 animated animatedFadeInUp fadeInUp">{{ product.title }}</div>
+                </div>
+                <div class="row">
+                  <div class="top-title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
+                </div>
+                <div class="row" style="padding-top: 36px;">
+                  
+                  {% if product.collections.first.collection_type.title == 'home' %}
+                  <div class="text-center col-lg-4 col-md-12">
+                      <a href="#" class="btn btn-success w-x">خرید محصول</a>
+                  </div>
+                  {% else %}
+                  <div class="text-center top-pad col-lg-4 col-md-12">
+                      <a class="btn btn-success w-x" href="/add_inquery/{{ product.slug }}">استعلام محصول</a>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-12" style="display: flex;justify-content: center;">
+                <img style="height: 250px;" src="{{ product.images.first.image.url }}" alt="symantec"/>
+              </div>
+                
+            </div>
+
+
+            <div class="container" style="padding-top: 150px;">
+                {% comment %} <h1 class="symantec-title">Endpoint Security</h1> {% endcomment %}
 
                 <div class="row mrg">
                   <div class="col-sm-3">
@@ -82,24 +112,6 @@
                 </div>
             </div>
             
-            {% comment %} <div class="home-center symantec-item">
-                <div><img src="" /></div>
-              <div class="home-desc-center" style="direction: rtl;">
-                <div class="container">
-                    <div class="row">
-                    <div class="top-title-kasper-2 col-md-12"><p>{{ product.title }}</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="top-title-symantec-3 col-md-5 ">{{ product.description }}</div>
-                    </div>
-                    <div class="row">
-                        <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
-                            <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a>
-                        </div>
-                    </div>
-                </div>
-              </div>
-            </div> {% endcomment %}
         </section>
         <div>{% include 'footer.html' %}</div>
         

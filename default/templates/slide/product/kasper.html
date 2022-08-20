@@ -4,26 +4,36 @@
     <head>{% include 'header.html' %}</head>
     <body>
         {% include "nav.html" %}
-        <section class="section half-home">
+        <section class="section half-home" style="direction: rtl;">
             <div class="top-banner"></div>
-            <div class="home-center pro">
-                <div class="i">
-                    <img src="{{ product.images.first.image.url }}" />
-                </div>
-              <div class="home-desc-center" style="direction: rtl;">
-                <div class="container content-page-kasper">
+            <div class="home-center row" >
+                
+              <div class="home-desc-center" >
+                <div class="container" style="display: flex;">
+                  <div class=" col-lg-8 col-md-12" style="padding-right: 30px;">
+                    <div class="row">
+                      <div class="top-title-kasper-2 col-md-12 animated animatedFadeInUp fadeInUp">{{ product.title }}</div>
+                    </div>
+                    <div class="row">
+                      <div class="top-title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
+                    </div>
+                    <div class="row" style="padding-top: 36px;">
+                      
+                      {% if product.collections.first.collection_type.title == 'home' %}
+                      <div class="text-center col-lg-4 col-md-12">
+                          <a href="#" class="btn btn-success w-x">خرید محصول</a>
+                      </div>
+                      {% else %}
+                      <div class="text-center top-pad col-lg-4 col-md-12">
+                          <a class="btn btn-success w-x" href="/add_inquery/{{ product.slug }}">استعلام محصول</a>
+                      </div>
+                      {% endif %}
+                    </div>
+                  </div>
 
-                    <div class="row">
-                    <div class="top-title-kasper-2 col-md-12 animated animatedFadeInUp fadeInUp">{{ product.title }}</div>
-                    </div>
-                    <div class="row">
-                        <div class="top-title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
-                    </div>
-                    {% comment %} <div class="row">
-                        <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
-                            <a href="{% url 'homepage' %}" class="btn btn-success">خرید محصول</a>
-                        </div>
-                    </div> {% endcomment %}
+                  <div class="col-lg-4 col-md-12">
+                    <img src="{{ product.images.first.image.url }}" />
+                  </div>
                     
                 </div>
               </div>
@@ -37,21 +47,21 @@
                     <div class="col-lg-12">
                         <div class="col-md-4">
                             <div class="Feature_icon__3OtVF circle">
-                                <img src="https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/modernization/key features/anti-hacking/anti-hacking.svg"/>
+                                <img src="{% static 'img/anti-hacking.svg' %}"/>
                             </div>
                             <div class="circle-title">ضد هک</div>
                             <div class="circle-content">مسدود کننده حمله شبکه و ضد باج افزار از نفوذ هکرها به شبکه خانگی و رهگیری داده های شما جلوگیری می کند.</div>
                         </div>
                         <div class="col-md-4">
                             <div class="Feature_icon__3OtVF circle">
-                                <img src="https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/modernization/key%20features/anti-virus/anti-virus.svg"/>
+                                <img src="{% static 'img/anti-virus-kasper.svg' %}"/>
                             </div>
                             <div class="circle-title">ضد ویروس</div>
                             <div class="circle-content">آنتی ویروس بلادرنگ برای محافظت از شما در برابر تهدیدات رایج مانند کرم ها و تروجان ها تا تهدیدات پیچیده مانند بات نت ها، روت کیت ها و سرکش ها کار می کند.</div>
                         </div>
                         <div class="col-md-4">
                             <div class="Feature_icon__3OtVF circle">
-                                <img src="https://content.kaspersky-labs.com/se/ru/content/ru-ru/images/modernization/key%20features/anti-malware/anti-malware.svg"/>
+                                <img src="{% static 'img/anti-malware-kasper.svg' %}"/>
                             </div>
                             <div class="circle-title">ضد بدافزار</div>
                             <div class="circle-content">ضد بدافزار پیشرفته تهدیدهایی از جمله جاسوس‌افزار، ابزارهای تبلیغاتی مزاحم، کیلاگرها، فیشینگ نیزه و حملات بدون فایل را که به سختی قابل تشخیص هستند، خنثی می‌کند.</div>
