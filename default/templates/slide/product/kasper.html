@@ -17,6 +17,7 @@
                     <div class="row">
                       <div class="top-title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
                     </div>
+<<<<<<< HEAD
                     <div class="row" style="padding-top: 36px;">
                       
                       {% if product.collections.first.collection_type.title == 'home' %}
@@ -28,6 +29,13 @@
                           <a class="btn btn-success w-x" href="/add_inquery/{{ product.slug }}">استعلام محصول</a>
                       </div>
                       {% endif %}
+=======
+                    <div class="row">
+                        <div class="top-title-kasper-2 col-md-4 d-grid gap-2">
+                            {% comment %} <button href="{% url 'homepage' %}" type="button" class="btnbtn-success">خرید محصول</button> {% endcomment %}
+                            <a href="#" class="btn btn-success">خرید محصول</a>
+                        </div>
+>>>>>>> 775c34bf5e8eec981ed50abe81d90c520681026d
                     </div>
                   </div>
 
