@@ -17,9 +17,12 @@
     align-content: center;
     justify-content: center;
 }
+.bg-back img{
+    width: -webkit-fill-available;
+}
 
 .pad-ser {
-    padding-top: 90px;
+    padding-top: 0px;
     padding-bottom: 33px;
 }
 

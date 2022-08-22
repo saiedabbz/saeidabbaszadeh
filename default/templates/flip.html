@@ -1,14 +1,14 @@
 {% load static %}
 
 <section id="services">
-  <div class="container-fluid bg-color-1">
+  <div id="fadeinanimation" class="container-fluid bg-color-1">
     <div class="padding">
       <p class="font-services pad-bot">خدمات امنیتی</p>
     </div>
     <div class="container"><hr/></div>
-    <div class="row padding services">
+    <div class="row padding services reveal fade-bottom">
       {% for serv in services  %}
-      <div class="col-lg-3 col-md-6 kh-p service-card">
+      <div class="col-lg-3 col-md-6 hideme kh-p service-card">
         <a href="/service/{{ serv.slug }}/"><img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} /></a>
         <a href="/service/{{ serv.slug }}/"><p>{{ serv.title }}</p></a>
       </div>
@@ -17,15 +17,48 @@
   </div>
 </section>
 
+{% comment %} <div id="fadeinanimation">
+  
+  <section>
+    <div class="container reveal fade-right">
+      <h2>Caption</h2>
+      <div class="text-container">
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+        <div class="text-box">
+          <h3>Section Text</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            eius molestiae perferendis eos provident vitae iste.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> {% endcomment %}
+
+
 
 <section id="software">
-  <div class="container flip bg-color-2">
+  <div id="fadeinanimation" class="container flip bg-color-2">
     <div class="padding"><p class="font-services pad-bot">نرم افزار های امنیتی</p></div>
     <div class="container"><hr/>
-      <div class="row padding">
+      <div class="row" style="padding-top: 96px;">
         {% if categories %}
           {% for cat in categories %}
-            <div class="col-lg-3 col-md-12">
+            <div class="col-lg-3 col-md-12 reveal fade-left">
               <div class="flip-card">
                   <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -184,9 +217,30 @@
       <div class="swiper-pagination"></div>
     </div>
 
-
   </div>
 </section>
+
+
+
+<script>
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+</script>
 
 <script>
   function animate(obj, initVal, lastVal, duration) {

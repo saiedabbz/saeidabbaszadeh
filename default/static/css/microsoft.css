@@ -476,3 +476,13 @@
 	margin-top: 0;
 	color: #3D3D3D;
 }
+
+
+
+#microsoft-detail .colum {
+  padding: 10px;
+}
+
+#microsoft-detail .box-classic p{
+  min-height: 80px;
+}
