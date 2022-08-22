@@ -6,7 +6,7 @@
       <p class="font-services pad-bot">خدمات امنیتی</p>
     </div>
     <div class="container"><hr/></div>
-    <div class="row padding services reveal fade-bottom">
+    <div class="row padding services reveal fade-right">
       {% for serv in services  %}
       <div class="col-lg-3 col-md-6 hideme kh-p service-card">
         <a href="/service/{{ serv.slug }}/"><img src={% if serv.image %}{{ serv.image.url }}{% else %}#{% endif %} /></a>
@@ -16,39 +16,6 @@
     </div>
   </div>
 </section>
-
-{% comment %} <div id="fadeinanimation">
-  
-  <section>
-    <div class="container reveal fade-right">
-      <h2>Caption</h2>
-      <div class="text-container">
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            eius molestiae perferendis eos provident vitae iste.
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            eius molestiae perferendis eos provident vitae iste.
-          </p>
-        </div>
-        <div class="text-box">
-          <h3>Section Text</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            eius molestiae perferendis eos provident vitae iste.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-</div> {% endcomment %}
-
 
 
 <section id="software">
@@ -196,11 +163,11 @@
     </div>
     <hr/>
     
-    <div class="swiper mySwiper" style="height: 350px">
+    <div id="fadeinanimation" class="swiper mySwiper" style="height: 350px">
       <div class="swiper-wrapper">
         {% for customer in customers  %}
           <div class="swiper-slide disp_customer">
-              <div class="Card_card_customer">
+              <div class="Card_card_customer reveal fade-bottom">
                 <div class="row row-logo-card-customer">
                   <img src="{{ customer.image.url }}"/>
                 </div>

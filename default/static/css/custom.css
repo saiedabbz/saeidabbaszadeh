@@ -1783,7 +1783,7 @@ section#success{
   margin-bottom: 10px;
 }
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
     #fadeinanimation section h1 {
     font-size: 2rem;
     text-align: center;
@@ -1791,7 +1791,7 @@ section#success{
   #fadeinanimation section .text-container {
     flex-direction: column;
   }
-} */
+}
 
 #fadeinanimation .reveal {
   position: relative;
@@ -1842,4 +1842,4 @@ section#success{
   }
 }
  
-/* End fade in animation */
+/*********************** End fade in animation ********************/

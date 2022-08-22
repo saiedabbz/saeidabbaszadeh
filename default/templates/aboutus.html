@@ -22,11 +22,11 @@
         </section>
         
         <section class="about-area section-padding">
-            <div class="container">
+            <div id="fadeinanimation" class="container">
                 <div class="row align-items-center d-flex">
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="about-content">
-                            <div class="about-content-text">
+                            <div class="about-content-text reveal fade-right">
                                 <h6>درباه شرکت ما</h6>
                                 <h2>ارائه بهترین راهکارهای امنیتی .</h2>
                                 <p>شرکت مهرسامان در سال ۱۳۸۱ فعالیت خود را آغاز نموده است. هدف شرکت پایداری و گسترش امنیت اطلاعات با استفاده از نرم افزار های اورجینال بوده و درطی سال های گذشته این شرکت نمایندگی رسمی شرکت های babylon, autodesk ,Symantec ,Microsoft Bitdefender ,Eset ,Kaspersky را بدست آورده است. و ضمن دارا بودن دانش فنی جهت مشاوره و پشتیبانی محصولات فوق، آن ها را گارانتی نموده است.</p>
@@ -72,11 +72,11 @@
         <section id="about-us" style="height: 500px;">
             {% comment %} {{ product.extras.all.0.desc|safe }} {% endcomment %}
 
-            <div class="container">
-                <div class="row row-50 row-lg-60 row-xl-90 justify-content-center">
-                    <div class="row" style="text-align: center;padding-bottom: 58px;">
-                        <h1>لیست برخی از خدمات شرکت</h1><br/>
-                    </div>
+            <div id="fadeinanimation" class="container ">
+                <div class="row" style="text-align: center;padding-bottom: 58px;">
+                    <h1>لیست برخی از خدمات شرکت</h1><br/>
+                </div>
+                <div class="row row-50 row-lg-60 row-xl-90 justify-content-center reveal fade-bottom">
                     <div class="col-lg-4 col-sm-6">
                       <div class="box-classic">
                         <div class="box-classic-icon-about icon-about icon-lg mdi mdi-newspaper fa-solid fa-people-line"></div>
@@ -122,3 +122,22 @@
     </body>
     
 </html>
+<script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    
+    window.addEventListener("scroll", reveal);
+  </script>
