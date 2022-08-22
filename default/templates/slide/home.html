@@ -6,7 +6,7 @@
   <div class="right animated animatedFadeInUp fadeInUp">
     <h1> مهر سامان </h1>
     <h4> ارائه دهنده <a>راهکارهای امنیتی</a> </h4>
-    <h3> دوری از تهدیدات  رویارویی با خطرات</h3>
+    <h3> دوری از تهدیدات،  رویارویی با خطرات</h3>
     <div class="row" style="padding-top: 55px;">
       <div>
         <a type="button" href="#services" class="btn btn-info">خدمات</a>
@@ -43,6 +43,11 @@
       color: #fff;
     }
 
+    .navbar-brand{
+      background-image: url({%  static '/img/logo-black.png' %});
+  }
+  
+
     .navbar a{
       color: #000000;
       }
@@ -50,10 +55,10 @@
       scroll-behavior: smooth;
       }
        
-    a {
+    {% comment %} a {
     text-decoration: none;
     color: black;
-    } 
+    }  {% endcomment %}
     
   
 </style>
@@ -63,4 +68,18 @@
 <script>
   var scene = document.getElementById('js-scene');
   var parallax = new Parallax(scene);
+</script>
+<script>
+  $( document ).ready(function() {
+
+    $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+
+      if (scroll > 100) {
+        $(".navbar").addClass("bgg-white");
+      }else{
+        $(".navbar").removeClass("bgg-white");
+      }
+    })
+  })
 </script>

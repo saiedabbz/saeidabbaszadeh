@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-brand{
-    background-image: url('../img/logo-black.png');
+    background-image: url('../img/logo-white.png');
     width: 171px;
     height: 67px;
     background-size: cover;
@@ -86,10 +86,10 @@ body {
 }
 
 .nav-item.business .menu-tabs{
-    margin-right: -156px;
+    margin-right: 0px;
 }
 .nav-item.home .menu-tabs{
-    margin-right: -335.88px;
+    margin-right: -179.5px;
 }
 .nav-item.srvs .menu-tabs{
     width: auto;

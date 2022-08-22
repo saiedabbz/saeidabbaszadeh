@@ -3,7 +3,7 @@
       <div class="container">
         
           
-        <a class="navbar-brand">
+        <a href="{% url 'homepage' %}" class="navbar-brand">
           <!-- <img src="{% static 'img/logo-white.png' %}"  class="d-inline-block align-text-top"> -->
         </a>
           
@@ -15,21 +15,6 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'homepage' %}"> صفحه اول </a>
-            </li>
-
-            <li class="nav-item srvs">
-              <a class="nav-link bef" aria-current="page" href="#">خدمات امنیتی </a>
-              <div class="menu-tabs">
-                <!-- required for floating -->
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs tabs-left sideways a">
-                    {% for service in g_services %}
-                      <li class="{% if forloop.first %}active{%endif%}">
-                        <a href="/service/{{service.slug}}">{{service.title}}</a>
-                      </li>
-                    {% endfor %}
-                </ul>
-              </div>
             </li>
 
 
@@ -140,6 +125,21 @@
                 </div>
               </div>
             </li>
+
+            <li class="nav-item srvs">
+              <a class="nav-link bef" aria-current="page" href="#">خدمات امنیتی </a>
+              <div class="menu-tabs">
+                <!-- required for floating -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs tabs-left sideways a">
+                    {% for service in g_services %}
+                      <li class="{% if forloop.first %}active{%endif%}">
+                        <a href="/service/{{service.slug}}">{{service.title}}</a>
+                      </li>
+                    {% endfor %}
+                </ul>
+              </div>
+            </li>
             
             
             <li class="nav-item">
@@ -169,22 +169,6 @@
 
                
   
-          $(window).scroll(function(){
-            var scroll = $(window).scrollTop();
-
-            $('.hideme').each( function(i){
-            
-              
-              
-              
-              
-          }); 
-
-            if (scroll > 100) {
-              $(".navbar").addClass("bgg-white");
-            }else{
-              $(".navbar").removeClass("bgg-white");
-            }
-          })
+        
         })
     </script>
