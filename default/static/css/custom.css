@@ -483,13 +483,16 @@ a:hover, a:focus {
 
   
 footer {
-    background: #212529;
+    background: #243238;
+}
+footer a{
+    color: #90caf9;
 }
 .footer-text{
     color: #fff;
-    /* text-align: center; */
     padding: 11px;
     -webkit-text-stroke-width: thin;
+    text-align: justify;
 }
 
 

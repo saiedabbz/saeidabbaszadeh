@@ -161,8 +161,10 @@
 
 .swiper-slide img {
   display: block;
-  width: 100px;
   object-fit: cover;
+  height: max-content;
+  height: 146px;
+  width: fit-content;
 }
 
 
