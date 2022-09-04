@@ -5,7 +5,7 @@
         {% include 'header.html' %}
     </head>
 
-    <body>
+    <body onload="initialize()">
         {% include 'nav.html' %}
 
         <div id="contact-us" class="container" style="direction:rtl;">
@@ -60,16 +60,12 @@
                         </div>
                     </form>
                 </div>
-                {% comment %} <div class="col-lg-6">
-                    <div class="form-group pro-info">
-                        
-                        <h1 class="animated animatedFadeInUp fadeInUp">{% if product != '' %}{{ product.title }}{% else %}{{ service.title }}{% endif %}</h1>
-                        <img class="fade-in-text" src="{% if product != '' %}{{ product.images.first.image.url }}{% else %}{{ service.image.url }}{% endif %}">
-                        
-                    </div><br/>
-                </div> {% endcomment %}
+                
             </div>
             
+        </div>
+        <div class="container-fluid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d366.485692051153!2d51.42239975551727!3d35.70303197851263!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d35.7031439!2d51.4222861!5e1!3m2!1sen!2sus!4v1662290191137!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div>{% include 'footer.html' %}</div>
     </body>

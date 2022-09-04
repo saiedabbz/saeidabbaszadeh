@@ -4,6 +4,7 @@ from django.db import models
 from product.models import Product
 from django.utils.translation import gettext as _
 from phone_field import PhoneField
+from django_google_maps import fields as map_fields
 
 class Contact(models.Model):
     company_name = models.CharField(_("company name"),max_length=64)
@@ -36,3 +37,8 @@ class InQueryType(models.Model):
     class Meta:
         verbose_name = _('InQuery Type')
         verbose_name_plural = _('InQuery Types')
+
+
+class Rental(models.Model):
+    address = map_fields.AddressField(max_length=200)
+    geolocation = map_fields.GeoLocationField(max_length=100)
