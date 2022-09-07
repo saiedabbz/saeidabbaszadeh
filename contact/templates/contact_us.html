@@ -5,14 +5,14 @@
         {% include 'header.html' %}
     </head>
 
-    <body onload="initialize()">
+    <body onload="initialize()" id="fadeinanimation">
         {% include 'nav.html' %}
 
         <div id="contact-us" class="container" style="direction:rtl;">
 
 
             <div class="row" style="padding-top: 140px">
-                <div class="col-lg-12 col-md-12 head">
+                <div class="col-lg-12 col-md-12 head animated animatedFadeInUp fadeInUp">
                     <h1>مهرسامان</h1>
                     <h3>شماره تماس شرکت: 88840504-021 (10 خط)</h3>
                     <h6>“در کنارتان هستیم”</h6>
@@ -23,7 +23,7 @@
 
                         {% csrf_token %}
 
-                        <div class="row">
+                        <div class="row reveal fade-right">
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
@@ -64,9 +64,28 @@
             </div>
             
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid mb-3">
             <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d366.485692051153!2d51.42239975551727!3d35.70303197851263!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d35.7031439!2d51.4222861!5e1!3m2!1sen!2sus!4v1662290191137!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div>{% include 'footer.html' %}</div>
     </body>
 </html>
+<script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    
+    window.addEventListener("scroll", reveal);
+</script>

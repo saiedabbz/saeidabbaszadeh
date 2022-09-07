@@ -149,11 +149,12 @@ body {
 
 .menu-tabs ul{
     display: block;
+    width: 179.5px;
 
 }
 
 .menu-tabs ul li{
-    width: 200px;
+    width: 179.5px;
 }
 .menu-tabs ul li:hover{
     /* background-color: #222; */
@@ -646,7 +647,12 @@ section#bestproducts{
 section#customer{
     padding-top: 80px;
 }
-
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'next';
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'prev';
+}
 .bg-color-2 {
     /* background: url(/static/img/testimonial-bg.jpg); */
     height: 500px;
@@ -739,9 +745,6 @@ section#customer{
 .customer_title p {
     font-size: 15px;
 }
-
-
-
 
 
 /********************************  Best of Product **************************************/
@@ -867,9 +870,7 @@ section#customer{
 }
 
 
-
 /******************************** End best of product ************************************/
-
 
 
 /*********************************** counter area *****************************************/
@@ -929,10 +930,7 @@ section#customer{
     animation-delay: 0s;
   }
 
-
-
 /************************* End Counter Up ************************************/
-
 
 
 /************************* InQuery form ***********************************/
@@ -1158,9 +1156,6 @@ span .gfield_required {
     }
 }
 
-/* .bg-gray-100 {
-    background-color: #0d5cd3;
-} */
 
 .section-bottom-right-rounded + .bg-gray-100 {
     position: relative;
@@ -1170,17 +1165,6 @@ span .gfield_required {
     border-bottom-left-radius: 100px;
 }
 
-/* .section-bottom-right-rounded::before {
-    content: '';
-    position: absolute;
-    top: -250px;
-    left: 0;
-    right: 0;
-    height: 250px;
-    background-color:#FAFBFC;
-    z-index: -1;
-    
-} */
 
 @media (min-width: 1200px){
     .section-bottom-left-rounded {
@@ -1194,10 +1178,10 @@ span .gfield_required {
 }
 
 
-/*******************************  End Gradient ****************************************/
+/*****************************  End Gradient ************************************/
 
 
-/*******************************  Parallax ****************************************/
+/*******************************  Parallax **************************************/
 
 #parallax .items {
     display: flex;
@@ -1302,8 +1286,7 @@ span .gfield_required {
   }
 
 
-/**************************** End Parallax ***********************************/
-
+/***************************** End Parallax ***********************************/
 
 
 /******************************  About Us  **********************************/
@@ -1591,7 +1574,6 @@ span .gfield_required {
 /****************************** End About Us  **********************************/
 
 
-
 /****************************** Contact Us  **********************************/
 
 #contact-us{
@@ -1676,7 +1658,7 @@ span .gfield_required {
 
 
 
-/****************************** End Contact Us  **********************************/
+/***************************** End Contact Us  *********************************/
 
 
 /****************************** Success Page  **********************************/
@@ -1708,9 +1690,6 @@ section#success{
 #success a:hover{
     color: #ffffff;
 }
-#success .btn{
-
-}
 
 #success .comment::after{
     content: "\f00c";
@@ -1722,20 +1701,7 @@ section#success{
 /***************************  End Success Page  **********************************/
 
 
-.btn-info {
-    width: 150px;
-    background-color: #2191FF;
-    color: aliceblue;
-    font-size: 20px;
-    box-shadow: 0 0px 8px 0px rgba(0,0,0,0.2);
-}
-
-
-
-/***************** fade in animation *********************/
-
-
-
+/**************************** fade in animation **********************************/
 
 
 #fadeinanimation section {
@@ -1846,3 +1812,149 @@ section#success{
 }
  
 /*********************** End fade in animation ********************/
+
+
+/************************ Siwper Slider Home ***********************/
+
+
+section#home-slider{
+    height: 650px;
+}
+
+#home-slider .swiper-container 
+{
+    width: 100%;
+    height: auto;
+}
+
+#home-slider .swiper-slide {
+	/* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#home-slider .autoplay
+{
+	position: absolute;
+	color: #000;
+	font: 100px/100% arial, sans-serif;
+	right: 15px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #fff;
+	top: 15px;
+	width:auto;
+	height:auto;
+	z-index:999;
+	opacity:0.4;
+	transition: opacity .1s ease-in, transform .1s ease-out; 
+	animation: fade_close 3s ease-out;
+}
+
+@keyframes fade_close
+{
+	0% { opacity: 0.8; } 
+	50% { opacity: 0.8; }
+	to { opacity: 0.4; }
+}
+
+#home-slider .autoplay:active
+{
+  transform:scale(0.8);
+}
+
+#home-slider .stop
+{
+  right: 15px;
+}
+
+#home-slider .play
+{
+  right: 90px;
+}
+
+#home-slider .start-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+#home-slider .start-img{
+    display: flex;
+    justify-content: center;
+}
+#home-slider .start-img img{
+    height: 350px;
+}
+
+/* #home-slider .btn-info {
+    width: 150px;
+    background-color: #002dd1;
+    color: aliceblue;
+    font-size: 20px;
+    box-shadow: 0 0px 8px 0px rgba(0,0,0,0.2);
+    border: none;
+} */
+#home-slider .btn-info{
+    background: #0c5adb;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 44;
+    border: none;
+    color: #fff;
+}
+#home-slider .btn-info::before{
+    position: absolute;
+    content: "";
+    top: 0px;
+    height: 100%;
+    left: -25%;
+    width: 0%;
+    background: #00247E;
+    transform: skew(50deg);
+    transition-duration: .6s;
+    z-index: -1;
+}
+#home-slider .btn-info:hover{
+    /* background-color: #160ca7; */
+    color: #fff;
+}
+#home-slider .btn-info:hover {
+    color: #fff;
+}
+#home-slider .btn-info:hover:before {
+    width: 180%;
+}
+
+#home-slider .home-banner-s2{
+    background-image: url(http://slidesigma.com/themes/html/nina/assets/img/banner/banner3.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#home-slider .home-banner-s3{
+    background-image: url(http://slidesigma.com/themes/html/nina/assets/img/banner/banner1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/**************************** End Siwper Slider Home ***********************/
+
+

@@ -12,7 +12,7 @@
           <div class="top-title-kasper-2 col-md-12 animated animatedFadeInUp fadeInUp">امنیت سایبری که همیشه یک قدم جلوتر است</div>
         </div>
         <div class="row">
-          <div class="top-title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">با محافظت مبتنی بر هوش مصنوعی در برابر هکرها و جدیدترین ویروس‌ها، باج‌افزارها و جاسوس‌افزارها، واقعاً احساس امنیت کنید.</div>
+          <div class="title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">با محافظت مبتنی بر هوش مصنوعی در برابر هکرها و جدیدترین ویروس‌ها، باج‌افزارها و جاسوس‌افزارها، واقعاً احساس امنیت کنید.</div>
         </div>
         {% comment %} <div class="row p">
           <a class="btn btn-success k-button">لیست محصولات</a>
@@ -30,7 +30,7 @@
   </div>
 </section>
 
-<section class="section top">
+<section id="kasper-swiper" class="section top">
   <div class="container">
     <div class="kasper-title">
     {{ products.0.collections.all.0.title }} - 
@@ -46,7 +46,7 @@
                   <img src="{{ prod.images.first.image.url }}"/>
                 </div>
                 <div class="row slide-item-top"><p>{{ prod.title }}</p></div>
-                <div class="row slide-item-top"><h6>{{ prod.description }}</h6></div>
+                <div class="row slide-item-top"><h6 class="kasper-desc">{{ prod.description }}</h6></div>
 
                 {% if prod.collections.first.collection_type.title == 'home' %}
                 <div class="row slide-item-top"><a href="#" class="btn btn-success">خرید محصول</a></div>

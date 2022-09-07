@@ -49,6 +49,12 @@
     width: 70%;
     text-align: justify;
 }
+.title-kasper-3 {
+  padding-top: 12px;
+  color: rgb(0, 0, 0);
+  width: 46%;
+  text-align: justify;
+}
 
 .logo {
     display: flex;
@@ -175,8 +181,9 @@
   margin-bottom: 10px;
 }
 
-.swiper-slide h6{
-  padding: -1px 0 0 0;
+#kasper-swiper .swiper-slide .kasper-desc{
+  padding: 25px 40px 22px 40px;
+  text-align: justify;
 }
 
 
@@ -210,6 +217,7 @@
 
 .row-logo-card img {
   width: 58px;
+  height: 64px;
 }
 
 .disp {
@@ -309,3 +317,9 @@
 
 
 
+#kasper-swiper .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: 'prev';
+}
+#kasper-swiper .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: 'next';
+}
