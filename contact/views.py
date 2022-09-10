@@ -5,6 +5,10 @@ from contact.models import Contact, InQueryType
 from product.models import Product
 from service.models import Service
 
+
+from django.contrib import messages
+
+
 def success(request):
     contact = Contact.objects.all()
     inq_type = InQueryType.objects.all()
@@ -23,22 +27,29 @@ def addContactUs(request):
 def insertContactUs(request):
 
     if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        description = request.POST.get('description')
+        try:
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            phone = request.POST.get('phone')
+            description = request.POST.get('description')
 
-        contact = Contact()
+            contact = Contact()
 
-        contact.name = name
-        contact.email = email
-        contact.phone = phone
-        contact.inquery_type_id = 3
-        contact.description = description
+            contact.name = name
+            contact.email = email
+            contact.phone = phone
+            contact.inquery_type_id = 3
+            contact.description = description
 
-        contact.save()
+            contact.save()
+            messages.success(request, 'پیام شما با موفقیت ارسال شد')
 
-    return redirect("success")
+        except Exception as e:
+            print(e)
+            messages.success(request, 'ارسال نا موفق!')
+
+    return redirect("contact_us")
+    # return render(request,'insert_contactus',{})
 
 
 

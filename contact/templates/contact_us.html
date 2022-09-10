@@ -8,68 +8,125 @@
     <body onload="initialize()" id="fadeinanimation">
         {% include 'nav.html' %}
 
-        <div id="contact-us" class="container" style="direction:rtl;">
-
-
-            <div class="row" style="padding-top: 140px">
-                <div class="col-lg-12 col-md-12 head animated animatedFadeInUp fadeInUp">
-                    <h1>مهرسامان</h1>
-                    <h3>شماره تماس شرکت: 88840504-021 (10 خط)</h3>
-                    <h6>“در کنارتان هستیم”</h6>
-                    <p>مهرسامان همواره در تلاش است تا خدمات ارزنده‌ای را به شما مشتریان عزیز ارائه دهد و در این راستا نیز موفق بوده است. عقیده ما بر این است که امنیت کاربران در فضای مجازی بسیار مهم و حیاتی بوده و در دنیای امروزی باید بیش از پیش از آن محافظت کرد، اگر شما نیز با ما هم عقیده هستید میتوانید آنتی ویروس مورد نیاز خود را از ما دریافت نمایید.</p>
-                </div>
-                <div class="col-lg-12 col-md-12" style="line-height: 20px;">
-                    <form id="contact-form" class="contact-form form" method="POST" action="/insert_contact_us/" enctype="multipart/form-data" style="padding-top: 135px;">
-
-                        {% csrf_token %}
-
-                        <div class="row reveal fade-right">
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="نام مسئول"/>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" style="text-align: end;" placeholder="ایمیل "/>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="tel" name="phone" class="form-control" style="text-align: end; " placeholder="تلفن "/>
-                                </div>
-                            </div>
-
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <textarea name="description" class="form-control" cols="35" row="8" style="resize: none;height: 120px;" placeholder="توضیحات"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <button class="send-btn" type="submit">ارسال</button>
-                                    <span style="top: 61.7188px; left: 9px;"></span>
-                                </div>
-                            </div>
-
+        <div class="contact-banner">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="page-title-content">
+                            <h2>تماس با ما</h2>
+                            <ul>
+                                <li><a href="{% url 'homepage' %}">خانه</a></li>
+                                <li class="about-li">تماس با ما</li>
+                            </ul>
                         </div>
-                    </form>
+                    </div>
                 </div>
-                
             </div>
-            
         </div>
-        <div class="container-fluid mb-3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d366.485692051153!2d51.42239975551727!3d35.70303197851263!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d35.7031439!2d51.4222861!5e1!3m2!1sen!2sus!4v1662290191137!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="contact-us" class="container" style="direction:rtl;">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 reveal fade-right" style="padding: 15px;">
+                    <div class="section_title text_left mb-50">
+						<div class="section_sub_title uppercase mb-3">
+							<h6>اطلاعات تماس</h6>
+						</div>
+						<div class="section_main_title">
+							<h1>در کنارتان هستیم</h1>
+						</div>
+						<div class="section_title_text pt-2">
+							<p>مهرسامان همواره در تلاش است تا خدمات ارزنده‌ای را به شما مشتریان عزیز ارائه دهد و در این راستا نیز موفق بوده است. عقیده ما بر این است که امنیت کاربران در فضای مجازی بسیار مهم و حیاتی بوده و در دنیای امروزی باید بیش از پیش از آن محافظت کرد، اگر شما نیز با ما هم عقیده هستید میتوانید آنتی ویروس مورد نیاز خود را از ما دریافت نمایید.</p>
+						</div>
+						<div class="em_bar">
+							<div class="em_bar_bg"></div>
+						</div>
+					</div>
+                    <div class="contact_address">
+						<div class="contact_address_company mb-3">
+							<ul>
+								<li><i class="fa fa-envelope-o"></i><span><a href="#">Contact@examplesite.com</a></span></li>
+								<li><i class="fa fa-mobile"></i><span> 88840504-021 (10 خط)</span></li>
+								<li><i class="fa fa-map-marker"></i> <span> انقلاب ، آذرنوش</span></li>
+							</ul>
+						</div>
+					</div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-12 reveal fade-left" style="padding: 15px;">
+                    <div class="contact_from pt-4">
+						<div class="contact_from_box">
+							<div class="contact_title">
+								<h3>ارسال پیام </h3>
+							</div>
+							<form id="contact-form" class="contact-form form" method="POST" action="/insert_contact_us/" enctype="multipart/form-data" style="padding-top:30px;">
+
+                                {% csrf_token %}
+                                {% if messages %}
+                                <div class="alert alert-info">
+                                    {% for message in messages %}
+                                        {{ message }}
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+        
+                                <div class="row">
+        
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" placeholder="نام مسئول"/>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" style="text-align: end;" placeholder="ایمیل "/>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="tel" name="phone" class="form-control" style="text-align: end; " placeholder="تلفن "/>
+                                        </div>
+                                    </div>
+        
+        
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="description" class="form-control" cols="35" row="8" style="resize: none;height: 120px;" placeholder="توضیحات"></textarea>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <button class="send-btn" type="submit">ارسال</button>
+                                            <span style="top: 61.7188px; left: 9px;"></span>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </form>
+							<p class="form-message"></p>
+						</div>
+					</div>
+                </div>
+            </div>
+
+
+
         </div>
+        <div >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d809.9856307217395!2d51.4224!3d35.703032!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x0%3A0x44f638b14f208b21!2sPC3C%2B8V7%2C%20Tehran%20Province%2C%20Tehran%2C%20N%2C%20S%20Kheradmand%20St%2C%20Iran!3m2!1d35.7032875!2d51.422171899999995!5e0!3m2!1sen!2sus!4v1662820718261!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+
+
         <div>{% include 'footer.html' %}</div>
     </body>
 </html>
+
+
+
+
 <script>
     function reveal() {
       var reveals = document.querySelectorAll(".reveal");

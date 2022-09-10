@@ -956,6 +956,11 @@ span .gfield_required {
 .contact-form .form-group {
     margin-bottom: 15px;
 }
+#contact-us .contact-form .form-group {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
 
 .contact-form .form-control {
 	background-color: #ffffff;
@@ -1577,7 +1582,7 @@ span .gfield_required {
 /****************************** Contact Us  **********************************/
 
 #contact-us{
-    height: 1020px;
+    height: 750px;
 }
 
 #contact-us .head h1{
@@ -1603,9 +1608,9 @@ span .gfield_required {
 	border: none;
 	height: 55px;
 	font-size: 15px;
-	border-right: 3px solid #197e00;
+	border-right: 3px solid #0C5ADB;
     -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.068);
-	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.062); 
+	box-shadow: 0px 5px 10px 0px rgba(148, 146, 245, 30%); 
 }
 
 #contact-us .send-btn {
@@ -1616,7 +1621,7 @@ span .gfield_required {
     overflow: hidden;
     z-index: 1;
     color: #ffffff;
-    background-color: #197e00;
+    background-color: #0C5ADB;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 3px;
@@ -1635,7 +1640,7 @@ span .gfield_required {
 	width: 0;
 	height: 0;
 	border-radius: 50%;
-	background-color: #197e00;
+	background-color: #0C5ADB;
 	-webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 	transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 	-webkit-transform: translate(-50%, -50%);
@@ -1646,15 +1651,179 @@ span .gfield_required {
 
 #contact-us .send-btn:hover{
     color: #fff;
-    background-color:#185c07;    
+    background-color:#093b8b;    
 }
 
 #contact-us .contact-form .form-control:focus {
 	
     -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.192);
-	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.199);  
+	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 50%);  
 }
 
+#contact-us .align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+#contact-us .mb-50 {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#contact-us .uppercase {
+    text-transform: uppercase;
+}
+#contact-us .section_sub_title h6 {
+    letter-spacing: 0;
+    color: #0c5adb;
+    font-size: 16px;
+}
+#contact-us .text_left .section_main_title h1 {
+    margin: 0;
+    letter-spacing: -1px;
+}
+#contact-us .text_left .em_bar {
+    margin: 0;
+}
+#contact-us .em_bar {
+    background: #9B50DB none repeat scroll 0 0;
+    height: 2px;
+    margin: 0 auto 5px;
+    width: 62px;
+}
+#contact-us .em_bar_bg {
+    height: 5px;
+    width: 90px;
+    background: #cbbded;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 30px;
+}
+#contact-us .em_bar_bg:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -2.7px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #0C5ADB;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: MOVE-BG;
+    animation-name: MOVE-BG;
+}
+#contact-us .section_title_text p{
+    text-align: justify;
+}
+
+#contact-us .contact_address_company ul li {
+    list-style: none;
+    display: block;
+    margin-bottom: 12px;
+}
+
+#contact-us .contact_address_company ul li i {
+    font-size: 25px;
+    color: #fff;
+    margin-left: 15px;
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    background: #0c5adb;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+#contact-us .fa-envelope-o:before {
+    content: "\f003";
+}
+
+#contact-us .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#contact-us .contact_address_company ul li {
+    list-style: none;
+    display: block;
+    margin-bottom: 12px;
+}
+
+#contact-us .contact_address_company ul li a {
+    color: #616161;
+}
+#contact-us .contact_from_box {
+    box-shadow: 0 10px 30px 3px rgba(99, 119, 238, 0.4);
+    background: #fff;
+    padding: 35px 50px 40px;
+    border-top: 8px solid #0c5adb;
+    border-radius: 5px;
+}
+
+
+#contact-us .contact_from_box {
+    box-shadow: 0 10px 30px 3px rgb(99 119 238 / 40%);
+    background: #fff;
+    padding: 35px 35px 40px;
+    border-top: 8px solid #0c5adb;
+    border-radius: 5px;
+}
+
+#contact-us .contact_title h3{
+    text-align: center;
+}
+
+@-webkit-keyframes MOVE-BG {
+    from {
+      -webkit-transform: translateX(88px);
+              transform: translateX(88px);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  
+  @keyframes MOVE-BG {
+    from {
+      -webkit-transform: translateX(88px);
+              transform: translateX(88px);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+
+.contact-banner {
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/contactus_banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 480px;
+}
+
+.contact-banner::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #030821;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
 
 
 
@@ -1944,16 +2113,18 @@ section#home-slider{
 }
 
 #home-slider .home-banner-s2{
-    background-image: url(http://slidesigma.com/themes/html/nina/assets/img/banner/banner3.jpg);
+    background-image: url(../img/internet-security-1.webp);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: inherit;
 }
 #home-slider .home-banner-s3{
-    background-image: url(http://slidesigma.com/themes/html/nina/assets/img/banner/banner1.jpg);
+    background-image: url(../img/csm_internet-sicherheit_945f6f870d.webp);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: inherit;
 }
 /**************************** End Siwper Slider Home ***********************/
 
