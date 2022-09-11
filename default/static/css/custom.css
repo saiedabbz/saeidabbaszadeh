@@ -2111,21 +2111,36 @@ section#home-slider{
 #home-slider .btn-info:hover:before {
     width: 180%;
 }
-
+#home-slider .home-banner-s1{
+    background-image: url(../img/trianglify-lowres-copy.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: inherit;
+}
 #home-slider .home-banner-s2{
-    background-image: url(../img/internet-security-1.webp);
+    background-image: url(../img/trianglify-lowres-copy.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: inherit;
 }
 #home-slider .home-banner-s3{
-    background-image: url(../img/csm_internet-sicherheit_945f6f870d.webp);
+    background-image: url(../img/trianglify-lowres-copy.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: inherit;
 }
+
+#home-slider h1{
+    font-size: 72px;
+    color: #0072dd;
+    padding-inline-end: 140px;
+}
 /**************************** End Siwper Slider Home ***********************/
-
-
+#home-slider .responsive-diagonal {
+    /* width: 50vw; */
+    /* height: 185vh; */
+    background: linear-gradient(to right bottom, #f8f9fa 54%, #e9ecef 54.3%);
+}

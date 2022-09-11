@@ -1,30 +1,42 @@
 {% load static %}
 
+
 <section id="home-slider">
   <link rel="stylesheet" type="text/css" href="{% static 'css/swiper.css' %}">
 
   <div class="swiper-container">
 		<div class="swiper-wrapper" id="gallery_wrapper">
-		  <div class="swiper-slide">
+
+		  <div class="swiper-slide responsive-diagonal">
         <div class="container">
           <div class="row">
-            <div class="col-lg-7 col-md-12 start-text animated animatedFadeInUp fadeInUp">
-              <h1> مهر سامان </h1>
-              <h4> ارائه دهنده <a style="color:0180FF;">راهکارهای امنیتی</a> </h4>
-              <h3 class="mt-3"> دوری از تهدیدات،  رویارویی با خطرات</h3>
-              <div class="right">
-                
-                <div class="row" style="padding-top: 55px;">
-                  <div>
-                    <a type="button" href="#services" class="btn btn-info">خدمات</a>
-                    <a type="button" href="#software" class="btn btn-info">نرم افزار ها</a>
-                  </div>
+            <div class="col-lg-6 col-md-12 start-text animated animatedFadeInUp fadeInUp">
+              <div class="d-table" style="padding-top: 80px;">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div >
+                          <h1 style="font-size:72px; color:#0072dd;"> مهر سامان </h1>
+                        </div>
+                        
+                    </div>
+                    <div class="row" style="padding-top: 67PX;">
+                      <div style="padding-left: 163px;">
+                        <a type="button" href="#services" class="btn btn-info">خدمات</a>
+                        <a type="button" href="#software" class="btn btn-info">نرم افزار ها</a>
+                      </div>
+                    </div>
                 </div>
+                
               </div>
+              
+              {% comment %} <h4> ارائه دهنده <a style="color:0180FF;">راهکارهای امنیتی</a> </h4>
+              <h3 class="mt-3"> دوری از تهدیدات،  رویارویی با خطرات</h3> {% endcomment %}
+                
+              
             </div>
-            <div class="col-lg-5 col-md-12">
+            <div class="col-lg-6 col-md-12">
               <div class="start-img">
-                <img class="fade-in-text" src="{%  static 'img/fingerprint.png' %}" alt="fingerprint">
+                <img class="fade-in-text" src="{%  static 'img/vector-png.png' %}" alt="fingerprint">
               </div>
             </div>
           </div>
@@ -66,29 +78,29 @@
   </div>
 </div> {% endcomment %}
 
-  <style>
-    .navbar { 
-        background-color: rgba(51, 51, 51, 0);
-        color: #000;
-    }
-
-    .navbar, .navbar:hover {
-      background-color: rgba(51, 51, 51, 85%);
-      color: #fff;
-    }
-
-    .navbar-brand{
-      background-image: url({%  static '/img/logo-black.png' %});
+<style>
+  .navbar { 
+      background-color: rgba(51, 51, 51, 0);
+      color: #000;
   }
-  
 
-    .navbar a{
-      color: #ffffff;
-      }
-    html {
-      scroll-behavior: smooth;
-      }
-       
+  .navbar:hover {
+    background-color: rgba(51, 51, 51, 0.719);
+    color: #fff;
+  }
+
+  .navbar-brand{
+    background-image: url(/static/img/logo-black.png);
+}
+
+
+  .navbar a{
+    color: #000000;
+    }
+  html {
+    scroll-behavior: smooth;
+    }
+
 </style>
 
 <script src="{% static 'js/parallax.min.js' %}"></script>
@@ -96,7 +108,7 @@
 
 
 <script>
-  var scene = document.getElementById('js-scene');
+  var scene = document.getElementById ('js-scene');
   var parallax = new Parallax(scene);
 </script>
 <script>
