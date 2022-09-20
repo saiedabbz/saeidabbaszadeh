@@ -26,7 +26,7 @@
     padding-bottom: 33px;
 }
 
-.service-text img {
+.service-text .soc-pic-1, .soc-pic-2, .soc-pic-3, .soc-pic-4 {
     height: 265px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -63,3 +63,32 @@
     background-image:url(../img/network-security-banner-2.jpg);
     background-position:center;
 } */
+
+
+.soc-pic-2{
+    height:356px;
+}
+
+@media only screen and (max-width: 600px) {
+    .service-text .soc-pic-1 {
+        height: 212px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+    .service-text .soc-pic-2{
+        height: 115px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+    .service-text .soc-pic-3{
+        height: 289px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+    .service-text .soc-pic-4{
+        height: 227px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+  }

@@ -323,3 +323,21 @@
 #kasper-swiper .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
   content: 'next';
 }
+
+
+@media only screen and (max-width: 600px){
+    .kas-image {
+      background: none;
+      position: absolute;
+      z-index: 0;
+      height: 550px;
+      /* left: 205px; */
+  }
+  .content-page-kasper {
+    padding-inline: 0;
+    padding-top: 38px;
+    margin-inline: 0;
+    padding-bottom: 70px;
+    text-align: center;
+}
+}

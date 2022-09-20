@@ -560,6 +560,14 @@ div.icon svg {
 }
 
 
+.bqpd{ 
+    background:url();
+    transform-origin: bottom left;
+    -ms-transform: skew(-30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);
+    transform: skew(-64deg, 0deg);
+  }
+
 .font-services {
     font-size: 36px;
     font-weight: 600;
@@ -669,7 +677,7 @@ section#customer{
 #customers .swiper-slide{
     background: none;
 }
-
+/* 
 @media only screen and (max-width:600px){
     .bg-color-1 {
         height: 77rem;
@@ -677,15 +685,15 @@ section#customer{
     .bg-color-2 {
         height: 72rem;
     }
-}
-@media only screen and (max-width:900px){
+} */
+/* @media only screen and (max-width:900px){
     .bg-color-1 {
         height: 55rem;
     }
     .bg-color-2 {
         height: 43rem;
     }
-}
+} */
 
 
 #microsoft-v .col-md-6 {
@@ -1321,6 +1329,7 @@ span .gfield_required {
     width: 100%;
     height: 100%;
     display: table!important;
+    padding-top: 80px;
 }
 .d-table-cell {
     vertical-align: middle;
@@ -2111,26 +2120,22 @@ section#home-slider{
 #home-slider .btn-info:hover:before {
     width: 180%;
 }
-#home-slider .home-banner-s1{
+/* #home-slider .home-banner-s1{
     background-image: url(../img/trianglify-lowres-copy.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: inherit;
+} */
+#home-slider .home-banner-s1 {
+    background: linear-gradient(to right bottom, #f8f9fa 54%, #e9ecef 50%);
 }
 #home-slider .home-banner-s2{
-    background-image: url(../img/trianglify-lowres-copy.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: inherit;
+    background: linear-gradient(to right top, #e9ecef 50%, #f8f9fa 50%);
 }
+
 #home-slider .home-banner-s3{
-    background-image: url(../img/trianglify-lowres-copy.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: inherit;
+    background: linear-gradient(to right bottom, #f8f9fa 45%, #e9ecef 50%);
 }
 
 #home-slider h1{
@@ -2139,8 +2144,68 @@ section#home-slider{
     padding-inline-end: 140px;
 }
 /**************************** End Siwper Slider Home ***********************/
-#home-slider .responsive-diagonal {
-    /* width: 50vw; */
-    /* height: 185vh; */
-    background: linear-gradient(to right bottom, #f8f9fa 54%, #e9ecef 54.3%);
+
+#home-slider .product-buttons{
+    padding-left: 163px;
 }
+
+#footer ul li{
+    text-align: right;
+    padding-right: 93px;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-expand-lg {
+        position: absolute;
+    }
+    #home-slider .start-img img{
+        display: none;
+    }
+    #home-slider .start-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* margin-top: 50px; */
+    }
+    #home-slider h1 {
+        font-size: 72px;
+        color: #0072dd;
+        padding-inline-end: 0;
+    }
+    #home-slider .d-table {
+        width: 100%;
+        height: 100%;
+        display: table!important;
+        padding-top: 0;
+    }
+    #home-slider .product-buttons {
+        padding-left: 0;
+    }
+    #home-slider .start-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+
+    #service .bg-color-1 {
+        height: 84rem;
+    }
+    .bg-color-2 {
+        height: 90rem;
+    }
+    section#services {
+        background-color: #FFFFFF;
+        min-height: 1391px;
+     }
+    .techvio img {
+        text-align: center;
+        height: 334px;
+    }
+    #footer ul li{
+        text-align: center;
+        padding-right: 0;
+    }
+  }
+
+  

@@ -60,7 +60,7 @@
   <div class="container">
     <div class="row techvio">
       <div class="col-lg-6">
-        <div class="img-animation" style="float:left;">
+        <div class="img-animation col-s-12" style="float:left;">
           <img style="padding-top: 25px;" src="{% static 'img/choose-1.jpg' %}" alt="image">
         </div>
       </div>
@@ -263,6 +263,18 @@
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        // when window width is <= 499px
+        600: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 20
+        },
+        // when window width is <= 999px
+        999: {
+            slidesPerView: 5,
+            spaceBetweenSlides: 20
+        }
+    }
   });
 
 
