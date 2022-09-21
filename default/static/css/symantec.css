@@ -105,3 +105,13 @@
     background-color: #ffffff !important;
     min-height: 350px;
 }
+
+
+@Media only screen and (max-width: 600px){
+    .sym-text {
+        text-align: justify;
+        padding-top: 148px;
+        font-size: 19px;
+        padding-left: 0;
+    }
+}

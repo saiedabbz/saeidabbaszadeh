@@ -330,3 +330,105 @@ ul.list-checkmark li.x::before{
 .foot {
     padding-top: 0;
 }
+
+
+@Media only screen and (max-width:600px){
+    .bg-home {
+        background-color: #0096A1;
+        position: relative;
+        max-height: 331px;
+        margin-bottom: 60px;
+    }
+    .top-title-1{
+        display: none;
+    }
+    .top-title-2 {
+        color: #fff;
+        padding-top: 0;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .internet-banner {
+        background: url(/static/img/eset-banner-01.jpg) center center / cover scroll no-repeat;
+        z-index: 0;
+        background-position: 14%;
+        margin-bottom: 44px;
+    }
+    .top-title-3 {
+        padding-top: 12px;
+        color: #fff;
+        text-align: justify;
+        font-weight: 600;
+    }
+    
+    .min-wi {
+        min-width: 145px;
+    }
+    .center-list {
+        text-align: center!important;
+        display: flex;
+        width: 90px;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        height: 155px;
+    }
+    .home-title-1::before {
+        position: absolute;
+        top: 42rem;
+        bottom: 0;
+        width: 1px;
+        margin-left: -1px;
+        border-radius: 2px;
+        background-color: #424d56;
+        content: "";
+        z-index: -1;
+        left: 0;
+        right: 50%;
+        height: 0;
+    }
+
+    .home-title-3::before {
+        position: absolute;
+        padding-top: -13rem;
+        width: 1px;
+        margin-left: -1px;
+        border-radius: 2px;
+        background-color: #424d56;
+        content: "";
+        z-index: -1;
+        left: 0;
+        top: 137rem;
+        right: 49%;
+        height: 0;
+    }
+    .home-title-2::before {
+        position: absolute;
+        top: 90rem;
+        bottom: 0;
+        width: 1px;
+        margin-left: -1px;
+        border-radius: 2px;
+        background-color: #424d56;
+        content: "";
+        z-index: -1;
+        left: 0;
+        right: 49%;
+        height: 0;
+    }
+    .nod-banner {
+        background: url(/static/img/nod-banner.jpg) center center / cover scroll no-repeat;
+        z-index: 0;
+        margin-bottom: 44px;
+        background-position: 10%;
+    }
+    .smart-banner {
+        background: url(/static/img/smart-banner.jpg) center center / cover scroll no-repeat;
+        z-index: 0;
+        margin-bottom: 44px;
+        background-position: 10%;
+    }
+}

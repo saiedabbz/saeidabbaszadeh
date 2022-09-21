@@ -243,6 +243,7 @@
 
 .con-flu-col {
   background-color: #23D1AE;
+  padding: 30px;
 }
 
 .con-flu-col .col-lg-12 {
@@ -268,16 +269,19 @@
   height: 131px;
   border-radius: 50%;
   padding-top: 34px;
+  padding-right: 37px;
 }
 
 .circle-title {
   padding-top: 30px;
   font-size: 28px;
+  text-align: center;
 }
 
 .circle-content {
 
   margin: 18px 45px;
+  text-align: justify;
 }
 
 .k-button {
@@ -307,7 +311,10 @@
 }
 
 
-
+.logo-kasper-product{
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -339,5 +346,43 @@
     margin-inline: 0;
     padding-bottom: 70px;
     text-align: center;
-}
+  }
+  .logo .lg {
+    width: fit-content;
+    margin: 0 0 0 21px;
+    padding: 7px;
+  }
+  .title-kasper-3{
+    display: none;
+  }
+  #kasper-swiper .swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow:visible;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    height: 659px;
+    width: 122px;
+  }
+  .section {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative !important;
+  }
+  .top-title-kasper-2 {
+    color: rgb(0, 0, 0);
+    padding-top: 47px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .top-title-kasper-3 {
+    padding-top: 12px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 22px;
+    width: auto;
+  }
 }
