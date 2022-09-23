@@ -4,39 +4,34 @@
     <head>{% include 'header.html' %}</head>
     <body>
         {% include "nav.html" %}
-        <section style="height: 95px;padding-top: 83px;">
-            <div class="container-fluid" style="background-color: #0067b8; height: 50px;padding-top: 360px;">
+        {% comment %} <section style="height: 95px;padding-top: 83px;">
+            <div class="container-fluid " style="background-color: #0067b8; height: 50px;padding-top: 360px;">
         </div>
-        </section>
-        <section class="section-mic">
+        </section> {% endcomment %}
+        <section id="microsoft_product" class="section-mic">
             <div class="home-center pro">
-                <div style="padding-top: 30px;">
-                    <img class="mic-logo fade-in-text" src="{{ product.images.first.image.url }}" />
+              <div class="row mt-7">
+                <div class="col-xs-12 col-md-6 disp-1">
+                  <img class="mic-logo fade-in-text" src="{{ product.images.first.image.url }}" />
                 </div>
-              <div class="home-desc-center" style="direction: rtl;">
-                <div class="container content-page-mic">
+                <div class="col-xs-6 col-md-6 disp-2">
+                  <div class="row" style="direction: rtl;">
+                    <div class="top-title-micro-1 animated animatedFadeInUp fadeInUp"><h1>{{ product.title }}</h1></div>
+                    <div class="top-title-micro-2 animated animatedFadeInUp fadeInUp"><p>{{ product.description }}</P></div>
 
-                    <div class="row">
-                        <div class="top-title-micro-1 col-md-12 animated animatedFadeInUp fadeInUp">{{ product.title }}</div>
-                    </div>
-                    <div class="row">
-                        <div class="top-title-micro-2 col-md-5 animated animatedFadeInUp fadeInUp">{{ product.description }}</div>
-                    </div>
-                    <div class="row" style="padding-top: 36px;">
-                      
                       {% if product.collections.first.collection_type.title == 'home' %}
-                      <div class="text-center col-lg-4 col-md-12">
-                          <a href="#" class="btn btn-success m-b">خرید محصول</a>
-                      </div>
-                      {% else %}
-                      <div class="text-center top-pad col-lg-4 col-md-12">
-                          <a class="btn btn-success m-b" href="/add_inquery/{{ product.slug }}">استعلام محصول</a>
-                      </div>
+                        <div class="col-xs-6 .col-md-4">
+                            <a href="#" class="btn btn-success m-b">خرید محصول</a>
+                        </div>
+                        {% else %}
+                        <div class="col-xs-6 .col-md-4">
+                            <a class="btn btn-success m-b" href="/add_inquery/{{ product.slug }}">استعلام محصول</a>
+                        </div>
                       {% endif %}
-                    </div>
-                    
+                  </div>
                 </div>
               </div>
+     
             </div>
         </section>
 
@@ -45,10 +40,12 @@
             {% comment %} {{ product.extras.all.0.desc|safe }} {% endcomment %}
 
             <div class="container">
+              <div class="row">
+                <div class="col-xs-12 col-md-12 col-sm-12">
+                    <h1 class="text-mic-pro">امنیت همه جانبه برای ویندوز</h1>
+                </div>
+              </div>
                 <div class="row row-50 row-lg-60 row-xl-90 justify-content-center">
-                    <div class="row" style="text-align: center;padding-bottom: 58px;">
-                        <h1>امنیت همه جانبه برای ویندوز</h1><br/>
-                    </div>
                     <div class="col-lg-3 col-sm-6 colum">
                       <div class="box-classic">
                         <div class="box-classic-icon iconn icon-lg mdi mdi-newspaper fa-brands fa-windows"></div>
@@ -98,7 +95,7 @@
                         <p class="box-classic-text"> معرفی Windows PowerShell ۵,۰</p>
                       </div>
                     </div>
-                  </div>
+                </div>
             </div>
             
         </section>
