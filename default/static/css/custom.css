@@ -572,6 +572,7 @@ div.icon svg {
 
 .font-services {
     font-size: 36px;
+    color: #040d21;
     font-weight: 600;
     text-align: center;
 }
@@ -630,10 +631,6 @@ div.icon svg {
     text-align: justify;
     padding-top: 80px;
     padding-bottom: 110px;
-}
-
-.bg-color-1 {
-    
 }
 
 section#services {
@@ -1032,6 +1029,19 @@ span .gfield_required {
     -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.192);
 	box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.199);  
 }
+
+@media only screen and (max-width: 600px){
+    .responsive_inquery {
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: space-around;
+    }
+    .pro-info {
+        margin-right: 0;
+    }
+}
+
+
 
 /************************* End InQuery form ***********************************/
 
@@ -1507,20 +1517,6 @@ span .gfield_required {
     border-radius: 30px;
 }
 
-@media (min-width: 992px){
-    .offset-lg-1 {
-        margin-left: 8.333333%;
-    }.contact-form .form-control {
-        background-color: #ffffff;
-        border: none;
-        height: 55px;
-        font-size: 15px;
-        border-right: 3px solid #7b68ee;
-        -webkit-box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.068);
-        box-shadow: 0px 5px 30px 0px rgba(148, 146, 245, 0.062); 
-    }
-}
-
 .about-image {
     position: relative;
     text-align: center;
@@ -1586,6 +1582,44 @@ span .gfield_required {
 #about-us .box-classic-text {
     text-align: center;
 }
+
+
+@media only screen and (max-width: 600px){
+    .page-title-area {
+        height: 250px;
+    }
+    .d-flex {
+        display: -ms-flexbox!important;
+        display: flex!important;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .about-image .years-design {
+        position: absolute;
+        right: -16px;
+        bottom: 7px;
+        text-align: left;
+        padding: 15px;
+        background: #ffffff;
+        border-bottom: 2px solid #FF9800;
+        -webkit-box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
+        box-shadow: -1px 3px 20px 0px rgb(82 90 101 / 10%);
+    }
+    .about-image .years-design h2 {
+        font-size: 50px;
+        font-weight: 700;
+        background: url(../img/about-slider-2.jpg) no-repeat;
+        background-position: 47% 53%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.1;
+    }
+    #fadeinanimation .active.fade-right {
+        animation: fade-right 1s ease-in;
+        margin-top: 39px;
+    }
+}
+
 
 /****************************** End About Us  **********************************/
 
@@ -1821,7 +1855,8 @@ span .gfield_required {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 480px;
+    height: 500px;
+    margin-bottom: 36px;
 }
 
 .contact-banner::before{
@@ -1834,6 +1869,15 @@ span .gfield_required {
     top: 0;
     opacity: 0.5;
     z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-banner {
+        height: 250px;
+    }
+    #contact-us {
+        height: 80rem;
+    }
 }
 
 
@@ -2079,14 +2123,6 @@ section#home-slider{
     height: 350px;
 }
 
-/* #home-slider .btn-info {
-    width: 150px;
-    background-color: #002dd1;
-    color: aliceblue;
-    font-size: 20px;
-    box-shadow: 0 0px 8px 0px rgba(0,0,0,0.2);
-    border: none;
-} */
 #home-slider .btn-info{
     background: #0c5adb;
     padding: 16px 32px;
@@ -2113,7 +2149,6 @@ section#home-slider{
     z-index: -1;
 }
 #home-slider .btn-info:hover{
-    /* background-color: #160ca7; */
     color: #fff;
 }
 #home-slider .btn-info:hover {
@@ -2122,13 +2157,7 @@ section#home-slider{
 #home-slider .btn-info:hover:before {
     width: 180%;
 }
-/* #home-slider .home-banner-s1{
-    background-image: url(../img/trianglify-lowres-copy.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: inherit;
-} */
+
 #home-slider .home-banner-s1 {
     background-color: #040d21;
 }

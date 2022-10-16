@@ -11,7 +11,7 @@
         <div class="container" style="direction:rtl;">
 
 
-            <div class="row">
+            <div class="row responsive_inquery ">
                 <div class="col-lg-6" style="line-height: 20px;">
                     <form id="contact-form" class="contact-form form" method="POST" action="/insert_inquery/{% if product != '' %}{{ product.slug }}{% else %}{{ service.slug }}{% endif %}/" enctype="multipart/form-data" style="padding-top: 135px;">
 
@@ -86,5 +86,6 @@
             </div>
             
         </div>
+        <div>{% include 'footer.html' %}</div>
     </body>
 </html>
