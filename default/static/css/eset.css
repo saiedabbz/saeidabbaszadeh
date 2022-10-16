@@ -345,9 +345,30 @@ ul.list-checkmark li.x::before{
     .top-title-2 {
         color: #fff;
         padding-top: 0;
-        font-size: 30px;
+        font-size: 22px;
         font-weight: bold;
         text-align: center;
+    }
+    .home-title-1{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .home-title-3 {
+        font-size: 20px;
+        padding-top: 6rem;
+        font-weight: 600;
+    }
+    .internet-banner {
+        height: 250px;
+    }
+    .nod-banner{
+        height: 250px;
+    }
+    .home-title-2 {
+        font-size: 20px;
+        padding-bottom: 0rem;
+        padding-top: 5rem;
+        font-weight: 600;
     }
     .internet-banner {
         background: url(/static/img/eset-banner-01.jpg) center center / cover scroll no-repeat;
@@ -356,10 +377,7 @@ ul.list-checkmark li.x::before{
         margin-bottom: 44px;
     }
     .top-title-3 {
-        padding-top: 12px;
-        color: #fff;
-        text-align: justify;
-        font-weight: 600;
+        display: none;
     }
     
     .min-wi {
@@ -430,5 +448,18 @@ ul.list-checkmark li.x::before{
         z-index: 0;
         margin-bottom: 44px;
         background-position: 10%;
+        height: 250px;
+    }
+    .home-center {
+        display: table;
+        width: 100%;
+        height: 250px;
+    }
+    .mb-0 {
+        margin-bottom: 0!important;
+        position: relative;
+        top: 42px;
+        font-size: 24px;
+        line-height: 44px;
     }
 }

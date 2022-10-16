@@ -65,7 +65,6 @@ body {
 .navbar a{
     line-height: 4rem;
     color: #ffffff;
-    /* padding: 3vh 5vh; */
 }
 
 .nav-item:hover .nav-link ,.menu-tabs ul li a:hover{
@@ -93,7 +92,6 @@ body {
 }
 .nav-item.srvs .menu-tabs{
     width: auto;
-    /* display: flex; */
 }
 
 .eset-list .img-fluid{
@@ -106,9 +104,6 @@ body {
 .bgg-white{
     background-color: #444444 !important;
 }
-
-
-
 
 #navbarNav {
     z-index: 9999;
@@ -135,10 +130,6 @@ body {
 
 /*/////////////////////////////////////////////////////////////////////////*/
 
-
-
-
-
 .menu-tabs{
     display: flex;
     background-color: #222;
@@ -157,7 +148,6 @@ body {
     width: 179.5px;
 }
 .menu-tabs ul li:hover{
-    /* background-color: #222; */
     padding: 0;
     line-height: normal;
 }
@@ -197,14 +187,10 @@ body {
     display: inline-block;
 }
 
-
 .navbar img {
-    /* width: 132px; */
     height: 136px;
     border-radius: 10px;
 }
-
-
 
 .tab-content .tab-pane{
     color: #FFF
@@ -242,7 +228,6 @@ body {
 .home-content .right h1 {
     font-weight: 800;
     font-size: 58px;
-    /* color: #fff; */
     color: #555;
     margin-bottom: 20px;
 }
@@ -298,7 +283,6 @@ body {
 .eset{
     position: absolute;
     top: 12rem;
-    /* right: 117px; */
     color: #fff;
     width: 85%;
 }
@@ -424,7 +408,6 @@ body {
 }
 
 .btn-flip{
-    /* background-color: rgb(0 133 127); */
     background-color: #7B68EE;
     color: #fff;
     width: 80%;
@@ -434,7 +417,6 @@ body {
     height: 37px;
 }
 .btn-flip:hover{
-    /* background-color: rgb(1, 110, 105); */
     background-color: #5A45C2;
     color: #fff;
 }
@@ -457,12 +439,12 @@ body {
 }
 
 
-
-
-
 /* ==========================================
     FOR DEMO PURPOSE
   ========================================== */
+
+
+
 .back-color {
     background-color: #2a2e32;
   }
@@ -480,9 +462,7 @@ a {
 a:hover, a:focus {
     text-decoration: none;
 }
-  
 
-  
 footer {
     background: #243238;
 }
@@ -495,9 +475,6 @@ footer a{
     -webkit-text-stroke-width: thin;
     text-align: justify;
 }
-
-
-
 
 .cus-card {
     width: 13rem;
@@ -517,8 +494,6 @@ footer a{
 .lo {
     display: flex;
 }
-
-
 
 .row{
     --bs-gutter-x: 0;
@@ -549,8 +524,6 @@ div.icon svg {
     margin-bottom: 20px;
 }
 
-
-
 .services {
     display: flex;
     height: 350px;
@@ -560,7 +533,6 @@ div.icon svg {
     position: relative;
     top: -128px;
 }
-
 
 .bqpd{ 
     background:url();
@@ -589,8 +561,6 @@ div.icon svg {
     justify-content: space-evenly;
     align-items: stretch;
     flex-wrap: wrap;
-    /* opacity: 0; */
-
 }
 
 .kh-p img {
@@ -635,19 +605,15 @@ div.icon svg {
 
 section#services {
     background-color:#FFFFFF;
-    /* min-height: 800px; */
-    /* box-shadow: 0 8px 11px 0px rgb(128, 128, 128) */
 }
 
 section#software{
     background-color:#FAFBFC;
     min-height: 750px;
-    /* box-shadow: 0 8px 11px 0px rgb(128, 128, 128) */
 
 }
 section#bestproducts{
     background-color:#ffffff;
-    /* box-shadow: 0 8px 11px 0px rgb(128, 128, 128) */
 
 }
 
@@ -676,30 +642,10 @@ section#customer{
 #customers .swiper-slide{
     background: none;
 }
-/* 
-@media only screen and (max-width:600px){
-    .bg-color-1 {
-        height: 77rem;
-    }
-    .bg-color-2 {
-        height: 72rem;
-    }
-} */
-/* @media only screen and (max-width:900px){
-    .bg-color-1 {
-        height: 55rem;
-    }
-    .bg-color-2 {
-        height: 43rem;
-    }
-} */
-
 
 #microsoft-v .col-md-6 {
     width: 26%;
 }
-
-
 .pici {
     display: flex;
     flex-direction: row;
@@ -2052,7 +1998,6 @@ section#home-slider{
 }
 
 #home-slider .swiper-slide {
-	/* Center slide text vertically */
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
@@ -2187,14 +2132,11 @@ section#home-slider{
     .navbar-expand-lg {
         position: absolute;
     }
-    /* #home-slider .start-img img{
-        display: none;
-    } */
+    
     #home-slider .start-text {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        /* margin-top: 50px; */
     }
     #home-slider h1 {
         font-size: 58px;

@@ -370,21 +370,22 @@
   }
   .top-title-kasper-2 {
     color: rgb(0, 0, 0);
-    padding-top: 47px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
   }
   .top-title-kasper-3 {
-    padding-top: 12px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin-bottom: 22px;
-    width: auto;
+    display: none;
   }
   .kasper-title {
     text-align: center;
     font-size: 28px;
     padding: 36px;
+  }
+  .logo-kasper-product {
+    display: flex;
+    justify-content: center;
+    height: 159px;
+    margin-top: 26px;
   }
 }
