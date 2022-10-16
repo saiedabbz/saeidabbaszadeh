@@ -341,7 +341,6 @@
       /* left: 205px; */
   }
   .content-page-kasper {
-    padding-inline: 0;
     padding-top: 38px;
     margin-inline: 0;
     padding-bottom: 70px;
@@ -363,8 +362,6 @@
     list-style: none;
     padding: 0;
     z-index: 1;
-    height: 659px;
-    width: 122px;
   }
   .section {
     padding-top: 0;
@@ -384,5 +381,10 @@
     text-align: center;
     margin-bottom: 22px;
     width: auto;
+  }
+  .kasper-title {
+    text-align: center;
+    font-size: 28px;
+    padding: 36px;
   }
 }
