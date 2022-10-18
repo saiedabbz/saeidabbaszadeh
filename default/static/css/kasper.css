@@ -10,11 +10,12 @@
 }
 
 .kas-image {
-    background: url(/static/img/kasper-banner.png) no-repeat left scroll;
-    position: absolute;
-    z-index: 0;
-    height: 550px;
-    /* left: 205px; */
+  background: url(/static/img/kasper-banner.png) no-repeat left scroll;
+  position: relative;
+  z-index: 0;
+  height: 550px;
+  top: 83px;
+  background-position-x: -8%;
 }
 
 .kas-card{
@@ -134,7 +135,7 @@
   }
 
 .top {
-  top: 600px;
+  top: 63px;
   background-color: rgb(171 171 171 / 13%);
 }
 
@@ -341,7 +342,9 @@
   padding: 0;
   top: 67px;
 }
-
+.footer-kasper{
+  padding-top: 60px;
+}
 @media only screen and (max-width: 600px){
     .kas-image {
       background: none;
@@ -372,11 +375,13 @@
       list-style: none;
       padding: 0;
       z-index: 1;
+      top: 53px;
     }
     .section {
       padding-top: 0;
       padding-bottom: 0;
       position: relative !important;
+      height: 633px;
     }
     .top-title-kasper-2 {
       color: rgb(0, 0, 0);
@@ -400,14 +405,17 @@
     }
     .top-banner {
       padding-top: 0;
-  }
-  .home-center-kasper{
-    display: table;
-    width: 100%;
-    height: 364px;
-  }
-  .half-home-kasper{
-    padding: 0;
-    top: 18px;
-  }
+    }
+    .home-center-kasper{
+      display: table;
+      width: 100%;
+      height: 364px;
+    }
+    .half-home-kasper{
+      padding: 0;
+      top: 18px;
+    }
+    .kasper-title{
+      display: none;
+    }
 }

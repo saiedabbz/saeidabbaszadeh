@@ -110,7 +110,7 @@
 
 .half-home-symantec{
     padding: 0;
-    top: 67px;
+    top: 0;
 }
 
 @Media only screen and (max-width: 600px){
