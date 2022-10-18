@@ -1600,9 +1600,8 @@ span .gfield_required {
         -webkit-text-fill-color: transparent;
         line-height: 1.1;
     }
-    #fadeinanimation .active.fade-right {
-        animation: fade-right 1s ease-in;
-        margin-top: 39px;
+    .about-image {
+        margin-bottom: 27px;
     }
 }
 
@@ -1863,6 +1862,9 @@ span .gfield_required {
     }
     #contact-us {
         height: 80rem;
+    }
+    .contact-banner {
+        margin-bottom: 0;
     }
 }
 
@@ -2240,7 +2242,10 @@ section#home-slider{
     .home-banner-s2 img,.home-banner-s3 img{
         margin-top: 55px;
     }
-  }
+    .section-padding {
+        padding: 40px 0!important;
+    }
+}
 
 
 /* Home Logo */

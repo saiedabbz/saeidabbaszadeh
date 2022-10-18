@@ -108,6 +108,11 @@
     height: 250px;
 }
 
+.half-home-symantec{
+    padding: 0;
+    top: 67px;
+}
+
 @Media only screen and (max-width: 600px){
     .sym-text {
         font-size: 19px;
@@ -136,5 +141,11 @@
         display: flex;
         padding-top: 0;
         flex-direction: column-reverse;
+    }
+    .section-symantec {
+        padding-top: 110px;
+    }
+    .half-home-symantec{
+        top: 0;
     }
 }
