@@ -44,6 +44,7 @@
     background-repeat: no-repeat;
     height: 210px;
     border-radius: 7px;
+    background-position-y: 10%;
 }
 
 .network-banner::after {
@@ -59,36 +60,94 @@
     background: #03030c6e;
     border-radius: 7px;
 }
-/* .section-1{
-    background-image:url(../img/network-security-banner-2.jpg);
-    background-position:center;
-} */
-
+.marging_services_title{
+    margin-top: 40px;
+}
 
 .soc-pic-2{
     height:356px;
 }
 
+.network_img_1{
+    height: 288px;
+}
+.network_img_2{
+    height: 270px;
+}
+.network_img_3{
+    height: 310px;
+}
+
+.ooda_img_1{
+    height: 340px;
+    border-radius: 10px;
+}
+.ooda_img_3{
+    height: 290px;
+}
+
 @media only screen and (max-width: 600px) {
     .service-text .soc-pic-1 {
-        height: 212px;
-        border-radius: 6px;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        height: auto;
+        width: 100%;
+        margin-top: 20px;
     }
     .service-text .soc-pic-2{
-        height: 115px;
-        border-radius: 6px;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        height: auto;
+        width: 100%;
+        
     }
     .service-text .soc-pic-3{
-        height: 289px;
-        border-radius: 6px;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        height: auto;
+        width: 100%;
+        margin: 30px;
     }
     .service-text .soc-pic-4{
-        height: 227px;
-        border-radius: 6px;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        height: auto;
+        width: 100%;
+        margin-bottom: 36px;
+    }
+    .service-send-btn {
+        text-align: center;
+    }
+    .half-home {
+        padding: 0;
+        top: 67px;
+    }
+    .pad-ser {
+        padding-top: 0px;
+        padding-bottom: 0;
+    }
+    section#services_inner{
+        position: relative;
+        top: 67px;
+    }
+    .network-banner{
+        display: none;
+    }
+    .network_img_1 {
+        height: auto;
+        width: 100%;
+    }
+    .network_img_3 {
+        height: auto;
+        width: 100%;
+    }
+    .network_img_2 {
+        margin-bottom: 55px;
+    }
+    .ooda_img_1 {
+        height: auto;
+        width: 100%;
+        margin-top: 24px;
+    }
+    .ooda_img_2{
+        height: auto;
+        width: 100%;
+    }
+    .ooda_img_3 {
+        height: auto;
+        width: 100%;
     }
 
   }
