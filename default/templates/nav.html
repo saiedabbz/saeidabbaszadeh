@@ -37,7 +37,7 @@
                     <div class="tab-pane {% if forloop.first %}active{% endif%}" id="business-{{ cat.slug }}">
                       <div class="row justi">
                         {% comment %} <div class="col-md-4 pici"> {% endcomment %}
-                          <div class="col-sm-4">
+                          <div class="col-lg-4 col-sm-1">
                             {% for child in cat.collection_set.all %}
                             {% if child.collection_type_id == 4%}
                               {% for product in g_products %}
@@ -93,7 +93,7 @@
                     <div class="tab-pane {% if forloop.first %}active{% endif%}" id="home-{{ cat.slug }}">
                       <div class="row justi">
                         {% comment %} <div class="col-md-4 pici"> {% endcomment %}
-                          <div class="col-sm-4">
+                          <div class="col-lg-4 col-sm-1">
                             {% for child in cat.collection_set.all %}
                             {% if child.collection_type_id == 3%}
                               {% for product in g_products %}
