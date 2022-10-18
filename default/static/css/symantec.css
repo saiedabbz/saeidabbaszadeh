@@ -50,8 +50,6 @@
 
 
 .symantec-title{
-    margin-top: 0;
-    text-align: center;
     color: #53565a;
     font-family: hco gotham,sans-serif;
     font-weight: 400;
@@ -63,6 +61,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    top: 30px;
 }
 
 .symantec-title::after{
@@ -90,15 +89,14 @@
 
 
 .mrg {
-    margin-top: 3rem!important;
     justify-content: space-around;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .mrg .col-sm-3 {
-    margin-left: 20px;
+    padding: 3px 15px 8px 18px;
 }
 
 .mrg .bg-white{
