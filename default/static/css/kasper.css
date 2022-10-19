@@ -15,7 +15,7 @@
   z-index: 0;
   height: 550px;
   top: 83px;
-  background-position-x: -8%;
+  background-position-x: -10%;
 }
 
 .kas-card{
@@ -343,8 +343,20 @@
   top: 67px;
 }
 .footer-kasper{
-  padding-top: 60px;
+  padding-top: 86px;
 }
+
+.kasper_product_top{
+  padding-top: 126px;
+}
+
+.kasper_main_content{
+  top: 85px;
+  background-color: rgb(171 171 171 / 13%);
+  position: relative;
+}
+
+
 @media only screen and (max-width: 600px){
     .kas-image {
       background: none;
@@ -381,7 +393,7 @@
       padding-top: 0;
       padding-bottom: 0;
       position: relative !important;
-      height: 633px;
+      height: 447px;
     }
     .top-title-kasper-2 {
       color: rgb(0, 0, 0);
@@ -413,9 +425,18 @@
     }
     .half-home-kasper{
       padding: 0;
-      top: 18px;
+      top: 69px;
     }
     .kasper-title{
       display: none;
     }
+    .kasper_main_content {
+      top: 180px;
+  }
+  .footer-kasper {
+    padding-top: 246px;
+  }
+  .kasper_product_top {
+    padding-top: 24px;
+  }
 }

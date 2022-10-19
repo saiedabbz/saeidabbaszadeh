@@ -10,7 +10,7 @@ body {
     position: relative;
 }
 
-.section {
+.section-eset {
     padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
@@ -464,5 +464,14 @@ ul.list-checkmark li.x::before{
     }
     .eset-list{
         padding-top: 50px;
+    }
+    .foot{
+        padding-top: 89rem;
+    }
+    .section-eset {
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative !important;
+        height: 633px;
     }
 }

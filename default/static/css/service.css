@@ -149,5 +149,8 @@
         height: auto;
         width: 100%;
     }
+    .bg-home-ser {
+        padding-top: 67px;
+    }
 
   }

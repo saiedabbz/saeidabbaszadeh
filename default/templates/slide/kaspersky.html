@@ -1,6 +1,6 @@
 {% load static %}
 
-<section id="kaspersky" class="section half-home">
+<section id="kaspersky" class="section">
   <div class="top-banner"></div>
   <div class="home-center kas-image ">
     <div class="home-desc-center">
@@ -14,10 +14,7 @@
         <div class="row">
           <div class="title-kasper-3 col-md-5 animated animatedFadeInUp fadeInUp">با محافظت مبتنی بر هوش مصنوعی در برابر هکرها و جدیدترین ویروس‌ها، باج‌افزارها و جاسوس‌افزارها، واقعاً احساس امنیت کنید.</div>
         </div>
-        {% comment %} <div class="row p">
-          <a class="btn btn-success k-button">لیست محصولات</a>
-          <a class="btn btn-light k-button-2" >تمدید مجوز</a>
-        </div> {% endcomment %}
+        
           <div class="row logo">
             <div class="col-md-2 lg"><img src="{% static 'img/av-2020-kasper.png' %}"/></div>
             <div class="col-md-2 lg"><img src="{% static 'img/mrg--effitas-kasper.png' %}"/></div>
@@ -30,7 +27,7 @@
   </div>
 </section>
 
-<section id="kasper-swiper" class="section top">
+<section id="kasper-swiper" class="kasper_main_content">
   <div class="container">
     <div class="kasper-title">
     {{ products.0.collections.all.0.title }} - 

@@ -148,4 +148,8 @@
     .half-home-symantec{
         top: 0;
     }
+    .symantec_product_footer{
+        position: relative;
+        top: 119rem;
+    }
 }
