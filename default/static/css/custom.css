@@ -2040,7 +2040,7 @@ section#home-slider{
 }
 
 .home-banner-s2 img,.home-banner-s3 img{
-    height: 260px !important;
+    height: 390px !important;
 }
 
 #home-slider .swiper-slide {
@@ -2153,10 +2153,10 @@ section#home-slider{
     background-color: #040d21;
 }
 #home-slider .home-banner-s2{
-    background-color: #040d21;}
+    background-color: #000000;}
 
 #home-slider .home-banner-s3{
-    background-color: #040d21;}
+    background-color: #010101;}
 
 #home-slider h1{
     font-size: 72px;
@@ -2245,10 +2245,13 @@ section#home-slider{
     .section-padding {
         padding: 40px 0!important;
     }
+    .home-banner-s2 img, .home-banner-s3 img {
+        height: 271px !important;
+    }
 }
 
 
-/* Home Logo */
+/******************************** Home Logo *************************************/
 
 @media (min-width: 1012px) {
 
