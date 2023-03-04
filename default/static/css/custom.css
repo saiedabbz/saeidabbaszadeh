@@ -649,7 +649,7 @@ section#services {
 
 section#software{
     background-color:#FAFBFC;
-    min-height: 750px;
+    min-height: 40em;
 
 }
 section#bestproducts{
@@ -2029,150 +2029,57 @@ section#success{
 /************************ Siwper Slider Home ***********************/
 
 
-section#home-slider{
-    height: 650px;
-}
-
-#home-slider .swiper-container 
-{
-    width: 100%;
-    height: auto;
-}
-
-.home-banner-s2 img,.home-banner-s3 img{
-    height: 390px !important;
-}
-
-#home-slider .swiper-slide {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-}
-
-#home-slider .autoplay
-{
-	position: absolute;
-	color: #000;
-	font: 100px/100% arial, sans-serif;
-	right: 15px;
-	text-decoration: none;
-	text-shadow: 0 1px 0 #fff;
-	top: 15px;
-	width:auto;
-	height:auto;
-	z-index:999;
-	opacity:0.4;
-	transition: opacity .1s ease-in, transform .1s ease-out; 
-	animation: fade_close 3s ease-out;
-}
-
-@keyframes fade_close
-{
-	0% { opacity: 0.8; } 
-	50% { opacity: 0.8; }
-	to { opacity: 0.4; }
-}
-
-#home-slider .autoplay:active
-{
-  transform:scale(0.8);
-}
-
-#home-slider .stop
-{
-  right: 15px;
-}
-
-#home-slider .play
-{
-  right: 90px;
-}
-
-#home-slider .start-text{
+section#home-slider .banner {
+    background-image: url(../img/newbanner/mehrBanner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 92vh;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 50px;
-}
-#home-slider .start-img{
-    display: flex;
-    justify-content: center;
-}
-#home-slider .start-img img{
-    height: 350px;
-}
-
-#home-slider .btn-info{
-    background: #0c5adb;
-    padding: 16px 32px;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    background-position-y: top;
+  }
+  .banner h1 {
+    font-size: 50px;
+    margin: 0;
+    color: #fff;
+    padding-bottom: 5px;
+  }
+  
+  .banner p {
+    font-size: 20px;
+    margin: 20px 10px;
+    color: #666666;
+  }
+  .btn-pos{
+    padding-top: 2em;
+  }
+  .services-btn {
+    color: #FFFFFF;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background: #0C0B0E;
+    padding: 1em 2em;
     font-size: 18px;
     font-weight: 500;
     display: inline-block;
-    transition: .5s;
     position: relative;
     overflow: hidden;
-    z-index: 44;
-    border: none;
+  }
+  
+  .services-btn:hover {
+    background-color: #1b1722;
     color: #fff;
-}
-#home-slider .btn-info::before{
-    position: absolute;
-    content: "";
-    top: 0px;
-    height: 100%;
-    left: -28%;
-    width: 0%;
-    background: #00247E;
-    transform: skew(50deg);
-    transition-duration: .6s;
-    z-index: -1;
-}
-#home-slider .btn-info:hover{
-    color: #fff;
-}
-#home-slider .btn-info:hover {
-    color: #fff;
-}
-#home-slider .btn-info:hover:before {
-    width: 180%;
-}
+  }
+  
 
-#home-slider .home-banner-s1 {
-    background-color: #040d21;
-}
-#home-slider .home-banner-s2{
-    background-color: #000000;}
 
-#home-slider .home-banner-s3{
-    background-color: #010101;}
-
-#home-slider h1{
-    font-size: 72px;
-    color: #FFFEFF;
-    padding-inline-end: 140px;
-    margin-bottom: 48px;
-}
-
-.home_s2 {
-    width: 88%;
-}
 /**************************** End Siwper Slider Home ***********************/
 
-#home-slider .product-buttons{
-    padding-left: 163px;
-}
 
 #footer ul li{
     text-align: right;
@@ -2217,11 +2124,11 @@ section#home-slider{
     .bg-color-2 {
         height: 90rem;
     }
-    section#services {
+    /* section#services {
         background-color: #FFFFFF;
         min-height: 1089px;
         height: 335px;
-     }
+     } */
     .techvio img {
         text-align: center;
         height: 334px;
