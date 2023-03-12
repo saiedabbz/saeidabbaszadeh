@@ -2029,33 +2029,31 @@ section#success{
 /************************ Siwper Slider Home ***********************/
 
 
-section#home-slider .banner {
+section#home-slider{
     background-image: url(../img/newbanner/mehrBanner.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 92vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color: #fff;
-    background-position-y: top;
+    height: 95vh;
+    max-height: 650px;
   }
-  .banner h1 {
+  .text-header-content {
+   padding-top: 12%;
+  }
+  #home-slider h1 {
     font-size: 50px;
     margin: 0;
     color: #fff;
     padding-bottom: 5px;
   }
   
-  .banner p {
-    font-size: 20px;
+  #home-slider p {
     margin: 20px 10px;
-    color: #666666;
+    color: hsl(0deg 0% 70%);
   }
-  .btn-pos{
+  .banner-btn-pad{
     padding-top: 2em;
   }
-  .services-btn {
+  .banner-button {
     color: #FFFFFF;
     font-size: 20px;
     border: 1px solid #ccc;
@@ -2071,7 +2069,7 @@ section#home-slider .banner {
     overflow: hidden;
   }
   
-  .services-btn:hover {
+  .banner-button:hover {
     background-color: #1b1722;
     color: #fff;
   }

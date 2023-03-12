@@ -2,21 +2,56 @@
 
 
 <section id="home-slider">
-  <div class="banner">
+  {% comment %} <div class="banner"></div> {% endcomment %}
     <div class="container text-header-content">
       <h1>مهرسامان</h1>
       <p>ارائه دهنده راهکارهای امنیتی</p>
       <p> دوری از تهدیدات،</p>
       <p>رویارویی با خطرات</p>
-      <div class="btn-pos">
-        <a class="services-btn" href="#services">خدمات</a>
-        <a class="services-btn" href="#software">نرم افزارها</a>
+      <div class="banner-btn-pad">
+        <a class="banner-button" onclick="scrollWin()">خدمات</a>
+        <a class="banner-button" href="#software">نرم افزارها</a>
       </div>
     </div>
-  </div>
 </section>
 
 
+
+<script>
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var scrollTop = $(this).scrollTop();
+      var opacity = 1 - (scrollTop / 400); // adjust the division value to control the speed of the fade out effect
+      $('.text-header-content').css('opacity', opacity);
+      var bgPosition = scrollTop * 0.5; // adjust the multiplication value to control the speed of the background scrolling effect
+      $('#home-slider').css('background-position-y', bgPosition + 'px');
+    });
+  });
+  
+</script>
+
+<script>
+  function scrollWin() {
+    window.scrollTo(0, 450);
+  }
+</script>
+
+
+<script>
+  $( document ).ready(function() {
+    
+    $(window).scroll(function(){
+      var scroll = $(window).scrollTop();
+      
+      if (scroll > 100) {
+        $(".navbar").addClass("bgg-white");
+      }else{
+        $(".navbar").removeClass("bgg-white");
+      }
+    })
+  })
+</script>
+<script src="{% static "js/parallax.min.js" %}"></script>
 <style>
   .navbar { 
       background-color: rgba(51, 51, 51, 0);
@@ -41,54 +76,3 @@
     }
 
 </style>
-
-<script src="{% static 'js/parallax.min.js' %}"></script>
-<script src="{% static 'js/swiper.js' %}"></script>
-
-
-<script>
-  var scene = document.getElementById ('js-scene');
-  var parallax = new Parallax(scene);
-</script>
-<script>
-  $( document ).ready(function() {
-
-    $(window).scroll(function(){
-      var scroll = $(window).scrollTop();
-
-      if (scroll > 100) {
-        $(".navbar").addClass("bgg-white");
-      }else{
-        $(".navbar").removeClass("bgg-white");
-      }
-    })
-  })
-</script>
-<script>
-  var mySwiper = new Swiper ('.swiper-container', 
-	{
-    speed:2000,
-		direction: 'horizontal',
-		navigation: 
-		{
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-		},
-		pagination: 
-		{
-			el: '.swiper-pagination',
-			dynamicBullets: true,
-		},
-		zoom: true,
-		keyboard: 
-		{
-			enabled: true,
-			onlyInViewport: false,
-		},
-    autoplay: 
-    {
-      delay: 4000,
-    },
-    loop: true,
-	}); 
-</script>
