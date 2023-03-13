@@ -21,14 +21,15 @@
   $(document).ready(function() {
     $(window).scroll(function() {
       var scrollTop = $(this).scrollTop();
-      var opacity = 1 - (scrollTop / 400); // adjust the division value to control the speed of the fade out effect
-      $('.text-header-content').css('opacity', opacity);
+      var posY = 0 - (scrollTop * 0.5); // adjust the multiplication value to control the speed of the upward movement
+      $('.text-header-content').css('transform', 'translateY(' + posY + 'px)');
       var bgPosition = scrollTop * 0.5; // adjust the multiplication value to control the speed of the background scrolling effect
       $('#home-slider').css('background-position-y', bgPosition + 'px');
     });
   });
-  
 </script>
+
+
 
 <script>
   function scrollWin() {
