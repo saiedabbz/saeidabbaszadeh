@@ -8,7 +8,7 @@ SECRET_KEY = 'django-insecure-$r*dtlb-4ude4yrv#o$u7m4bcc)3$wr@g^7=jw=jbxadovj!+4
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','saeidabbaszadeh.site', 'www.saeidabbaszadeh.site']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'payment_gateway',
     'promotion',
 
-    'publisher',
+    #'publisher',
     'service',
     'contact',
     'config',
